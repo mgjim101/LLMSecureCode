@@ -23,19 +23,61 @@ def load_json(rel_path):
         st.error(f"JSON decode error in {full_path}: {e}")
         st.stop()
 
-# --- Load Data ---
-tasks = [load_json(f"data/tasks/task{i+1}.json") for i in range(3)]
-nudges = {
+# --- Load All Tasks & Nudges Data ---
+tasks_data = [load_json(f"data/tasks/task{i+1}.json") for i in range(3)]
+nudges_data = {
     'A': load_json("data/nudges/nudgeA.json")["message"],
     'B': load_json("data/nudges/nudgeB.json")["message"]
 }
 
-# --- Session State Initialization ---
+# --- Group Assignment Mapping ---
+group_design = {
+    1: {'tasks': [1, 2, 3], 'nudges': ['A', 'B', 'A']},
+    2: {'tasks': [1, 3, 2], 'nudges': ['B', 'A', 'B']},
+    3: {'tasks': [2, 1, 3], 'nudges': ['A', 'B', 'A']},
+    4: {'tasks': [2, 3, 1], 'nudges': ['B', 'A', 'B']},
+    5: {'tasks': [3, 1, 2], 'nudges': ['A', 'B', 'A']},
+    6: {'tasks': [3, 2, 1], 'nudges': ['B', 'A', 'B']},
+}
+
+# --- Streamlit UI Setup ---
+st.set_page_config(page_title="SecureCode Study", layout="centered")
+st.title("🔒 SecureCode Study")
+st.markdown(
+    """
+    **Study Overview:**  
+    You will complete three code tasks and decide whether to run a security tool after each.  
+    Enter your participant ID (1–30) to begin.
+    """
+)
+
+# --- Participant Identification ---
+if 'participant_id' not in st.session_state:
+    pid = st.number_input("Enter your Participant ID", min_value=1, max_value=30, step=1)
+    if st.button("Start Experiment"):
+        st.session_state.participant_id = int(pid)
+        # assign to group: 5 participants per group
+        group_num = ((st.session_state.participant_id - 1) // 5) + 1
+        st.session_state.group = group_num
+        # load group-specific sequences
+        design = group_design[group_num]
+        st.session_state.task_sequence = design['tasks']
+        st.session_state.nudge_sequence = design['nudges']
+                # init progress state
+        st.session_state.task_index = 0
+        st.session_state.show_nudge = False
+        st.session_state.task_done = False
+        st.session_state.logs = []
+        # Streamlit automatically reruns after widget interaction; explicit rerun removed
+    else:
+        st.stop()
+
+# --- Display Assigned Group ---
+st.subheader(f"Participant ID: {st.session_state.participant_id} — Group G{st.session_state.group}")
+
+# --- Session State Defaults ---
 if 'task_index' not in st.session_state:
     st.session_state.task_index = 0
-if 'nudge_sequence' not in st.session_state:
-    # Define the sequence of nudges for each task per participant
-    st.session_state.nudge_sequence = ['A', 'B', 'A']
 if 'show_nudge' not in st.session_state:
     st.session_state.show_nudge = False
 if 'task_done' not in st.session_state:
@@ -43,34 +85,25 @@ if 'task_done' not in st.session_state:
 if 'logs' not in st.session_state:
     st.session_state.logs = []
 
-# --- UI Header ---
-st.set_page_config(page_title="SecureCode Study", layout="centered")
-st.title("🔒 SecureCode Study")
-st.write("Complete each coding task and choose whether to run a security tool based on the prompt.")
-st.markdown(
-    """
-    **Study Overview:**  
-    In this experiment, you will review and complete coding exercises with potential vulnerabilities.  
-    After submission, you'll receive a prompt to run a security analysis tool.  
-    We record your choices to study how prompts affect tool usage.
-    """
-)
-
-# --- Determine Current Task ---
+# --- Experiment Flow ---
 idx = st.session_state.task_index
-if idx >= len(tasks):
-    st.success("🎉 All tasks completed. Thank you!")
+# end of experiment
+if idx >= len(st.session_state.task_sequence):
+    st.success("🎉 Experiment complete. Thank you!")
+    st.write("Your responses:")
+    st.json(st.session_state.logs)
     st.stop()
 
-task = tasks[idx]
+# load current task
+task_id = st.session_state.task_sequence[idx]
+task = tasks_data[task_id - 1]
 nudge_type = st.session_state.nudge_sequence[idx]
-nudge_msg = nudges[nudge_type]
+nudge_msg = nudges_data[nudge_type]
 
-# --- Display Task ---
+# --- Display Code Task ---
 st.header(f"Task {task['id']}: {task['title']}")
-st.write("Review the suggested code, edit if needed, then click **Submit**.")
+st.write("Review and modify the code below. Click **Submit** when ready.")
 
-# --- Code Editor ---
 code = st_monaco(
     task['code'],
     language="python",
@@ -78,21 +111,20 @@ code = st_monaco(
     height=500
 )
 
-# --- Submission & Nudge Flow ---
+# --- Submit and Nudge ---
 if not st.session_state.show_nudge and not st.session_state.task_done:
-    if st.button("Submit"):
+    if st.button("Submit Task"):
         st.session_state.show_nudge = True
 
 if st.session_state.show_nudge and not st.session_state.task_done:
     st.subheader("Security Nudge")
     st.write(nudge_msg)
     col1, col2 = st.columns(2)
-    if col1.button("Use Tool"):
-        # Save code to a temporary file
+    if col1.button("Run Security Tool"):
+        # run Bandit
         tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.py')
         tmp.write(code.encode())
         tmp.close()
-        # Run Bandit static analysis
         result = subprocess.run(
             ['bandit', '-r', tmp.name, '-f', 'json'],
             capture_output=True, text=True
@@ -102,8 +134,9 @@ if st.session_state.show_nudge and not st.session_state.task_done:
             st.json(json.loads(result.stdout))
         except json.JSONDecodeError:
             st.text(result.stdout)
-        # Log interaction
         st.session_state.logs.append({
+            'participant': st.session_state.participant_id,
+            'group': st.session_state.group,
             'task': task['id'],
             'nudge': nudge_type,
             'used_tool': True,
@@ -111,8 +144,10 @@ if st.session_state.show_nudge and not st.session_state.task_done:
         })
         st.session_state.task_done = True
     if col2.button("Skip Tool"):
-        st.info("Skipped running the tool.")
+        st.info("Tool skipped.")
         st.session_state.logs.append({
+            'participant': st.session_state.participant_id,
+            'group': st.session_state.group,
             'task': task['id'],
             'nudge': nudge_type,
             'used_tool': False
@@ -123,7 +158,6 @@ if st.session_state.show_nudge and not st.session_state.task_done:
 if st.session_state.task_done:
     if st.button("Next Task"):
         st.session_state.task_index += 1
-        # Reset state for next task
         st.session_state.show_nudge = False
         st.session_state.task_done = False
-        # Streamlit automatically reruns on widget interaction; no explicit rerun needed
+        # on next run, new task will load

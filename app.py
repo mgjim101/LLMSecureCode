@@ -156,8 +156,8 @@ if st.session_state.show_nudge and not st.session_state.task_done:
 
 # --- Next Task Navigation ---
 if st.session_state.task_done:
-    if st.button("Next Task"):
+    def go_next():
         st.session_state.task_index += 1
         st.session_state.show_nudge = False
         st.session_state.task_done = False
-        # on next run, new task will load
+    st.button("Next Task", on_click=go_next)

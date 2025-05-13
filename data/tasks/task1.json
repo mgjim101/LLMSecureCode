@@ -1,0 +1,5 @@
+{
+    "id": 1,
+    "title": "Login Function",
+    "code": "# TODO: Complete this function\n\ndef login(username, password):\n    pass"
+}

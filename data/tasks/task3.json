@@ -1,0 +1,5 @@
+{
+    "id": 3,
+    "title": "System Command Execution",
+    "code": "# TODO: Run a command safely\n\nimport os\n\ndef run_command(cmd):\n    os.system(cmd)"
+}

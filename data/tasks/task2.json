@@ -1,0 +1,5 @@
+{
+    "id": 2,
+    "title": "Upload File",
+    "code": "# TODO: Add secure file upload\n\ndef upload(file):\n    with open(file.filename, 'wb') as f:\n        f.write(file.read())"
+}

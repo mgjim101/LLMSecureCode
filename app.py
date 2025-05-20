@@ -1,163 +1,165 @@
 import streamlit as st
-import json
-import os
-import subprocess
-import tempfile
+import json, os, subprocess, tempfile
 from streamlit_monaco import st_monaco
 
-# --- Project Paths & JSON Loader ---
+# --- Helpers & JSON Loader ---
 BASE_DIR = os.path.dirname(__file__)
-
-def load_json(rel_path):
-    """
-    Load a JSON file from the data directory with error handling.
-    """
-    full_path = os.path.join(BASE_DIR, rel_path)
+def load_json(path):
+    full = os.path.join(BASE_DIR, path)
     try:
-        with open(full_path, 'r', encoding='utf-8') as f:
+        with open(full, 'r', encoding='utf-8') as f:
             return json.load(f)
-    except FileNotFoundError:
-        st.error(f"File not found: {full_path}")
-        st.stop()
-    except json.JSONDecodeError as e:
-        st.error(f"JSON decode error in {full_path}: {e}")
+    except Exception as e:
+        st.error(f"Failed to load {full}: {e}")
         st.stop()
 
-# --- Load All Tasks & Nudges Data ---
-tasks_data = [load_json(f"data/tasks/task{i+1}.json") for i in range(3)]
-nudges_data = {
+# --- Load tasks & nudges ---
+tasks = [load_json(f"data/tasks/task{i+1}.json") for i in range(3)]
+nudges = {
     'A': load_json("data/nudges/nudgeA.json")["message"],
     'B': load_json("data/nudges/nudgeB.json")["message"]
 }
+design = {i: {'tasks': seq, 'nudges': nds} for i,(seq,nds) in enumerate([
+    ([1,2,3],['A','B','A']),
+    ([1,3,2],['B','A','B']),
+    ([2,1,3],['A','B','A']),
+    ([2,3,1],['B','A','B']),
+    ([3,1,2],['A','B','A']),
+    ([3,2,1],['B','A','B'])
+], start=1)}
 
-# --- Group Assignment Mapping ---
-group_design = {
-    1: {'tasks': [1, 2, 3], 'nudges': ['A', 'B', 'A']},
-    2: {'tasks': [1, 3, 2], 'nudges': ['B', 'A', 'B']},
-    3: {'tasks': [2, 1, 3], 'nudges': ['A', 'B', 'A']},
-    4: {'tasks': [2, 3, 1], 'nudges': ['B', 'A', 'B']},
-    5: {'tasks': [3, 1, 2], 'nudges': ['A', 'B', 'A']},
-    6: {'tasks': [3, 2, 1], 'nudges': ['B', 'A', 'B']},
+# --- Initialize session state ---
+defaults = {
+    'pid': None, 'group': None,
+    'seq': [], 'nseq': [], 'idx': 0,
+    'show_nudge': False, 'tool_ran': False, 'editing': False,
+    'logs': [], 'bandit_output': None
 }
+for k,v in defaults.items():
+    if k not in st.session_state:
+        st.session_state[k] = v
 
-# --- Streamlit UI Setup ---
+# --- Page Setup ---
 st.set_page_config(page_title="SecureCode Study", layout="centered")
 st.title("🔒 SecureCode Study")
-st.markdown(
-    """
-    **Study Overview:**  
-    You will complete three code tasks and decide whether to run a security tool after each.  
-    Enter your participant ID (1–30) to begin.
-    """
-)
+st.markdown("**Overview:** Complete tasks → optional security scan → optional edit → auto-advance.")
 
-# --- Participant Identification ---
-if 'participant_id' not in st.session_state:
-    pid = st.number_input("Enter your Participant ID", min_value=1, max_value=30, step=1)
-    if st.button("Start Experiment"):
-        st.session_state.participant_id = int(pid)
-        # assign to group: 5 participants per group
-        group_num = ((st.session_state.participant_id - 1) // 5) + 1
-        st.session_state.group = group_num
-        # load group-specific sequences
-        design = group_design[group_num]
-        st.session_state.task_sequence = design['tasks']
-        st.session_state.nudge_sequence = design['nudges']
-                # init progress state
-        st.session_state.task_index = 0
-        st.session_state.show_nudge = False
-        st.session_state.task_done = False
-        st.session_state.logs = []
-        # Streamlit automatically reruns after widget interaction; explicit rerun removed
+# --- Participant ID Input ---
+if st.session_state.pid is None:
+    pid = st.number_input("Enter Participant ID (1–30)", 1, 30)
+    if st.button("Start Experiment", key="start_button"):
+        st.session_state.pid = pid
+        grp = ((pid - 1) // 5) + 1
+        st.session_state.group = grp
+        st.session_state.seq = design[grp]['tasks']
+        st.session_state.nseq = design[grp]['nudges']
     else:
         st.stop()
 
-# --- Display Assigned Group ---
-st.subheader(f"Participant ID: {st.session_state.participant_id} — Group G{st.session_state.group}")
-
-# --- Session State Defaults ---
-if 'task_index' not in st.session_state:
-    st.session_state.task_index = 0
-if 'show_nudge' not in st.session_state:
-    st.session_state.show_nudge = False
-if 'task_done' not in st.session_state:
-    st.session_state.task_done = False
-if 'logs' not in st.session_state:
-    st.session_state.logs = []
-
 # --- Experiment Flow ---
-idx = st.session_state.task_index
-# end of experiment
-if idx >= len(st.session_state.task_sequence):
-    st.success("🎉 Experiment complete. Thank you!")
-    st.write("Your responses:")
+idx = st.session_state.idx
+if idx >= len(st.session_state.seq):
+    st.success("🎉 All tasks completed. Thank you!")
     st.json(st.session_state.logs)
     st.stop()
 
-# load current task
-task_id = st.session_state.task_sequence[idx]
-task = tasks_data[task_id - 1]
-nudge_type = st.session_state.nudge_sequence[idx]
-nudge_msg = nudges_data[nudge_type]
+# Load current task & nudge
+task_id = st.session_state.seq[idx]
+t = tasks[task_id - 1]
+nudge = st.session_state.nseq[idx]
 
-# --- Display Code Task ---
-st.header(f"Task {task['id']}: {task['title']}")
-st.write("Review and modify the code below. Click **Submit** when ready.")
+st.header(f"Task {t['id']}: {t['title']}")
+st.write("Modify code below and click Submit Task.")
 
+# Editor always visible, stored in session_state.code_{idx}
+code_key = f"code_{idx}"
+if code_key not in st.session_state:
+    st.session_state[code_key] = t['code']
 code = st_monaco(
-    task['code'],
+    value=st.session_state[code_key],
     language="python",
     theme="vs-dark",
-    height=500
-)
+    height=400)
 
-# --- Submit and Nudge ---
-if not st.session_state.show_nudge and not st.session_state.task_done:
-    if st.button("Submit Task"):
-        st.session_state.show_nudge = True
+# Callback functions
+def submit_task():
+    st.session_state.logs.append({
+        'participant': st.session_state.pid,
+        'group':       st.session_state.group,
+        'task':        t['id'],
+        'nudge':       nudge,
+        'code_pre':    st.session_state[code_key]
+    })
+    st.session_state.show_nudge = True
 
-if st.session_state.show_nudge and not st.session_state.task_done:
-    st.subheader("Security Nudge")
-    st.write(nudge_msg)
-    col1, col2 = st.columns(2)
-    if col1.button("Run Security Tool"):
-        # run Bandit
-        tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.py')
-        tmp.write(code.encode())
-        tmp.close()
-        result = subprocess.run(
-            ['bandit', '-r', tmp.name, '-f', 'json'],
-            capture_output=True, text=True
-        )
-        st.subheader("Tool Output (Bandit)")
-        try:
-            st.json(json.loads(result.stdout))
-        except json.JSONDecodeError:
-            st.text(result.stdout)
-        st.session_state.logs.append({
-            'participant': st.session_state.participant_id,
-            'group': st.session_state.group,
-            'task': task['id'],
-            'nudge': nudge_type,
-            'used_tool': True,
-            'output': result.stdout
-        })
-        st.session_state.task_done = True
-    if col2.button("Skip Tool"):
-        st.info("Tool skipped.")
-        st.session_state.logs.append({
-            'participant': st.session_state.participant_id,
-            'group': st.session_state.group,
-            'task': task['id'],
-            'nudge': nudge_type,
-            'used_tool': False
-        })
-        st.session_state.task_done = True
 
-# --- Next Task Navigation ---
-if st.session_state.task_done:
-    def go_next():
-        st.session_state.task_index += 1
-        st.session_state.show_nudge = False
-        st.session_state.task_done = False
-    st.button("Next Task", on_click=go_next)
+def run_tool():
+    tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.py')
+    tmp.write(st.session_state.logs[-1]['code_pre'].encode()); tmp.close()
+    res = subprocess.run(
+        ['bandit','-r',tmp.name,'-f','json'], capture_output=True, text=True
+    )
+    st.session_state.bandit_output = res.stdout
+    st.session_state.logs[-1].update({'used_tool': True, 'output': res.stdout})
+    st.session_state.tool_ran = True
+
+
+def skip_tool():
+    st.session_state.logs[-1].update({
+        'used_tool': False,
+        'code_post': st.session_state.logs[-1]['code_pre']
+    })
+    advance_task()
+
+
+def next_steps_edit():
+    st.session_state.editing = True
+
+
+def next_steps_submit():
+    st.session_state.logs[-1].update({'code_post': st.session_state.logs[-1]['code_pre']})
+    advance_task()
+
+
+def submit_edited():
+    st.session_state.logs[-1].update({'code_post': st.session_state[code_key]})
+    advance_task()
+
+
+def advance_task():
+    st.session_state.idx += 1
+    for flag in ['show_nudge', 'tool_ran', 'editing']:
+        st.session_state[flag] = False
+
+# Stage 1: Submit Task
+eg1 = not st.session_state.show_nudge and not st.session_state.tool_ran and not st.session_state.editing
+if eg1:
+    st.button("Submit Task", on_click=submit_task)
+
+# Stage 2: Nudge + Run/Skip
+eg2 = st.session_state.show_nudge and not st.session_state.tool_ran and not st.session_state.editing
+if eg2:
+    st.subheader("🔔 Security Nudge")
+    st.write(nudges[nudge])
+    cols = st.columns(2)
+    cols[0].button("Run Security Tool", on_click=run_tool)
+    cols[1].button("Submit Without Checking", on_click=skip_tool)
+
+# Stage 3: After Tool: report + next steps
+eg3 = st.session_state.tool_ran and not st.session_state.editing
+if eg3:
+    st.subheader("Tool Output (Bandit)")
+    try:
+        st.json(json.loads(st.session_state.bandit_output))
+    except:
+        st.text(st.session_state.bandit_output)
+    st.subheader("Next Steps")
+    c3 = st.columns(2)
+    c3[0].button("Edit Code", on_click=next_steps_edit)
+    c3[1].button("Submit As-Is", on_click=next_steps_submit)
+
+# Stage 4: Edit Mode
+eg4 = st.session_state.editing
+if eg4:
+    st.info("Edit your code above and click 'Submit Edited Code'.")
+    st.button("Submit Edited Code", on_click=submit_edited)

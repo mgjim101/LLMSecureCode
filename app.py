@@ -1,8 +1,5 @@
 import streamlit as st
-import json
-import os
-import subprocess
-import tempfile
+import json, os, subprocess, tempfile
 from streamlit_monaco import st_monaco
 
 # --- Helpers & JSON Loader ---
@@ -25,6 +22,7 @@ nudges = {
 # Each suggestions file is a JSON array of three code strings
 suggestions_data = [load_json(f"data/suggestions/task{i+1}.json") for i in range(3)]
 
+# --- Experimental Design Mapping ---
 design = {
     1:{'tasks':[1,2,3],'nudges':['A','B','A']},
     2:{'tasks':[1,3,2],'nudges':['B','A','B']},
@@ -36,12 +34,17 @@ design = {
 
 # --- Initialize Session State ---
 defaults = {
-    'pid': None, 'group': None,
-    'seq': [], 'nseq': [], 'idx': 0,
-    'show_nudge': False, 'tool_ran': False, 'editing': False,
-    'logs': [], 'bandit_output': None
+    'pid': None,
+    'group': None,
+    'seq': [],
+    'nseq': [],
+    'idx': 0,
+    'show_nudge': False,
+    'tool_ran': False,
+    'editing': False,
+    'logs': []
 }
-for k,v in defaults.items():
+for k, v in defaults.items():
     if k not in st.session_state:
         st.session_state[k] = v
 
@@ -50,17 +53,19 @@ st.set_page_config(page_title="SecureCode Study", layout="centered")
 st.title("🔒 SecureCode Study")
 st.markdown(
     """
-    **Study Overview**
-    You will complete three coding tasks with LLM-suggested snippets shown for each. After submission, you'll see a security nudge and can optionally run a vulnerability scan and edit before moving on.
+    **Study Overview**  
+    You will complete three coding tasks with three LLM-generated suggestions displayed above your editor.  
+    After submission, you'll receive a security nudge, can run a static scan (Bandit), optionally edit based on feedback,
+    and then proceed to the next task.
     """
 )
 
 # --- Participant Identification ---
 if st.session_state.pid is None:
-    st.number_input("Participant ID (1–30)", 1, 30, key="pid_input")
-    if st.button("Start Experiment", key="start_button"):
-        st.session_state.pid = st.session_state.pid_input
-        grp = ((st.session_state.pid - 1) // 5) + 1
+    pid = st.number_input("Enter Participant ID (1–30)", 1, 30)
+    if st.button("Start Experiment"):
+        st.session_state.pid = pid
+        grp = ((pid - 1) // 5) + 1
         st.session_state.group = grp
         st.session_state.seq = design[grp]['tasks']
         st.session_state.nseq = design[grp]['nudges']
@@ -69,28 +74,25 @@ if st.session_state.pid is None:
 
 st.subheader(f"Participant {st.session_state.pid} — Group G{st.session_state.group}")
 
-# --- Main Experiment Flow ---
+# --- Experiment Flow ---
 idx = st.session_state.idx
 if idx >= len(st.session_state.seq):
     st.success("🎉 All tasks completed. Thank you!")
     st.json(st.session_state.logs)
     st.stop()
 
-# Current task and nudge
+# Load current task and nudge type
 task_id = st.session_state.seq[idx]
 t = tasks[task_id - 1]
 nudge = st.session_state.nseq[idx]
 
-# Display task
+# --- Display Task & LLM Suggestions ---
 st.header(f"Task {t['id']}: {t['title']}")
-st.write("Below are three LLM-generated suggestions. Review them, then modify in the main editor and submit.")
+st.write("Review these LLM-generated suggestions, then modify below and submit.")
+for i, suggestion in enumerate(suggestions_data[idx], start=1):
+    st.text_area(f"Suggestion {i}", value=suggestion, height=100, disabled=True)
 
-# Show three LLM suggestions stacked vertically
-suggests = suggestions_data[idx]
-for i, s in enumerate(suggests, start=1):
-    st.text_area(f"Suggestion {i}", value=s, height=100, disabled=True)
-
-# Main code editor always visible
+# --- Main Code Editor (always visible) ---
 code_key = f"code_{idx}"
 if code_key not in st.session_state:
     st.session_state[code_key] = t['code']
@@ -98,11 +100,15 @@ code = st_monaco(
     value=st.session_state[code_key],
     language="python",
     theme="vs-dark",
-    height=400,
-    # no key param for monaco
+    height=400
 )
 
-# Callbacks
+# --- Callbacks to Log & Advance ---
+def advance():
+    st.session_state.idx += 1
+    for flag in ('show_nudge', 'tool_ran', 'editing'):
+        st.session_state[flag] = False
+
 def submit_task():
     st.session_state.logs.append({
         'participant': st.session_state.pid,
@@ -116,11 +122,9 @@ def submit_task():
 def run_tool():
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.py')
     tmp.write(st.session_state.logs[-1]['code_pre'].encode()); tmp.close()
-    res = subprocess.run(
-        ['bandit','-r',tmp.name,'-f','json'], capture_output=True, text=True
-    )
-    st.session_state.bandit_output = res.stdout
-    st.session_state.logs[-1].update({'used_tool': True, 'output': res.stdout})
+    res = subprocess.run(['bandit','-r',tmp.name,'-f','json'], capture_output=True, text=True)
+    out = res.stdout
+    st.session_state.logs[-1].update({'used_tool': True, 'output': out})
     st.session_state.tool_ran = True
 
 def skip_tool():
@@ -141,37 +145,32 @@ def submit_edited():
     st.session_state.logs[-1].update({'code_post': st.session_state[code_key]})
     advance()
 
-def advance():
-    st.session_state.idx += 1
-    for flag in ['show_nudge','tool_ran','editing']:
-        st.session_state[flag] = False
-
-# Stage 1: Submit Task
+# --- Stage 1: Submit Task ---
 if not st.session_state.show_nudge:
     st.button("Submit Task", on_click=submit_task, key=f"sub_{idx}")
 
-# Stage 2: Nudge & Run/Skip
+# --- Stage 2: Display Nudge & Run/Skip ---
 elif st.session_state.show_nudge and not st.session_state.tool_ran and not st.session_state.editing:
     st.subheader("🔔 Security Nudge")
     st.write(nudges[nudge])
-    col1, col2 = st.columns(2)
-    col1.button("Run Security Tool", on_click=run_tool, key=f"run_{idx}")
-    col2.button("Submit Without Checking", on_click=skip_tool, key=f"skip_{idx}")
+    c1, c2 = st.columns(2)
+    c1.button("Run Security Tool", on_click=run_tool, key=f"run_{idx}")
+    c2.button("Submit Without Checking", on_click=skip_tool, key=f"skip_{idx}")
 
-# Stage 3: Bandit report + Next Steps
+# --- Stage 3: Bandit Report + Next Steps ---
 if st.session_state.tool_ran and not st.session_state.editing:
     st.subheader("Tool Output (Bandit)")
     try:
-        st.json(json.loads(st.session_state.bandit_output))
+        st.json(json.loads(st.session_state.logs[-1]['output']))
     except:
-        st.text(st.session_state.bandit_output)
+        st.text(st.session_state.logs[-1]['output'])
     st.subheader("Next Steps")
-    st.write("Choose to refine your code based on the security report or submit it as-is to proceed to the next task.")
-    c1, c2 = st.columns(2)
-    c1.button("Edit Code", on_click=edit_code, key=f"edit_{idx}")
-    c2.button("Submit As-Is", on_click=submit_as_is, key=f"asis_{idx}")
+    st.write("Choose to refine your code based on feedback or submit as-is to proceed.")
+    e1, e2 = st.columns(2)
+    e1.button("Edit Code", on_click=edit_code, key=f"edit_{idx}")
+    e2.button("Submit As-Is", on_click=submit_as_is, key=f"asis_{idx}")
 
-# Stage 4: Edit Mode
+# --- Stage 4: Edit Mode & Submit Edited ---
 if st.session_state.editing:
-    st.info("Edit the code above and click 'Submit Edited Code'.")
-    st.button("Submit Edited Code", on_click=submit_edited, key=f"subedit_{idx}")
+    st.info("Edit the code above and click **Submit Edited Code**.")
+    st.button("Submit Edited Code", on_click=submit_edited, key=f"edit_sub_{idx}")

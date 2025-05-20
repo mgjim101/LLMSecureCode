@@ -1,0 +1,5 @@
+[
+    "def login(user, pwd):\n    if user == 'admin':\n        return True\n    return False",
+    "def login(user, pwd):\n    # suggestion 2...\n    return authenticate(user, pwd)",
+    "def login(user, pwd):\n    # suggestion 3...\n    return check_credentials(user, pwd)"
+  ]

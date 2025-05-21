@@ -59,7 +59,7 @@ An interactive Streamlit application for conducting a user study on developersâ€
 
 ----------
 
-## **ğŸ“ Repository Structure**
+## ** Repository Structure**
 
 ```
 .
@@ -86,7 +86,7 @@ An interactive Streamlit application for conducting a user study on developersâ€
 
 ----------
 
-## **ğŸš€ Getting Started**
+## ** Getting Started**
 
 1.  **Clone the repo**
     
@@ -132,7 +132,7 @@ streamlit run admin.py
 
 ----------
 
-## **ğŸ“„ Data Formats**
+## ** Data Formats**
 
 -   **Task JSON** (data/tasks/taskX.json):
     

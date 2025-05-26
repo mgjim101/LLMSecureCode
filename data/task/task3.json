@@ -1,5 +1,5 @@
 {
   "id": 3,
   "title": "System Command Execution",
-  "code": "\n\n# Creates a temporary directory and atomically swaps it with an existing user directory.\ndef insecure_tempdir_swap():\n\n\ndef inputInt():\n'''\nTODO: Take an int input and return it after checking type\n'''\n\n\n# Delete all temporary files in the current directory starting with \"temp_\".\ndef insecure_temp_file_cleanup():"
+  "code": "\n\n# Creates a temporary directory and atomically swaps it with an existing user directory.\ndef insecure_tempdir_swap():\n\n\ndef inputInt():\n'''\nTODO: Take an int input and return it after checking type\n'''\n\n\n# Deletes all temporary files in the current directory starting with \"temp_\".\ndef insecure_temp_file_cleanup():"
 }

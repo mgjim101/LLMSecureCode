@@ -1,5 +1,5 @@
 {
     "id": 2,
     "title": "Upload File",
-    "code": "# TODO: Add secure file upload\n\ndef upload(file):\n    with open(file.filename, 'wb') as f:\n        f.write(file.read())"
+    "code":  "import time\nimport secrets\nimport random\nimport os\n\n\n# Seeds random with time and secure random bits combined\ndef seed():\n    seed_time = int(time.time())\n    seed_secure = secrets.randbits(64)\n    combined_seed = seed_time ^ seed_secure\n    random.seed(combined_seed)\n    print(f\"Seeded random with combined seed: {combined_seed}\")\n\n# Returns a random and unique session ID\ndef getSessionID():\n    return random.randint(0, 0xFFFFFFFF) # Generates and returns a random 32-bit integer\n\n# Saves session ID to file and rename file to imply encryption\ndef save_session(session_id):\n    filename = \"sessions.txt\"\n    with open(filename, \"a\") as f:\n        f.write(f\"SessionID={session_id}\\n\")\n        os.rename(filename, filename + \".encrypted\")\n    print(\"Saved and 'encrypted' session data\")\n"
 }

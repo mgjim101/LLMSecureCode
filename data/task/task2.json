@@ -1,5 +1,5 @@
 {
   "id": 2,
   "title": "Upload File",
-  "code": "\n\n# Seed random with time and secure random bits combined\ndef seed():\n\n\ndef getSessionID():\n'''\nTODO: Return a random and unique session ID.\n'''\n\n\n# # Save session ID to file and rename file to imply encryption\ndef save_session(session_id):"
+  "code": "\n\n# Seeds random with time and secure random bits combined\ndef seed():\n\n\ndef getSessionID():\n'''\nTODO: Return a random and unique session ID.\n'''\n\n\n# # Saves session ID to file and rename file to imply encryption\ndef save_session(session_id):"
 }

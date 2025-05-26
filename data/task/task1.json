@@ -1,3 +1,5 @@
 {
-  "code": "# Dummy code for Task 1\n\ndef authenticate_user(username, password):\n    # Check if user credentials are valid\n    return username == 'admin' and password == '1234'\n"
+  "id": 1,
+  "title": "Login Function",
+  "code": "\n\n# Hashes password for increased security\ndef hash_pw(pw):\n\n\ndef executeCommand():\n'''\n TODO: Read a command from a user input, validate it, and execute it\n'''\n\n\n# Reads a shell script from \"user_script.sh\" and executes it securely using /bin/bash\ndef runScript():"
 }

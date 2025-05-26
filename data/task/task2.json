@@ -1,3 +1,5 @@
 {
-  "code": "# Dummy code for Task 2\n\nimport os\n\ndef list_files():\n    # List all files in the current directory\n    return os.listdir('.')\n"
+  "id": 2,
+  "title": "Upload File",
+  "code": "\n\n# Seeds random with time and secure random bits combined\ndef seed():\n\n\ndef getSessionID():\n'''\nTODO: Return a random and unique session ID.\n'''\n\n\n# # Saves session ID to file and rename file to imply encryption\ndef save_session(session_id):"
 }

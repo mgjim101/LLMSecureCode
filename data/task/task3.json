@@ -1,0 +1,3 @@
+{
+  "code": "# Dummy code for Task 3\n\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef home():\n    return 'Hello, world!'\n"
+}

@@ -1,0 +1,3 @@
+{
+  "code": "# Dummy code for Task 2\n\nimport os\n\ndef list_files():\n    # List all files in the current directory\n    return os.listdir('.')\n"
+}

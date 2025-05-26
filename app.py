@@ -3,7 +3,7 @@ import sqlite3, os, json, subprocess, tempfile
 from datetime import datetime
 from streamlit_ace import st_ace  
 
-# ─── Database setup ───────────────────────────────────────────────────────────
+# ─── Database setup ───
 BASE_DIR = os.path.dirname(__file__)
 DB_PATH  = os.path.join(BASE_DIR, "interactions.db")
 conn     = sqlite3.connect(DB_PATH, check_same_thread=False)
@@ -28,17 +28,16 @@ CREATE TABLE IF NOT EXISTS interactions (
 """)
 conn.commit()
 
-# ─── JSON loaders ────────────────────────────────────────────────────────────
+# ─── JSON loaders ───
+
 def load_json(path):
     with open(os.path.join(BASE_DIR, path), encoding="utf-8") as f:
         return json.load(f)
 
-tasks       = [load_json(f"data/tasks/task{i+1}.json") for i in range(3)]
-nudges      = {
+nudges = {
     'A': load_json("data/nudges/nudgeA.json")["message"],
     'B': load_json("data/nudges/nudgeB.json")["message"]
 }
-suggestions = [load_json(f"data/suggestions/task{i+1}.json") for i in range(3)]
 
 design = {
  1:{'tasks':[1,2,3],'nudges':['A','B','A']},
@@ -49,7 +48,7 @@ design = {
  6:{'tasks':[3,2,1],'nudges':['B','A','B']}
 }
 
-# ─── Session defaults ────────────────────────────────────────────────────────
+# ─── Session defaults ───
 for k,v in {
     'pid':None, 'group':None,
     'seq':[], 'nseq':[], 'idx':0,
@@ -59,22 +58,24 @@ for k,v in {
     if k not in st.session_state:
         st.session_state[k] = v
 
-# ─── Page & Project Description ──────────────────────────────────────────────
-st.set_page_config(page_title="SecureCode Study", layout="centered")
-st.title("🔒 SecureCode Study")
+# ─── Page & Project Description ───
+st.set_page_config(page_title="SecureCode Study", layout="wide")
+st.title("What is this study?")
 st.markdown(
-    """
-**What is this study?**  
-We’re testing whether developers will run a security-checker when prompted after a code suggestion.  
+    """ 
+UBC is developing a tool to support programming education using large language models (LLMs). The tool
+provides AI-generated code suggestions to help students complete coding tasks while learning best practices.
+Designed for use in instructional settings, it aims to enhance learning without promoting over-reliance on 
+automation. The project also includes user studies to evaluate how students interact with the tool and how it 
+influences their coding behavior.
 
-1. Solve three code-completion tasks.  
-2. View three LLM-generated code suggestions per task.  
-3. Submit initial code → receive a nudge.  
-4. Optionally run Bandit and edit, or skip and proceed.
+TO-DO:
+1. Check the code in the text box (read only) for the coding task.
+2. The code editor has the solution from an LLM. You can edit this code.
 """
 )
 
-# ─── Participant ID Input & Validation ────────────────────────────────────────
+# ─── Participant ID Input & Validation ───
 if st.session_state.pid is None:
     pid_str = st.text_input("Enter your Participant ID (1–30)")
     if st.button("Start Experiment"):
@@ -96,48 +97,58 @@ if st.session_state.pid is None:
 
 st.subheader(f"Participant {st.session_state.pid} — Group G{st.session_state.group}")
 
-# ─── Main Experiment Flow ────────────────────────────────────────────────────
+# ─── Main Experiment Flow ───
 idx = st.session_state.idx
 if idx >= len(st.session_state.seq):
     st.success("🎉 Experiment complete. Thank you!")
     st.stop()
 
 task_id = st.session_state.seq[idx]
-t       = tasks[task_id - 1]
 nudge   = st.session_state.nseq[idx]
 
-# record start time
 if st.session_state.ts_start is None:
     st.session_state.ts_start = datetime.utcnow().isoformat()
 
-# ─── Display Task & LLM Suggestions ──────────────────────────────────────────
-st.header(f"Task {t['id']}: {t['title']}")
-st.write("Three LLM suggestions (read-only):")
-for i, s in enumerate(suggestions[idx], start=1):
-    st.text_area(f"Suggestion {i}", s, height=100, disabled=True)
+# ─── Load dummy code and LLM code ───
+dummy_code_path = f"data/task/task{task_id}.json"
+llm_code_path   = f"data/LLMCode/task{task_id}.json"
 
-# ─── Code Editor (streamlit-ace) ─────────────────────────────────────────────
-st.write("Your code:")
-code_key = f"code_{idx}"
-widget_key = f"ace_widget_{idx}"
-if code_key not in st.session_state:
-    st.session_state[code_key] = t['code']
+dummy_json = load_json(dummy_code_path)
+llm_json = load_json(llm_code_path)
 
-code_input = st_ace(
-    value=st.session_state[code_key],
-    language="python",
-    theme="monokai",
-    key=widget_key,
-    height=400,
-    tab_size=4,
-    font_size=14,
-    wrap=True,
-    auto_update=True
-)
-if code_input is not None:
-    st.session_state[code_key] = code_input
+dummy_code = dummy_json["code"] if isinstance(dummy_json, dict) and "code" in dummy_json else "# Error loading dummy code"
+llm_code = llm_json["code"] if isinstance(llm_json, dict) and "code" in llm_json else "# Error loading LLM code"
 
-# ─── Callbacks ────────────────────────────────────────────────────────────────
+st.header(f"Task {task_id}")
+
+c1, c2 = st.columns(2)
+
+with c1:
+    st.markdown("#### Coding Problem (Read Only)")
+    st.text_area(label="", value=dummy_code, height=600, disabled=True, key="dummy_box")
+
+with c2:
+    st.markdown("#### LLM Suggested Solution (Editable)")
+    code_key = f"code_{idx}"
+    widget_key = f"ace_widget_{idx}"
+    if code_key not in st.session_state:
+        st.session_state[code_key] = llm_code
+
+    code_input = st_ace(
+        value=st.session_state[code_key],
+        language="python",
+        theme="monokai",
+        key=widget_key,
+        height=600,
+        tab_size=4,
+        font_size=14,
+        wrap=True,
+        auto_update=True
+    )
+    if code_input is not None:
+        st.session_state[code_key] = code_input
+
+# ─── Callbacks ───
 def advance():
     st.session_state.idx += 1
     for flag in ('show_nudge','tool_ran','editing','ts_start','ts_edit_start','current_id'):
@@ -152,7 +163,7 @@ def submit_task():
     """, (
       st.session_state.pid,
       st.session_state.group,
-      t['id'],
+      task_id,
       nudge,
       st.session_state.ts_start,
       st.session_state[code_key],
@@ -167,8 +178,7 @@ def run_tool():
     lastid = st.session_state.current_id
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".py")
     tmp.write(st.session_state[code_key].encode()); tmp.close()
-    res = subprocess.run(['bandit','-r',tmp.name,'-f','json'],
-                         capture_output=True, text=True)
+    res = subprocess.run(['bandit','-r',tmp.name,'-f','json'], capture_output=True, text=True)
     c.execute("""
       UPDATE interactions SET
         used_tool=1,
@@ -225,12 +235,11 @@ def submit_edited():
     conn.commit()
     advance()
 
-# ─── UI Stages ────────────────────────────────────────────────────────────────
+# ─── UI Stages ───
 if not st.session_state.show_nudge:
     st.button("Submit Task", on_click=submit_task, key=f"submit_{idx}")
 elif not st.session_state.tool_ran and not st.session_state.editing:
-    st.subheader("🔔 Security Nudge")
-    st.write(nudges[nudge])
+    st.warning(nudges[nudge], icon="⚠️")
     c1, c2 = st.columns(2)
     c1.button("Run Security Tool", on_click=run_tool, key=f"run_{idx}")
     c2.button("Submit Without Checking", on_click=skip_tool, key=f"skip_{idx}")

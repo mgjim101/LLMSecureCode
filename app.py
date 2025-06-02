@@ -1,7 +1,7 @@
 import streamlit as st
 import sqlite3, os, json, subprocess, tempfile
 from datetime import datetime
-from streamlit_ace import st_ace  
+from streamlit_ace import st_ace
 
 # ─── Database setup ───
 BASE_DIR = os.path.dirname(__file__)
@@ -30,7 +30,6 @@ CREATE TABLE IF NOT EXISTS interactions (
 conn.commit()
 
 # ─── JSON loaders ───
-
 def load_json(path):
     with open(os.path.join(BASE_DIR, path), encoding="utf-8") as f:
         return json.load(f)
@@ -40,14 +39,15 @@ nudges = {
     'B': load_json("data/nudges/nudgeB.json")["message"]
 }
 
-design = {
- 1:{'tasks':[1,2,3],'nudges':['A','B','A']},
- 2:{'tasks':[1,3,2],'nudges':['B','A','B']},
- 3:{'tasks':[2,1,3],'nudges':['A','B','A']},
- 4:{'tasks':[2,3,1],'nudges':['B','A','B']},
- 5:{'tasks':[3,1,2],'nudges':['A','B','A']},
- 6:{'tasks':[3,2,1],'nudges':['B','A','B']}
-}
+# ─── New Design with 2 main groups and 6 permutations each ───
+permutations = [
+    [1, 2, 3], [1, 3, 2], [2, 1, 3],
+    [2, 3, 1], [3, 1, 2], [3, 2, 1]
+]
+design = {}
+for i, perm in enumerate(permutations):
+    design[i + 1] = {'tasks': perm, 'nudges': ['A'] * 3}
+    design[i + 7] = {'tasks': perm, 'nudges': ['B'] * 3}
 
 # ─── Session defaults ───
 for k,v in {
@@ -78,7 +78,7 @@ TO-DO:
 
 # ─── Participant ID Input & Validation ───
 if st.session_state.pid is None:
-    pid_str = st.text_input("Enter your Participant ID (1–30)")
+    pid_str = st.text_input("Enter your Participant ID (1–200)")
     prolific_str = st.text_input("Enter your Prolific ID")
 
     if st.button("Start Experiment"):
@@ -87,8 +87,8 @@ if st.session_state.pid is None:
         except:
             st.error("❗ Please enter a valid integer ID.")
             st.stop()
-        if pid < 1 or pid > 30:
-            st.error("❗ Invalid ID — please enter a number between 1 and 30.")
+        if pid < 1 or pid > 200:
+            st.error("❗ Invalid ID — please enter a number between 1 and 200.")
             st.stop()
         if not prolific_str.strip():
             st.error("❗ Please enter your Prolific ID.")
@@ -96,10 +96,11 @@ if st.session_state.pid is None:
 
         st.session_state.pid = pid
         st.session_state.prolific_id = prolific_str.strip()
-        grp = ((pid - 1) // 5) + 1
-        st.session_state.group = grp
-        st.session_state.seq   = design[grp]['tasks']
-        st.session_state.nseq  = design[grp]['nudges']
+
+        group = ((pid - 1) % 12) + 1
+        st.session_state.group = group
+        st.session_state.seq   = design[group]['tasks']
+        st.session_state.nseq  = design[group]['nudges']
     else:
         st.stop()
 
@@ -124,13 +125,12 @@ llm_code_path   = f"data/LLMCode/task{task_id}.json"
 dummy_json = load_json(dummy_code_path)
 llm_json = load_json(llm_code_path)
 
-dummy_code = dummy_json["code"] if isinstance(dummy_json, dict) and "code" in dummy_json else "# Error loading dummy code"
-llm_code = llm_json["code"] if isinstance(llm_json, dict) and "code" in llm_json else "# Error loading LLM code"
+dummy_code = dummy_json.get("code", "# Error loading dummy code")
+llm_code   = llm_json.get("code", "# Error loading LLM code")
 
 st.header(f"Task {task_id}")
 
 c1, c2 = st.columns(2)
-
 with c1:
     st.markdown("#### Coding Problem (Read Only)")
     st.text_area(label="", value=dummy_code, height=600, disabled=True, key="dummy_box")

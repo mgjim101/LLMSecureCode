@@ -12,6 +12,7 @@ c.execute("""
 CREATE TABLE IF NOT EXISTS interactions (
  id INTEGER PRIMARY KEY AUTOINCREMENT,
  participant INTEGER,
+ prolific_id TEXT,
  group_num INTEGER,
  task INTEGER,
  nudge TEXT,
@@ -50,7 +51,7 @@ design = {
 
 # ─── Session defaults ───
 for k,v in {
-    'pid':None, 'group':None,
+    'pid':None, 'prolific_id':None, 'group':None,
     'seq':[], 'nseq':[], 'idx':0,
     'show_nudge':False, 'tool_ran':False, 'editing':False,
     'ts_start':None, 'ts_edit_start':None, 'current_id':None
@@ -78,6 +79,8 @@ TO-DO:
 # ─── Participant ID Input & Validation ───
 if st.session_state.pid is None:
     pid_str = st.text_input("Enter your Participant ID (1–30)")
+    prolific_str = st.text_input("Enter your Prolific ID")
+
     if st.button("Start Experiment"):
         try:
             pid = int(pid_str)
@@ -87,7 +90,12 @@ if st.session_state.pid is None:
         if pid < 1 or pid > 30:
             st.error("❗ Invalid ID — please enter a number between 1 and 30.")
             st.stop()
+        if not prolific_str.strip():
+            st.error("❗ Please enter your Prolific ID.")
+            st.stop()
+
         st.session_state.pid = pid
+        st.session_state.prolific_id = prolific_str.strip()
         grp = ((pid - 1) // 5) + 1
         st.session_state.group = grp
         st.session_state.seq   = design[grp]['tasks']
@@ -158,10 +166,11 @@ def submit_task():
     now = datetime.utcnow().isoformat()
     c.execute("""
       INSERT INTO interactions
-        (participant,group_num,task,nudge,timestamp_start,code_pre,timestamp_submit)
-      VALUES (?,?,?,?,?,?,?)
+        (participant, prolific_id, group_num, task, nudge, timestamp_start, code_pre, timestamp_submit)
+      VALUES (?,?,?,?,?,?,?,?)
     """, (
       st.session_state.pid,
+      st.session_state.prolific_id,
       st.session_state.group,
       task_id,
       nudge,

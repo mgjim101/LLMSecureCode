@@ -2,15 +2,30 @@ import streamlit as st
 import sqlite3, os, json, subprocess, tempfile
 from datetime import datetime
 from streamlit_ace import st_ace
+import psycopg2
+from dotenv import load_dotenv
+load_dotenv()
 
-# ─── Database setup ───
-BASE_DIR = os.path.dirname(__file__)
-DB_PATH  = os.path.join(BASE_DIR, "interactions.db")
-conn     = sqlite3.connect(DB_PATH, check_same_thread=False)
-c        = conn.cursor()
+
+# ─── PostgreSQL Setup ───
+DB_HOST     = os.getenv("DB_HOST", "localhost")
+DB_NAME     = os.getenv("DB_NAME", "your_db_name")
+DB_USER     = os.getenv("DB_USER", "your_user")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "your_password")
+DB_PORT     = os.getenv("DB_PORT", "5432")
+
+conn = psycopg2.connect(
+    host=DB_HOST,
+    dbname=DB_NAME,
+    user=DB_USER,
+    password=DB_PASSWORD,
+    port=DB_PORT
+)
+c = conn.cursor()
+# ─── Create Table ───
 c.execute("""
 CREATE TABLE IF NOT EXISTS interactions (
- id INTEGER PRIMARY KEY AUTOINCREMENT,
+ id SERIAL PRIMARY KEY,
  participant INTEGER,
  prolific_id TEXT,
  group_num INTEGER,
@@ -30,6 +45,7 @@ CREATE TABLE IF NOT EXISTS interactions (
 conn.commit()
 
 # ─── JSON loaders ───
+BASE_DIR = os.path.dirname(__file__)
 def load_json(path):
     with open(os.path.join(BASE_DIR, path), encoding="utf-8") as f:
         return json.load(f)
@@ -165,21 +181,23 @@ def advance():
 def submit_task():
     now = datetime.utcnow().isoformat()
     c.execute("""
-      INSERT INTO interactions
+    INSERT INTO interactions
         (participant, prolific_id, group_num, task, nudge, timestamp_start, code_pre, timestamp_submit)
-      VALUES (?,?,?,?,?,?,?,?)
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+    RETURNING id
     """, (
-      st.session_state.pid,
-      st.session_state.prolific_id,
-      st.session_state.group,
-      task_id,
-      nudge,
-      st.session_state.ts_start,
-      st.session_state[code_key],
-      now
+    st.session_state.pid,
+    st.session_state.prolific_id,
+    st.session_state.group,
+    task_id,
+    nudge,
+    st.session_state.ts_start,
+    st.session_state[code_key],
+    now
     ))
+    last_id = c.fetchone()[0]
     conn.commit()
-    st.session_state.current_id = c.lastrowid
+    st.session_state.current_id = last_id
     st.session_state.show_nudge = True
 
 def run_tool():
@@ -189,13 +207,13 @@ def run_tool():
     tmp.write(st.session_state[code_key].encode()); tmp.close()
     res = subprocess.run(['bandit','-r',tmp.name,'-f','json'], capture_output=True, text=True)
     c.execute("""
-      UPDATE interactions SET
-        used_tool=1,
-        timestamp_tool_decision=?,
-        timestamp_bandit_decision=?,
-        code_post=code_pre
-      WHERE id=?
-    """, (now, now, lastid))
+        UPDATE interactions SET
+            used_tool=%s,
+            timestamp_tool_decision=%s,
+            timestamp_bandit_decision=%s,
+            code_post=code_pre
+        WHERE id=%s
+        """, (True, now, now, lastid))
     conn.commit()
     st.session_state.bandit_output = res.stdout
     st.session_state.tool_ran = True
@@ -205,12 +223,12 @@ def skip_tool():
     lastid = st.session_state.current_id
     c.execute("""
       UPDATE interactions SET
-        used_tool=0,
-        timestamp_tool_decision=?,
-        timestamp_bandit_decision=?,
+        used_tool=%s,
+        timestamp_tool_decision=%s,
+        timestamp_bandit_decision=%s,
         code_post=code_pre
-      WHERE id=?
-    """, (now, now, lastid))
+      WHERE id=%s
+    """, (False, now, now, lastid))
     conn.commit()
     advance()
 
@@ -223,10 +241,10 @@ def submit_as_is():
     lastid = st.session_state.current_id
     c.execute("""
       UPDATE interactions SET
-        code_post=?,
-        timestamp_edit_complete=?,
+        code_post=%s,
+        timestamp_edit_complete=%s,
         editing_time_sec=0
-      WHERE id=?
+      WHERE id=%s
     """, (st.session_state[code_key], now, lastid))
     conn.commit()
     advance()
@@ -238,8 +256,8 @@ def submit_edited():
     lastid = st.session_state.current_id
     c.execute("""
       UPDATE interactions SET
-        code_post=?, timestamp_edit_complete=?, editing_time_sec=?
-      WHERE id=?
+        code_post=%s, timestamp_edit_complete=%s, editing_time_sec=%s
+      WHERE id=%s
     """, (st.session_state[code_key], now, delta, lastid))
     conn.commit()
     advance()

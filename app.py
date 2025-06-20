@@ -146,6 +146,11 @@ llm_code   = llm_json.get("code", "# Error loading LLM code")
 
 st.header(f"Task {task_id}")
 
+c0 = st.container()
+with c0:
+    st.markdown("### Task Description")
+    st.write(dummy_json.get("prompt", "No task description available."))
+
 c1, c2 = st.columns(2)
 with c1:
     st.markdown("#### Coding Problem (Read Only)")

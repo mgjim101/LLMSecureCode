@@ -3,3 +3,4 @@ streamlit-monaco
 bandit
 python-dotenv
 psycopg2-binary
+streamlit_ace

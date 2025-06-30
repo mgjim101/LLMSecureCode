@@ -288,6 +288,15 @@ def submit_edited():
     conn.commit()
     advance()
 
+
+def color_tag(severity):
+    return {
+        "HIGH": "🟥 High",
+        "MEDIUM": "🟧 Medium",
+        "LOW": "🟨 Low"
+    }.get(severity.upper(), severity)
+
+
 # ─── UI Stages ───
 if not st.session_state.show_nudge:
     st.button("Submit Task", on_click=submit_task, key=f"submit_{idx}")
@@ -299,14 +308,26 @@ elif not st.session_state.tool_ran and not st.session_state.editing:
 if st.session_state.tool_ran and not st.session_state.editing:
     st.subheader("Tool Output (Bandit)")
     try:
-        st.json(json.loads(st.session_state.bandit_output))
+        bandit_data = json.loads(st.session_state.bandit_output)
+        results = bandit_data.get("results", [])
+        if not results:
+            st.success("There is no issues found by Bandit!")
+        else:
+            for i, issue in enumerate(results, 1):
+                with st.expander(f"Issue {i}"):
+                    st.write(f"**Desctiption**: {issue['issue_text']}")
+                    st.write(f"**Line:** {issue['line_number']}")
+                    st.write(f"**Severity:** {color_tag(issue['issue_severity'])}")
+                    st.write(f"**Confidence:** {color_tag(issue['issue_confidence'])}")
+                    st.code(issue["code"], language="python")
+                    st.caption(f"Test ID: {issue['test_id']} — {issue['test_name']}")
     except Exception:
-        st.text(st.session_state.bandit_output)
+                st.text(st.session_state.bandit_output)
     st.subheader("Next Steps")
     st.write("After reviewing the Bandit report, choose to refine your code or submit as-is to proceed.")
     e1, e2 = st.columns(2)
     e1.button("Edit Code", on_click=edit_mode, key=f"edit_{idx}")
-    e2.button("Submit As-Is", on_click=submit_as_is, key=f"asis_{idx}")
+    e2.button("Submit", on_click=submit_as_is, key=f"asis_{idx}")
 if st.session_state.editing:
     st.info("Edit your code above, then click **Submit Edited Code**.")
     st.button("Submit Edited Code", on_click=submit_edited, key=f"edited_{idx}")

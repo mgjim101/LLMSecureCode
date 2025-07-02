@@ -4,6 +4,7 @@ from datetime import datetime
 from streamlit_ace import st_ace
 import psycopg2
 from dotenv import load_dotenv
+
 load_dotenv()
 
 # ─── Full-width Styling ───
@@ -234,13 +235,14 @@ def submit_edited():
     conn.commit()
     advance()
 
-<<<<<<< Updated upstream
-# ─── UI Stages ───
-=======
-def color_tag(sev): return {"HIGH": "🟥 High", "MEDIUM": "🟧 Medium", "LOW": "🟨 Low"}.get(sev.upper(), sev)
+def color_tag(severity):
+    return {
+        "HIGH": "🟥 High",
+        "MEDIUM": "🟧 Medium",
+        "LOW": "🟨 Low"
+    }.get(severity.upper(), severity)
 
 # ─── Interaction UI ───
->>>>>>> Stashed changes
 if not st.session_state.show_nudge:
     st.button("Submit Task", on_click=submit_task, key=f"submit_{idx}")
 elif not st.session_state.tool_ran and not st.session_state.editing:
@@ -251,9 +253,6 @@ elif not st.session_state.tool_ran and not st.session_state.editing:
 elif st.session_state.tool_ran and not st.session_state.editing:
     st.subheader("Tool Output (Bandit)")
     try:
-<<<<<<< Updated upstream
-        st.json(json.loads(st.session_state.bandit_output))
-=======
         data = json.loads(st.session_state.bandit_output)
         results = data.get("results", [])
         if not results:
@@ -267,17 +266,13 @@ elif st.session_state.tool_ran and not st.session_state.editing:
                     st.write(f"**Confidence**: {color_tag(issue['issue_confidence'])}")
                     st.code(issue["code"], language="python")
                     st.caption(f"Test ID: {issue['test_id']} — {issue['test_name']}")
->>>>>>> Stashed changes
     except Exception:
         st.text(st.session_state.bandit_output)
+
     st.subheader("Next Steps")
     e1, e2 = st.columns(2)
     e1.button("Edit Code", on_click=edit_mode, key=f"edit_{idx}")
     e2.button("Submit As-Is", on_click=submit_as_is, key=f"asis_{idx}")
-<<<<<<< Updated upstream
-if st.session_state.editing:
-=======
 elif st.session_state.editing:
->>>>>>> Stashed changes
     st.info("Edit your code above, then click **Submit Edited Code**.")
     st.button("Submit Edited Code", on_click=submit_edited, key=f"edited_{idx}")

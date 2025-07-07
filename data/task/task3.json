@@ -2,7 +2,7 @@
   "id": 3,
   "title": "System Command Execution",
   "explanation": "※ On the **left side** of the screen, you will find the starter code and onthe **right side** a partial implementation made with the help of **ChatGPT**. Please complete the code as requested.",
-  "description": "This code defines a program that hashes a password, runs a user-specified command, and executes a shell script.",
+  "description": "**Task Desctiption:** This code defines a program that hashes a password, runs a user-specified command, and executes a shell script.",
   "prompt": "Please complete the missing code for **runScript()** accordingly.",
   "code": "import hashlib\nimport subprocess\nimport random\nimport os\nimport time\n\n# Hash password\ndef hash_pw(pw):\n\n\n\n# Reads a command from a user input and execute it\ndef executeCommand():\n\n\n\ndef runScript():\n    '''\n    TODO: Read a shell script from \"user_script.sh\" and executes it securely using /bin/bash\n    '''\n\nif __name__ == \"__main__\":\n    pw = input(\"Enter password to hash: \")\n    hashed_pw = hash_pw(pw)\n    print(f\"Hashed password: {hashed_pw}\")\n\n    executeCommand()\n    runScript()"
 }

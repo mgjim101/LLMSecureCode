@@ -139,8 +139,19 @@ llm_json = load_json(f"data/LLMCode/task{task_id}.json")
 dummy_code = dummy_json.get("code", "# Error loading dummy code")
 llm_code = llm_json.get("code", "# Error loading LLM code")
 
-st.header(f"### Task {counter}")
-st.write(dummy_json.get("prompt", "No task description available."))
+st.markdown(f"### Task {counter}")
+st.write(dummy_json.get("description", "No task description available."))
+arrow = "===>"
+prompt = dummy_json.get("prompt", "No task prompt available.")
+st.markdown(f"""
+    <div style="">
+        {arrow}
+        <div style="background-color: #fff9c4; border-radius: 8px; display: inline-block; margin-bottom: 10px;">
+            {prompt}
+        </div>
+    </div>
+""", unsafe_allow_html=True)
+st.write(dummy_json.get("explanation", "No task explanation available."))
 
 st.markdown("#### Starter Code (Read Only)")
 st.text_area(label="", value=dummy_code, height=600, disabled=True, key="dummy_box")

@@ -89,6 +89,7 @@ for k, v in {
     if k not in st.session_state:
         st.session_state[k] = v
 
+
 # ─── Retrieve from URL ───
 params = st.query_params
 prolific_param = params.get("PROLIFIC_PID")
@@ -115,6 +116,7 @@ if st.session_state.pid is None:
     st.session_state.nseq = design[group_design]['nudges']
 
 # ─── Main Flow ───
+counter = st.session_state.idx + 1
 idx = st.session_state.idx
 if idx >= len(st.session_state.seq):
     st.success("🎉 Experiment complete. Thank you!")
@@ -137,7 +139,7 @@ llm_json = load_json(f"data/LLMCode/task{task_id}.json")
 dummy_code = dummy_json.get("code", "# Error loading dummy code")
 llm_code = llm_json.get("code", "# Error loading LLM code")
 
-st.header(f"Task {task_id}")
+st.header(f"Task {counter}")
 st.markdown("### Task Description")
 st.write(dummy_json.get("prompt", "No task description available."))
 
@@ -244,7 +246,7 @@ def color_tag(severity):
 
 # ─── Interaction UI ───
 if not st.session_state.show_nudge:
-    st.button("Submit Task", on_click=submit_task, key=f"submit_{idx}")
+    st.button("Submit Task", on_click=submit_task(), key=f"submit_{idx}")
 elif not st.session_state.tool_ran and not st.session_state.editing:
     st.warning(nudges[nudge], icon="⚠️")
     c1, c2 = st.columns(2)

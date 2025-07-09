@@ -83,12 +83,12 @@ for i, perm in enumerate(permutations):
 for k, v in {
     'pid': None, 'prolific_id': None, 'group': None,
     'seq': [], 'nseq': [], 'idx': 0,
-    'show_nudge': False, 'tool_ran': False, 'editing': False,
-    'ts_start': None, 'ts_edit_start': None, 'current_id': None
+    'show_nudge': False, 'tool_ran': False,
+    'ts_start': None, 'ts_edit_start': None, 'current_id': None,
+    'bandit_output': ""
 }.items():
     if k not in st.session_state:
         st.session_state[k] = v
-
 
 # ─── Retrieve from URL ───
 params = st.query_params
@@ -100,7 +100,6 @@ if st.session_state.pid is None:
     if not prolific_param or not group_param:
         st.error("Missing PROLIFIC_PID or GROUP_ID in URL.")
         st.stop()
-
     try:
         group_id = int(group_param)
         assert 1 <= group_id <= 200
@@ -116,8 +115,8 @@ if st.session_state.pid is None:
     st.session_state.nseq = design[group_design]['nudges']
 
 # ─── Main Flow ───
-counter = st.session_state.idx + 1
 idx = st.session_state.idx
+counter = idx + 1
 if idx >= len(st.session_state.seq):
     st.success("🎉 Experiment complete. Thank you!")
     st.markdown("""
@@ -179,8 +178,8 @@ if code_input is not None:
 # ─── Callbacks ───
 def advance():
     st.session_state.idx += 1
-    for flag in ('show_nudge', 'tool_ran', 'editing', 'ts_start', 'ts_edit_start', 'current_id'):
-        st.session_state[flag] = None if flag.endswith('_start') or flag == 'current_id' else False
+    for flag in ('show_nudge', 'tool_ran', 'ts_start', 'ts_edit_start', 'current_id', 'bandit_output'):
+        st.session_state[flag] = None
 
 def submit_task():
     now = datetime.utcnow().isoformat()
@@ -194,6 +193,7 @@ def submit_task():
     last_id = c.fetchone()[0]
     conn.commit()
     st.session_state.current_id = last_id
+    st.session_state.ts_edit_start = None
     st.session_state.show_nudge = True
 
 def run_tool():
@@ -205,45 +205,46 @@ def run_tool():
     res = subprocess.run(['bandit', '-r', tmp.name, '-f', 'json'], capture_output=True, text=True)
     c.execute("""
         UPDATE interactions SET used_tool=%s, timestamp_tool_decision=%s,
-        timestamp_bandit_decision=%s, code_post=code_pre WHERE id=%s
+        timestamp_bandit_decision=%s WHERE id=%s
     """, (True, now, now, lastid))
     conn.commit()
     st.session_state.bandit_output = res.stdout
     st.session_state.tool_ran = True
+    st.session_state.ts_edit_start = datetime.utcnow().isoformat()
 
 def skip_tool():
     now = datetime.utcnow().isoformat()
     lastid = st.session_state.current_id
     c.execute("""
         UPDATE interactions SET used_tool=%s, timestamp_tool_decision=%s,
-        timestamp_bandit_decision=%s, code_post=code_pre WHERE id=%s
-    """, (False, now, now, lastid))
-    conn.commit()
-    advance()
-
-def edit_mode():
-    st.session_state.editing = True
-    st.session_state.ts_edit_start = datetime.utcnow().isoformat()
-
-def submit_as_is():
-    now = datetime.utcnow().isoformat()
-    lastid = st.session_state.current_id
-    c.execute("""
-        UPDATE interactions SET code_post=%s, timestamp_edit_complete=%s,
-        editing_time_sec=0 WHERE id=%s
-    """, (st.session_state[code_key], now, lastid))
+        timestamp_bandit_decision=%s, code_post=%s,
+        timestamp_edit_complete=%s, editing_time_sec=%s WHERE id=%s
+    """, (False, now, now, st.session_state[code_key], now, 0, lastid))
     conn.commit()
     advance()
 
 def submit_edited():
     now = datetime.utcnow().isoformat()
-    start = datetime.fromisoformat(st.session_state.ts_edit_start)
-    delta = (datetime.utcnow() - start).total_seconds()
     lastid = st.session_state.current_id
+
+    if st.session_state.ts_edit_start:
+        start = datetime.fromisoformat(st.session_state.ts_edit_start)
+        delta = (datetime.utcnow() - start).total_seconds()
+    else:
+        delta = 0  # Fallback: shouldn't happen unless run_tool wasn't pressed
+
     c.execute("""
-        UPDATE interactions SET code_post=%s, timestamp_edit_complete=%s,
-        editing_time_sec=%s WHERE id=%s
-    """, (st.session_state[code_key], now, delta, lastid))
+        UPDATE interactions
+        SET code_post = %s,
+            timestamp_edit_complete = %s,
+            editing_time_sec = %s
+        WHERE id = %s
+    """, (
+        st.session_state[code_key],
+        now,
+        delta,
+        lastid
+    ))
     conn.commit()
     advance()
 
@@ -256,13 +257,13 @@ def color_tag(severity):
 
 # ─── Interaction UI ───
 if not st.session_state.show_nudge:
-    st.button("Submit Task", on_click=submit_task(), key=f"submit_{idx}")
-elif not st.session_state.tool_ran and not st.session_state.editing:
+    st.button("Submit Task", on_click=submit_task, key=f"submit_{idx}")
+elif not st.session_state.tool_ran:
     st.warning(nudges[nudge], icon="⚠️")
     c1, c2 = st.columns(2)
     c1.button("Run Security Tool", on_click=run_tool, key=f"run_{idx}")
     c2.button("Submit Without Checking", on_click=skip_tool, key=f"skip_{idx}")
-elif st.session_state.tool_ran and not st.session_state.editing:
+else:
     st.subheader("Tool Output (Bandit)")
     try:
         data = json.loads(st.session_state.bandit_output)
@@ -281,10 +282,10 @@ elif st.session_state.tool_ran and not st.session_state.editing:
     except Exception:
         st.text(st.session_state.bandit_output)
 
-    st.subheader("Next Steps")
-    e1, e2 = st.columns(2)
-    e1.button("Edit Code", on_click=edit_mode, key=f"edit_{idx}")
-    e2.button("Submit As-Is", on_click=submit_as_is, key=f"asis_{idx}")
-elif st.session_state.editing:
-    st.info("Edit your code above, then click **Submit Edited Code**.")
-    st.button("Submit Edited Code", on_click=submit_edited, key=f"edited_{idx}")
+    st.markdown("""
+    <div style="background-color: #e8f0fe; border-left: 6px solid #1a73e8; padding: 1rem; border-radius: 5px; margin-bottom: 1rem; color: #202124;">
+        <strong>Note:</strong> You can edit the code above if you wish. Once you're ready, click <strong>Submit Final Code</strong> below.
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.button("Submit Final Code", on_click=submit_edited, key=f"edited_{idx}")

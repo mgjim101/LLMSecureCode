@@ -1,6 +1,8 @@
 {
   "id": 2,
   "title": "Generate and Save a Secure Random 32-bit Session ID",
-  "prompt": "This program seeds the random number generator with a mix of the current time and random constant bits, generates a random 32-bit session ID, and saves that ID to a file.On the **left side** of the screen, you will find the starter code and onthe **right side** a partial implementation made with the help of **ChatGPT**. Please complete the missing code for **save_session()** accordingly.",
+  "explanation": "※ On the **left side** of the screen, you will find the starter code and onthe **right side** a partial implementation made with the help of **ChatGPT**. Please complete the code as requested.",
+  "description": "**Task Desctiption:** This program seeds the random number generator with a mix of the current time and random constant bits, generates a random 32-bit session ID, and saves that ID to a file.",
+  "prompt": "Please complete the missing code for **save_session()** accordingly.",
   "code": "import time\nimport secrets\nimport random\nimport os\n\n# Seeds the random number generator using the current time and extra bits to ensure variation in generated values.\ndef seed():\n\n\n\n# Generates and returns a random 32-bit integer\ndef getSessionID():\n\n\n\ndef save_session(session_id):\n    '''\n    TODO: Saves the given session ID to a file.\n    '''\n\nif __name__ == \"__main__\":\n    seed_random()\n    session_id = getSessionID()\n    print(f\"Generated Session ID: {session_id}\")\n    save_session(session_id)"
 }

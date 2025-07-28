@@ -54,7 +54,8 @@ CREATE TABLE IF NOT EXISTS interactions (
  timestamp_bandit_decision TEXT,
  editing_time_sec REAL,
  code_post TEXT,
- timestamp_edit_complete TEXT
+ timestamp_edit_complete TEXT,
+ llm_used BOOLEAN
 )
 """)
 conn.commit()
@@ -117,7 +118,7 @@ if st.session_state.pid is None:
 # ─── Main Flow ───
 idx = st.session_state.idx
 counter = idx + 1
-if idx >= len(st.session_state.seq):
+if st.session_state.get("llm_submitted", False):
     st.success("🎉 Experiment complete. Thank you!")
     st.markdown("""
     ### ✅ Final Step: Submit This Code on Prolific
@@ -126,54 +127,81 @@ if idx >= len(st.session_state.seq):
     st.code("761528", language="text")
     st.stop()
 
-task_id = st.session_state.seq[idx]
-nudge = st.session_state.nseq[idx]
+if idx >= len(st.session_state.seq):
+    st.markdown("""
+    ### 🤖 Quick Question Before You Finish
 
-if st.session_state.ts_start is None:
-    st.session_state.ts_start = datetime.utcnow().isoformat()
+    Did you use any Large Language Model (e.g., ChatGPT, Gemini, Claude) to assist with any part of the task?
+    """)
+    if "llm_used" not in st.session_state:
+        st.session_state.llm_used = "No"
+    radio_disabled = st.session_state.get("llm_submitted", False)
+    llm_used = st.radio("",
+        ["No", "Yes"],
+        index=["No", "Yes"].index(st.session_state.llm_used),
+        disabled=radio_disabled,
+        key="llm_used_radio"
+    )
+    st.session_state.llm_used = llm_used
+    if st.button("Submit and Finish"):
+        prolific_id = st.session_state.prolific_id
+        c.execute("""
+            UPDATE interactions SET llm_used = %s WHERE prolific_id = %s
+        """, (st.session_state.llm_used == "Yes", prolific_id))
+        conn.commit()
+        st.session_state.llm_submitted = True
+        st.rerun()
 
-# ─── Load Task Data ───
-dummy_json = load_json(f"data/task/task{task_id}.json")
-llm_json = load_json(f"data/LLMCode/task{task_id}.json")
-dummy_code = dummy_json.get("code", "# Error loading dummy code")
-llm_code = llm_json.get("code", "# Error loading LLM code")
+if idx < len(st.session_state.seq):
 
-st.markdown(f"### Task {counter}")
-st.write(dummy_json.get("description", "No task description available."))
-arrow = "===>"
-prompt = dummy_json.get("prompt", "No task prompt available.")
-st.markdown(f"""
-    <div style="">
-        {arrow}
-        <div style="background-color: #fff9c4; border-radius: 8px; display: inline-block; margin-bottom: 10px;">
-            {prompt}
+    task_id = st.session_state.seq[idx]
+    nudge = st.session_state.nseq[idx]
+
+    if st.session_state.ts_start is None:
+        st.session_state.ts_start = datetime.utcnow().isoformat()
+
+    # ─── Load Task Data ───
+    dummy_json = load_json(f"data/task/task{task_id}.json")
+    llm_json = load_json(f"data/LLMCode/task{task_id}.json")
+    dummy_code = dummy_json.get("code", "# Error loading dummy code")
+    llm_code = llm_json.get("code", "# Error loading LLM code")
+
+    st.markdown(f"### Task {counter}")
+    st.write(dummy_json.get("description", "No task description available."))
+    arrow = "===>"
+    prompt = dummy_json.get("prompt", "No task prompt available.")
+    st.markdown(f"""
+        <div style="">
+            {arrow}
+            <div style="background-color: #fff9c4; border-radius: 8px; display: inline-block; margin-bottom: 10px;">
+                {prompt}
+            </div>
         </div>
-    </div>
-""", unsafe_allow_html=True)
-st.write(dummy_json.get("explanation", "No task explanation available."))
+    """, unsafe_allow_html=True)
+    st.write(dummy_json.get("explanation", "No task explanation available."))
 
-st.markdown("#### Starter Code (Read Only)")
-st.text_area(label="", value=dummy_code, height=600, disabled=True, key="dummy_box")
+    st.markdown("#### Starter Code (Read Only)")
+    st.text_area(label="", value=dummy_code, height=600, disabled=True, key="dummy_box")
 
-st.markdown("#### LLM Suggested Solution (Editable)")
-code_key = f"code_{idx}"
-widget_key = f"ace_widget_{idx}"
-if code_key not in st.session_state:
-    st.session_state[code_key] = llm_code
+    st.markdown("#### LLM Suggested Solution (Editable)")
+    code_key = f"code_{idx}"
+    widget_key = f"ace_widget_{idx}"
+    if code_key not in st.session_state:
+        st.session_state[code_key] = llm_code
 
-code_input = st_ace(
-    value=st.session_state[code_key],
-    language="python",
-    theme="monokai",
-    key=widget_key,
-    height=650,
-    tab_size=4,
-    font_size=14,
-    wrap=True,
-    auto_update=True
-)
-if code_input is not None:
-    st.session_state[code_key] = code_input
+    code_input = st_ace(
+        value=st.session_state[code_key],
+        language="python",
+        theme="monokai",
+        key=widget_key,
+        height=650,
+        tab_size=4,
+        font_size=14,
+        wrap=True,
+        auto_update=True
+    )
+    if code_input is not None:
+        st.session_state[code_key] = code_input
 
 # ─── Callbacks ───
 def advance():
@@ -255,37 +283,38 @@ def color_tag(severity):
         "LOW": "🟨 Low"
     }.get(severity.upper(), severity)
 
-# ─── Interaction UI ───
-if not st.session_state.show_nudge:
-    st.button("Submit Task", on_click=submit_task, key=f"submit_{idx}")
-elif not st.session_state.tool_ran:
-    st.warning(nudges[nudge], icon="⚠️")
-    c1, c2 = st.columns(2)
-    c1.button("Run Security Tool", on_click=run_tool, key=f"run_{idx}")
-    c2.button("Submit Without Checking", on_click=skip_tool, key=f"skip_{idx}")
-else:
-    st.subheader("Tool Output (Bandit)")
-    try:
-        data = json.loads(st.session_state.bandit_output)
-        results = data.get("results", [])
-        if not results:
-            st.success("✅ No issues found by Bandit.")
-        else:
-            for i, issue in enumerate(results, 1):
-                with st.expander(f"Issue {i}"):
-                    st.write(f"**Description**: {issue['issue_text']}")
-                    st.write(f"**Line**: {issue['line_number']}")
-                    st.write(f"**Severity**: {color_tag(issue['issue_severity'])}")
-                    st.write(f"**Confidence**: {color_tag(issue['issue_confidence'])}")
-                    st.code(issue["code"], language="python")
-                    st.caption(f"Test ID: {issue['test_id']} — {issue['test_name']}")
-    except Exception:
-        st.text(st.session_state.bandit_output)
+if idx < len(st.session_state.seq):
+    # ─── Interaction UI ───
+    if not st.session_state.show_nudge:
+        st.button("Submit Task", on_click=submit_task, key=f"submit_{idx}")
+    elif not st.session_state.tool_ran:
+        st.warning(nudges[nudge], icon="⚠️")
+        c1, c2 = st.columns(2)
+        c1.button("Run Security Tool", on_click=run_tool, key=f"run_{idx}")
+        c2.button("Submit Without Checking", on_click=skip_tool, key=f"skip_{idx}")
+    else:
+        st.subheader("Tool Output (Bandit)")
+        try:
+            data = json.loads(st.session_state.bandit_output)
+            results = data.get("results", [])
+            if not results:
+                st.success("✅ No issues found by Bandit.")
+            else:
+                for i, issue in enumerate(results, 1):
+                    with st.expander(f"Issue {i}"):
+                        st.write(f"**Description**: {issue['issue_text']}")
+                        st.write(f"**Line**: {issue['line_number']}")
+                        st.write(f"**Severity**: {color_tag(issue['issue_severity'])}")
+                        st.write(f"**Confidence**: {color_tag(issue['issue_confidence'])}")
+                        st.code(issue["code"], language="python")
+                        st.caption(f"Test ID: {issue['test_id']} — {issue['test_name']}")
+        except Exception:
+            st.text(st.session_state.bandit_output)
 
-    st.markdown("""
-    <div style="background-color: #e8f0fe; border-left: 6px solid #1a73e8; padding: 1rem; border-radius: 5px; margin-bottom: 1rem; color: #202124;">
-        <strong>Note:</strong> You can edit the code above if you wish. Once you're ready, click <strong>Submit Final Code</strong> below.
-    </div>
-    """, unsafe_allow_html=True)
+        st.markdown("""
+        <div style="background-color: #e8f0fe; border-left: 6px solid #1a73e8; padding: 1rem; border-radius: 5px; margin-bottom: 1rem; color: #202124;">
+            <strong>Note:</strong> You can edit the code above if you wish. Once you're ready, click <strong>Submit Final Code</strong> below.
+        </div>
+        """, unsafe_allow_html=True)
 
-    st.button("Submit Final Code", on_click=submit_edited, key=f"edited_{idx}")
+        st.button("Submit Final Code", on_click=submit_edited, key=f"edited_{idx}")

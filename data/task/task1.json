@@ -1,9 +1,9 @@
 {
     "id": 1,
     "title": "Flask App Rendering Jinja2 Template",
-    "explanation": "※ On the **TOP** of the screen, you will find the starter code and on the **BOTTOM** a partial implementation made with the help of **ChatGPT**. Please complete the code as requested.",
+    "explanation": "※ On the **TOP** of the screen, you will find the starter code and on the **BOTTOM** a partial implementation made with the help of **Generative AI**. Please complete the code as requested.",
     "description": "**Task Desctiption:** This Flask application listens on the `/render` route. It accepts a query parameter named `name` in the URL query string (e.g., `/render?name=Sam`), renders `template.html` with that parameter, and returns the resulting HTML.",
-    "prompt": "Please complete the missing code for **validate_name()** accordingly.",
+    "prompt": "Please complete the missing code for <b>validate_name()</b> accordingly.",
     "code": "from flask import Flask, request\nfrom jinja2 import Environment, FileSystemLoader\n\napp = Flask(__name__)\n\n# Create and return the Jinja2 environment\ndef get_template_environment():\n\n\n\n# Render template.html with the 'name' parameter from request\ndef render_response_from_env():\n\n\n\ndef validate_name(name):\n    '''\n    TODO: Validate the 'name' parameter\n    '''\n\nif __name__ == \"__main__\":\n    app.run(debug=False)\n"
 
 }

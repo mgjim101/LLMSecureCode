@@ -38,25 +38,72 @@ conn = psycopg2.connect(
 c = conn.cursor()
 
 # ─── Create Table ───
+# — participants —
 c.execute("""
-CREATE TABLE IF NOT EXISTS interactions (
- id SERIAL PRIMARY KEY,
- participant INTEGER,
- prolific_id TEXT,
- group_num INTEGER,
- task INTEGER,
- nudge TEXT,
- timestamp_start TEXT,
- code_pre TEXT,
- timestamp_submit TEXT,
- used_tool BOOLEAN,
- timestamp_tool_decision TEXT,
- timestamp_bandit_decision TEXT,
- editing_time_sec REAL,
- code_post TEXT,
- timestamp_edit_complete TEXT,
- llm_used BOOLEAN
-)
+CREATE TABLE IF NOT EXISTS participants (
+  participant_id   INTEGER PRIMARY KEY,
+  prolific_pid     TEXT,
+  group_id         INTEGER,
+  llm_used_flag    BOOLEAN
+);
+""")
+# — nudge_descriptions —
+c.execute("""
+CREATE TABLE IF NOT EXISTS nudge_descriptions (
+  nudgeID   INTEGER PRIMARY KEY,
+  description TEXT
+);
+INSERT INTO nudge_descriptions(nudgeID,description)
+ VALUES
+   (1,'Do you want to run a tool for checking security issues?'),
+   (2,'LLMs can produce insecure code. Do you want to run a tool for checking security issues?')
+ ON CONFLICT(nudgeID) DO NOTHING;
+""")
+# — event_types —
+c.execute("""
+CREATE TABLE IF NOT EXISTS event_types (
+  eventID    INTEGER PRIMARY KEY,
+  description TEXT
+);
+INSERT INTO event_types(eventID,description)
+ VALUES
+   (1,'SUB_NO_NUDGE'),
+   (2,'RUN_TOOL'),
+   (3,'SUB_NO_TOOL'),
+   (4,'SUB_TOOL')
+ ON CONFLICT(eventID) DO NOTHING;
+""")
+# — tasks —
+c.execute("""
+CREATE TABLE IF NOT EXISTS tasks (
+  taskID      INTEGER PRIMARY KEY,
+  description TEXT,
+  code        TEXT
+);
+""")
+# — tool_usage —
+c.execute("""
+CREATE TABLE IF NOT EXISTS tool_usage (
+  interaction_id    SERIAL PRIMARY KEY,
+  participant_id    INTEGER REFERENCES participants(participant_id),
+  taskID            INTEGER REFERENCES tasks(taskID),
+  nudgeID           INTEGER REFERENCES nudge_descriptions(nudgeID),
+  eventID           INTEGER REFERENCES event_types(eventID),
+  tool_used         BOOLEAN,
+  tool_decision_time TEXT
+);
+""")
+# — code_snapshots —
+c.execute("""
+CREATE TABLE IF NOT EXISTS code_snapshots (
+  interaction_id    SERIAL PRIMARY KEY,
+  participant_id    INTEGER REFERENCES participants(participant_id),
+  taskID            INTEGER REFERENCES tasks(taskID),
+  eventID           INTEGER REFERENCES event_types(eventID),
+  nudgeID           INTEGER REFERENCES nudge_descriptions(nudgeID),
+  code              TEXT,
+  timestamp         TEXT
+);
 """)
 conn.commit()
 
@@ -118,7 +165,8 @@ if st.session_state.pid is None:
 # ─── Main Flow ───
 idx = st.session_state.idx
 counter = idx + 1
-if st.session_state.get("llm_submitted", False):
+
+if idx >= len(st.session_state.seq):
     st.success("🎉 Experiment complete. Thank you!")
     st.markdown("""
     ### ✅ Final Step: Submit This Code on Prolific
@@ -126,31 +174,6 @@ if st.session_state.get("llm_submitted", False):
     """)
     st.code("761528", language="text")
     st.stop()
-
-if idx >= len(st.session_state.seq):
-    st.markdown("""
-    ### 🤖 Quick Question Before You Finish
-
-    Did you use any Large Language Model (e.g., ChatGPT, Gemini, Claude) to assist with any part of the task?
-    """)
-    if "llm_used" not in st.session_state:
-        st.session_state.llm_used = "No"
-    radio_disabled = st.session_state.get("llm_submitted", False)
-    llm_used = st.radio("",
-        ["No", "Yes"],
-        index=["No", "Yes"].index(st.session_state.llm_used),
-        disabled=radio_disabled,
-        key="llm_used_radio"
-    )
-    st.session_state.llm_used = llm_used
-    if st.button("Submit and Finish"):
-        prolific_id = st.session_state.prolific_id
-        c.execute("""
-            UPDATE interactions SET llm_used = %s WHERE prolific_id = %s
-        """, (st.session_state.llm_used == "Yes", prolific_id))
-        conn.commit()
-        st.session_state.llm_submitted = True
-        st.rerun()
 
 if idx < len(st.session_state.seq):
 
@@ -211,67 +234,137 @@ def advance():
 
 def submit_task():
     now = datetime.utcnow().isoformat()
+    # ensure participant row exists
     c.execute("""
-    INSERT INTO interactions (participant, prolific_id, group_num, task, nudge, timestamp_start, code_pre, timestamp_submit)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s) RETURNING id
+      INSERT INTO participants(participant_id, prolific_pid, group_id)
+      VALUES (%s,%s,%s)
+      ON CONFLICT(participant_id) DO NOTHING;
     """, (
-        st.session_state.pid, st.session_state.prolific_id, st.session_state.group,
-        task_id, nudge, st.session_state.ts_start, st.session_state[code_key], now
+      st.session_state.pid,
+      st.session_state.prolific_id,
+      st.session_state.group
     ))
-    last_id = c.fetchone()[0]
+    # record SUB_NO_NUDGE snapshot (eventID=1)
+    c.execute("""
+      INSERT INTO code_snapshots(
+        participant_id, taskID, eventID, nudgeID, code, timestamp
+      ) VALUES (%s,%s,%s,%s,%s,%s)
+    """, (
+      st.session_state.pid,
+      task_id,
+      1,
+      (1 if nudge=='A' else 2),
+      st.session_state[code_key],
+      now
+    ))
     conn.commit()
-    st.session_state.current_id = last_id
-    st.session_state.ts_edit_start = None
     st.session_state.show_nudge = True
 
 def run_tool():
     now = datetime.utcnow().isoformat()
-    lastid = st.session_state.current_id
+
+    # Record the RUN_TOOL event in tool_usage
+    c.execute("""
+        INSERT INTO tool_usage (
+            participant_id,
+            taskID,
+            nudgeID,
+            eventID,
+            tool_used,
+            tool_decision_time
+        ) VALUES (%s, %s, %s, %s, %s, %s)
+    """, (
+        st.session_state.pid,
+        task_id,
+        (1 if nudge == 'A' else 2),
+        2,           # eventID for RUN_TOOL
+        True,
+        now
+    ))
+    conn.commit()
+
+    # Write the current code to a temp file
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".py")
     tmp.write(st.session_state[code_key].encode())
     tmp.close()
-    res = subprocess.run(['bandit', '-r', tmp.name, '-f', 'json'], capture_output=True, text=True)
-    c.execute("""
-        UPDATE interactions SET used_tool=%s, timestamp_tool_decision=%s,
-        timestamp_bandit_decision=%s WHERE id=%s
-    """, (True, now, now, lastid))
-    conn.commit()
+
+    # Actually run Bandit on that file
+    res = subprocess.run(
+        ['bandit', '-r', tmp.name, '-f', 'json'],
+        capture_output=True,
+        text=True
+    )
+
+    # Store the output and mark that the tool has run
     st.session_state.bandit_output = res.stdout
-    st.session_state.tool_ran = True
-    st.session_state.ts_edit_start = datetime.utcnow().isoformat()
+    st.session_state.tool_ran      = True
+    st.session_state.ts_edit_start = now
 
 def skip_tool():
     now = datetime.utcnow().isoformat()
-    lastid = st.session_state.current_id
+
+    # 1) Record the tool‐usage event (SUB_NO_TOOL eventID = 3)
     c.execute("""
-        UPDATE interactions SET used_tool=%s, timestamp_tool_decision=%s,
-        timestamp_bandit_decision=%s, code_post=%s,
-        timestamp_edit_complete=%s, editing_time_sec=%s WHERE id=%s
-    """, (False, now, now, st.session_state[code_key], now, 0, lastid))
+        INSERT INTO tool_usage (
+            participant_id,
+            taskID,
+            nudgeID,
+            eventID,
+            tool_used,
+            tool_decision_time
+        ) VALUES (%s, %s, %s, %s, %s, %s)
+    """, (
+        st.session_state.pid,
+        task_id,
+        (1 if nudge == 'A' else 2),
+        3,        # eventID for SUB_NO_TOOL
+        False,    # tool_used = False
+        now
+    ))
     conn.commit()
+
+    # 2) Record the code snapshot for skipping (eventID = 3)
+    c.execute("""
+        INSERT INTO code_snapshots (
+            participant_id,
+            taskID,
+            eventID,
+            nudgeID,
+            code,
+            timestamp
+        ) VALUES (%s, %s, %s, %s, %s, %s)
+    """, (
+        st.session_state.pid,
+        task_id,
+        3,  # same SUB_NO_TOOL
+        (1 if nudge == 'A' else 2),
+        st.session_state[code_key],
+        None  # or now if you prefer a timestamp
+    ))
+    conn.commit()
+
+    # Advance to next task
     advance()
 
 def submit_edited():
     now = datetime.utcnow().isoformat()
-    lastid = st.session_state.current_id
-
     if st.session_state.ts_edit_start:
         start = datetime.fromisoformat(st.session_state.ts_edit_start)
         delta = (datetime.utcnow() - start).total_seconds()
     else:
-        delta = 0  # Fallback: shouldn't happen unless run_tool wasn't pressed
-
+        delta = 0
+    # SUB_TOOL event
     c.execute("""
-        UPDATE interactions
-        SET code_post = %s,
-            timestamp_edit_complete = %s,
-            editing_time_sec = %s
-        WHERE id = %s
+      INSERT INTO code_snapshots(
+        participant_id, taskID, eventID, nudgeID, code, timestamp
+      ) VALUES (%s,%s,%s,%s,%s,%s)
     """, (
-        st.session_state[code_key],
-        now,
-        delta,
-        lastid
+      st.session_state.pid,
+      task_id,
+      4,
+      (1 if nudge=='A' else 2),
+      st.session_state[code_key],
+      now
     ))
     conn.commit()
     advance()

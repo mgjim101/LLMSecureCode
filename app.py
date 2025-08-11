@@ -1,5 +1,5 @@
 import streamlit as st
-import os, json, subprocess, tempfile
+import os, json, subprocess, tempfile, re
 from datetime import datetime
 from streamlit_ace import st_ace
 import psycopg2
@@ -193,14 +193,8 @@ if idx < len(st.session_state.seq):
     st.write(dummy_json.get("description", "No task description available."))
     arrow = "===>"
     prompt = dummy_json.get("prompt", "No task prompt available.")
-    st.markdown(f"""
-        <div style="">
-            {arrow}
-            <div style="background-color: #fff9c4; border-radius: 8px; display: inline-block; margin-bottom: 10px;">
-                {prompt}
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
+    clean_prompt = re.sub(r"<[^>]+>", "", prompt)
+    st.write(f"{arrow} {clean_prompt}")
     st.write(dummy_json.get("explanation", "No task explanation available."))
 
     st.markdown("#### Starter Code (Read Only)")

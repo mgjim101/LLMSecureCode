@@ -212,19 +212,7 @@ if idx < len(st.session_state.seq):
     if code_key not in st.session_state:
         st.session_state[code_key] = llm_code
 
-    code_input = st_ace(
-        value=st.session_state[code_key],
-        language="python",
-        theme="monokai",
-        key=widget_key,
-        height=650,
-        tab_size=4,
-        font_size=14,
-        wrap=True,
-        auto_update=True
-    )
-    if code_input is not None:
-        st.session_state[code_key] = code_input
+    # The editor and action buttons are rendered later inside a form to avoid per-keystroke reruns
 
 # ─── Callbacks ───
 def advance():
@@ -233,6 +221,9 @@ def advance():
         st.session_state[flag] = None
 
 def submit_task():
+    # Always use the latest editor contents from session
+    latest_code = st.session_state.get(code_key, "")
+
     now = datetime.utcnow().isoformat()
     # ensure participant row exists
     c.execute("""
@@ -254,13 +245,16 @@ def submit_task():
       task_id,
       1,
       (1 if nudge=='A' else 2),
-      st.session_state[code_key],
+      latest_code,
       now
     ))
     conn.commit()
     st.session_state.show_nudge = True
 
 def run_tool():
+    # Always use the latest editor contents from session
+    latest_code = st.session_state.get(code_key, "")
+
     now = datetime.utcnow().isoformat()
 
     # Record the RUN_TOOL event in tool_usage
@@ -281,11 +275,24 @@ def run_tool():
         True,
         now
     ))
+    # Also snapshot the code at RUN_TOOL (eventID=2)
+    c.execute("""
+      INSERT INTO code_snapshots(
+        participant_id, taskID, eventID, nudgeID, code, timestamp
+      ) VALUES (%s,%s,%s,%s,%s,%s)
+    """, (
+      st.session_state.pid,
+      task_id,
+      2,
+      (1 if nudge=='A' else 2),
+      latest_code,
+      now
+    ))
     conn.commit()
 
     # Write the current code to a temp file
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".py")
-    tmp.write(st.session_state[code_key].encode())
+    tmp.write((latest_code or "").encode())
     tmp.close()
 
     # Actually run Bandit on that file
@@ -301,6 +308,9 @@ def run_tool():
     st.session_state.ts_edit_start = now
 
 def skip_tool():
+    # Always use the latest editor contents from session
+    latest_code = st.session_state.get(code_key, "")
+
     now = datetime.utcnow().isoformat()
 
     # 1) Record the tool‐usage event (SUB_NO_TOOL eventID = 3)
@@ -338,8 +348,8 @@ def skip_tool():
         task_id,
         3,  # same SUB_NO_TOOL
         (1 if nudge == 'A' else 2),
-        st.session_state[code_key],
-        None  # or now if you prefer a timestamp
+        latest_code,
+        None  # keep as-is if that's your intended behavior
     ))
     conn.commit()
 
@@ -347,6 +357,9 @@ def skip_tool():
     advance()
 
 def submit_edited():
+    # Always use the latest editor contents from session
+    latest_code = st.session_state.get(code_key, "")
+
     now = datetime.utcnow().isoformat()
     if st.session_state.ts_edit_start:
         start = datetime.fromisoformat(st.session_state.ts_edit_start)
@@ -363,7 +376,7 @@ def submit_edited():
       task_id,
       4,
       (1 if nudge=='A' else 2),
-      st.session_state[code_key],
+      latest_code,
       now
     ))
     conn.commit()
@@ -377,37 +390,74 @@ def color_tag(severity):
     }.get(severity.upper(), severity)
 
 if idx < len(st.session_state.seq):
-    # ─── Interaction UI ───
-    if not st.session_state.show_nudge:
-        st.button("Submit Task", on_click=submit_task, key=f"submit_{idx}")
-    elif not st.session_state.tool_ran:
-        st.warning(nudges[nudge], icon="⚠️")
-        c1, c2 = st.columns(2)
-        c1.button("Run Security Tool", on_click=run_tool, key=f"run_{idx}")
-        c2.button("Submit Without Checking", on_click=skip_tool, key=f"skip_{idx}")
-    else:
-        st.subheader("Tool Output (Bandit)")
-        try:
-            data = json.loads(st.session_state.bandit_output)
-            results = data.get("results", [])
-            if not results:
-                st.success("✅ No issues found by Bandit.")
-            else:
-                for i, issue in enumerate(results, 1):
-                    with st.expander(f"Issue {i}"):
-                        st.write(f"**Description**: {issue['issue_text']}")
-                        st.write(f"**Line**: {issue['line_number']}")
-                        st.write(f"**Severity**: {color_tag(issue['issue_severity'])}")
-                        st.write(f"**Confidence**: {color_tag(issue['issue_confidence'])}")
-                        st.code(issue["code"], language="python")
-                        st.caption(f"Test ID: {issue['test_id']} — {issue['test_name']}")
-        except Exception:
-            st.text(st.session_state.bandit_output)
+    # Flags captured during form submission
+    submit_task_clicked = False
+    run_tool_clicked = False
+    skip_tool_clicked = False
+    submit_final_clicked = False
 
-        st.markdown("""
-        <div style="background-color: #e8f0fe; border-left: 6px solid #1a73e8; padding: 1rem; border-radius: 5px; margin-bottom: 1rem; color: #202124;">
-            <strong>Note:</strong> You can edit the code above if you wish. Once you're ready, click <strong>Submit Final Code</strong> below.
-        </div>
-        """, unsafe_allow_html=True)
+    # Render the form with editor and buttons here to keep function names in scope
+    with st.form(key=f"task_form_{idx}", clear_on_submit=False):
+        code_input = st_ace(
+            value=st.session_state[code_key],
+            language="python",
+            theme="monokai",
+            key=widget_key,
+            height=650,
+            tab_size=4,
+            font_size=14,
+            wrap=True,
+            auto_update=True
+        )
+        if code_input is not None:
+            st.session_state[code_key] = code_input
 
-        st.button("Submit Final Code", on_click=submit_edited, key=f"edited_{idx}")
+        if not st.session_state.show_nudge:
+            submit_task_clicked = st.form_submit_button("Submit Task")
+        elif not st.session_state.tool_ran:
+            st.warning(nudges[nudge], icon="⚠️")
+            c1, c2 = st.columns(2)
+            with c1:
+                run_tool_clicked = st.form_submit_button("Run Security Tool")
+            with c2:
+                skip_tool_clicked = st.form_submit_button("Submit Without Checking")
+        else:
+            st.subheader("Tool Output (Bandit)")
+            try:
+                data = json.loads(st.session_state.bandit_output)
+                results = data.get("results", [])
+                if not results:
+                    st.success("✅ No issues found by Bandit.")
+                else:
+                    for i, issue in enumerate(results, 1):
+                        with st.expander(f"Issue {i}"):
+                            st.write(f"**Description**: {issue['issue_text']}")
+                            st.write(f"**Line**: {issue['line_number']}")
+                            st.write(f"**Severity**: {color_tag(issue['issue_severity'])}")
+                            st.write(f"**Confidence**: {color_tag(issue['issue_confidence'])}")
+                            st.code(issue["code"], language="python")
+                            st.caption(f"Test ID: {issue['test_id']} — {issue['test_name']}")
+            except Exception:
+                st.text(st.session_state.bandit_output)
+
+            st.markdown("""
+            <div style=\"background-color: #e8f0fe; border-left: 6px solid #1a73e8; padding: 1rem; border-radius: 5px; margin-bottom: 1rem; color: #202124;\">
+                <strong>Note:</strong> You can edit the code above if you wish. Once you're ready, click <strong>Submit Final Code</strong> below.
+            </div>
+            """, unsafe_allow_html=True)
+
+            submit_final_clicked = st.form_submit_button("Submit Final Code")
+
+    # Execute actions after the form submission to avoid double-click behavior
+    if submit_task_clicked:
+        submit_task()
+        st.rerun()
+    elif run_tool_clicked:
+        run_tool()
+        st.rerun()
+    elif skip_tool_clicked:
+        skip_tool()
+        st.rerun()
+    elif submit_final_clicked:
+        submit_edited()
+        st.rerun()

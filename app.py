@@ -21,94 +21,98 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# ─── PostgreSQL Setup ───
-DB_HOST     = os.getenv("DB_HOST", "localhost")
-DB_NAME     = os.getenv("DB_NAME", "your_db_name")
-DB_USER     = os.getenv("DB_USER", "your_user")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "your_password")
-DB_PORT     = os.getenv("DB_PORT", "5432")
+# ─── PostgreSQL Setup (cached) ───
+@st.cache_resource
+def get_conn():
+    DB_HOST     = os.getenv("DB_HOST", "localhost")
+    DB_NAME     = os.getenv("DB_NAME", "your_db_name")
+    DB_USER     = os.getenv("DB_USER", "your_user")
+    DB_PASSWORD = os.getenv("DB_PASSWORD", "your_password")
+    DB_PORT     = os.getenv("DB_PORT", "5432")
 
-conn = psycopg2.connect(
-    host=DB_HOST,
-    dbname=DB_NAME,
-    user=DB_USER,
-    password=DB_PASSWORD,
-    port=DB_PORT
-)
+    conn = psycopg2.connect(
+        host=DB_HOST,
+        dbname=DB_NAME,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        port=DB_PORT
+    )
+    cur = conn.cursor()
+    # Create tables once per app session
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS participants (
+      participant_id   INTEGER PRIMARY KEY,
+      prolific_pid     TEXT,
+      group_id         INTEGER,
+      llm_used_flag    BOOLEAN
+    );
+    """)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS nudge_descriptions (
+      nudgeID   INTEGER PRIMARY KEY,
+      description TEXT
+    );
+    """)
+    cur.execute("""
+    INSERT INTO nudge_descriptions(nudgeID,description)
+     VALUES
+       (1,'Do you want to run a tool for checking security issues?'),
+       (2,'LLMs can produce insecure code. Do you want to run a tool for checking security issues?')
+     ON CONFLICT(nudgeID) DO NOTHING;
+    """)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS event_types (
+      eventID    INTEGER PRIMARY KEY,
+      description TEXT
+    );
+    """)
+    cur.execute("""
+    INSERT INTO event_types(eventID,description)
+     VALUES
+       (1,'SUB_NO_NUDGE'),
+       (2,'RUN_TOOL'),
+       (3,'SUB_NO_TOOL'),
+       (4,'SUB_TOOL')
+     ON CONFLICT(eventID) DO NOTHING;
+    """)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS tasks (
+      taskID      INTEGER PRIMARY KEY,
+      description TEXT,
+      code        TEXT
+    );
+    """)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS tool_usage (
+      interaction_id    SERIAL PRIMARY KEY,
+      participant_id    INTEGER REFERENCES participants(participant_id),
+      taskID            INTEGER REFERENCES tasks(taskID),
+      nudgeID           INTEGER REFERENCES nudge_descriptions(nudgeID),
+      eventID           INTEGER REFERENCES event_types(eventID),
+      tool_used         BOOLEAN,
+      tool_decision_time TEXT
+    );
+    """)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS code_snapshots (
+      interaction_id    SERIAL PRIMARY KEY,
+      participant_id    INTEGER REFERENCES participants(participant_id),
+      taskID            INTEGER REFERENCES tasks(taskID),
+      eventID           INTEGER REFERENCES event_types(eventID),
+      nudgeID           INTEGER REFERENCES nudge_descriptions(nudgeID),
+      code              TEXT,
+      timestamp         TEXT
+    );
+    """)
+    conn.commit()
+    return conn
+
+conn = get_conn()
 c = conn.cursor()
 
-# ─── Create Table ───
-# — participants —
-c.execute("""
-CREATE TABLE IF NOT EXISTS participants (
-  participant_id   INTEGER PRIMARY KEY,
-  prolific_pid     TEXT,
-  group_id         INTEGER,
-  llm_used_flag    BOOLEAN
-);
-""")
-# — nudge_descriptions —
-c.execute("""
-CREATE TABLE IF NOT EXISTS nudge_descriptions (
-  nudgeID   INTEGER PRIMARY KEY,
-  description TEXT
-);
-INSERT INTO nudge_descriptions(nudgeID,description)
- VALUES
-   (1,'Do you want to run a tool for checking security issues?'),
-   (2,'LLMs can produce insecure code. Do you want to run a tool for checking security issues?')
- ON CONFLICT(nudgeID) DO NOTHING;
-""")
-# — event_types —
-c.execute("""
-CREATE TABLE IF NOT EXISTS event_types (
-  eventID    INTEGER PRIMARY KEY,
-  description TEXT
-);
-INSERT INTO event_types(eventID,description)
- VALUES
-   (1,'SUB_NO_NUDGE'),
-   (2,'RUN_TOOL'),
-   (3,'SUB_NO_TOOL'),
-   (4,'SUB_TOOL')
- ON CONFLICT(eventID) DO NOTHING;
-""")
-# — tasks —
-c.execute("""
-CREATE TABLE IF NOT EXISTS tasks (
-  taskID      INTEGER PRIMARY KEY,
-  description TEXT,
-  code        TEXT
-);
-""")
-# — tool_usage —
-c.execute("""
-CREATE TABLE IF NOT EXISTS tool_usage (
-  interaction_id    SERIAL PRIMARY KEY,
-  participant_id    INTEGER REFERENCES participants(participant_id),
-  taskID            INTEGER REFERENCES tasks(taskID),
-  nudgeID           INTEGER REFERENCES nudge_descriptions(nudgeID),
-  eventID           INTEGER REFERENCES event_types(eventID),
-  tool_used         BOOLEAN,
-  tool_decision_time TEXT
-);
-""")
-# — code_snapshots —
-c.execute("""
-CREATE TABLE IF NOT EXISTS code_snapshots (
-  interaction_id    SERIAL PRIMARY KEY,
-  participant_id    INTEGER REFERENCES participants(participant_id),
-  taskID            INTEGER REFERENCES tasks(taskID),
-  eventID           INTEGER REFERENCES event_types(eventID),
-  nudgeID           INTEGER REFERENCES nudge_descriptions(nudgeID),
-  code              TEXT,
-  timestamp         TEXT
-);
-""")
-conn.commit()
-
-# ─── JSON Loaders ───
+# ─── JSON Loaders (cached) ───
 BASE_DIR = os.path.dirname(__file__)
+@st.cache_data
 def load_json(path):
     with open(os.path.join(BASE_DIR, path), encoding="utf-8") as f:
         return json.load(f)
@@ -291,7 +295,7 @@ def run_tool():
 
     # Actually run Bandit on that file
     res = subprocess.run(
-        ['bandit', '-r', tmp.name, '-f', 'json'],
+        ['bandit', tmp.name, '-f', 'json'],
         capture_output=True,
         text=True
     )
@@ -453,5 +457,5 @@ if idx < len(st.session_state.seq):
         skip_tool()
         st.rerun()
     elif submit_final_clicked:
-        submit_edited()
+        submit_edited()        
         st.rerun()

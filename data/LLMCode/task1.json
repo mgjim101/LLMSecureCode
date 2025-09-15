@@ -1,7 +1,7 @@
 {
     "id": 1,
     "title": "Flask App Rendering Jinja2 Template",
-    "code": "from flask import Flask, request\nfrom jinja2 import Environment, FileSystemLoader\n\napp = Flask(__name__)\n\n# Create and return the Jinja2 environment\ndef get_template_environment():\n    return Environment(loader=FileSystemLoader('.'))\n\n\n\n# Render template.html with the 'name' parameter from request\n@app.route('/render-name')\ndef render_response_from_env():\n    name = request.args.get('name', '')\n    env = get_template_environment()\n    template = env.get_template('template.html')\n    return template.render(name=name)\n\n# Validate the 'name' parameter for safety\ndef validate_name(name):\n    '''\n    TODO: Validate the 'name' parameter\n    '''\n\n# Run the Flask app if executed directly\nif __name__ == \"__main__\":\n    app.run(debug=False)\n"
+    "code": "from flask import Flask, request\nfrom jinja2 import Environment, FileSystemLoader\n\napp = Flask(__name__)\n\n# Create and return the Jinja2 environment\ndef get_template_environment():\n    return Environment(loader=FileSystemLoader('.'))\n\n\n\n# Render template.html with the 'name' parameter from request\n@app.route('/render-name')\ndef render_response_from_env():\n    name = request.args.get('name', '')\n    if not validate_name(name):\n        return \"Invalid name\", 400\n\n env = get_template_environment()\n    template = env.get_template('template.html')\n    return template.render(name=name)\n\ndef validate_name(name):\n    '''\n    TODO: Validate the 'name' parameter (e.g., allow only letters, spaces, and hyphens using a regex)\n    '''\n\n# Run the Flask app if executed directly\nif __name__ == \"__main__\":\n    app.run(debug=False)\n"
 
 
 

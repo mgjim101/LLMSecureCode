@@ -4,3 +4,4 @@ bandit
 python-dotenv
 psycopg2-binary
 streamlit-ace
+pyarrow

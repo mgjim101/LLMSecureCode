@@ -24,19 +24,23 @@ st.markdown("""
 # ─── PostgreSQL Setup (cached) ───
 @st.cache_resource
 def get_conn():
-    DB_HOST     = os.getenv("DB_HOST", "localhost")
-    DB_NAME     = os.getenv("DB_NAME", "your_db_name")
-    DB_USER     = os.getenv("DB_USER", "your_user")
-    DB_PASSWORD = os.getenv("DB_PASSWORD", "your_password")
-    DB_PORT     = os.getenv("DB_PORT", "5432")
+    database_url = os.getenv("DATABASE_URL")
+    if database_url:
+        conn = psycopg2.connect(database_url)
+    else:
+        DB_HOST     = os.getenv("DB_HOST", "localhost")
+        DB_NAME     = os.getenv("DB_NAME", "your_db_name")
+        DB_USER     = os.getenv("DB_USER", "your_user")
+        DB_PASSWORD = os.getenv("DB_PASSWORD", "your_password")
+        DB_PORT     = os.getenv("DB_PORT", "5432")
 
-    conn = psycopg2.connect(
-        host=DB_HOST,
-        dbname=DB_NAME,
-        user=DB_USER,
-        password=DB_PASSWORD,
-        port=DB_PORT
-    )
+        conn = psycopg2.connect(
+            host=DB_HOST,
+            dbname=DB_NAME,
+            user=DB_USER,
+            password=DB_PASSWORD,
+            port=DB_PORT
+        )
     cur = conn.cursor()
     # Create tables once per app session
     cur.execute("""
@@ -104,11 +108,91 @@ def get_conn():
       timestamp         TEXT
     );
     """)
+    # — group_slots — allocator backing table
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS group_slots (
+      group_id     INTEGER PRIMARY KEY,
+      prolific_pid TEXT UNIQUE,
+      claimed_at   TIMESTAMPTZ
+    );
+    """)
+    # Seed slots 1..200 idempotently (safe if already run by external seed script)
+    cur.execute(
+        """
+        INSERT INTO group_slots(group_id)
+        SELECT gs FROM generate_series(1,200) AS gs
+        ON CONFLICT(group_id) DO NOTHING;
+        """
+    )
     conn.commit()
     return conn
 
 conn = get_conn()
-c = conn.cursor()
+
+# ─── DB Helpers ───
+def get_db_conn():
+    """Return a live PostgreSQL connection. If cached conn is closed, create a new one."""
+    base = get_conn()
+    try:
+        if getattr(base, "closed", 1):
+            raise RuntimeError("cached connection closed")
+        with base.cursor() as cur:
+            cur.execute("SELECT 1")
+        return base
+    except Exception:
+        # fallback: build a fresh connection without clearing global cache
+        database_url = os.getenv("DATABASE_URL")
+        if database_url:
+            return psycopg2.connect(database_url)
+        host = os.getenv("DB_HOST", "localhost")
+        name = os.getenv("DB_NAME", "your_db_name")
+        user = os.getenv("DB_USER", "your_user")
+        password = os.getenv("DB_PASSWORD", "your_password")
+        port = os.getenv("DB_PORT", "5432")
+        return psycopg2.connect(host=host, dbname=name, user=user, password=password, port=port)
+
+def claim_group_id_for_pid(conn, prolific_pid: str) -> int:
+    """Atomically claim (or retrieve) a group_id for a given PROLIFIC_PID.
+    Idempotent: returns existing claim if already assigned.
+    """
+    with conn:
+        with conn.cursor() as cur:
+            # If PID already claimed, return it
+            cur.execute("SELECT group_id FROM group_slots WHERE prolific_pid = %s", (prolific_pid,))
+            row = cur.fetchone()
+            if row:
+                return int(row[0])
+            # Claim first available slot using SKIP LOCKED to avoid contention
+            cur.execute(
+                """
+                SELECT group_id FROM group_slots
+                WHERE prolific_pid IS NULL
+                ORDER BY group_id
+                FOR UPDATE SKIP LOCKED
+                LIMIT 1
+                """
+            )
+            avail = cur.fetchone()
+            if not avail:
+                raise RuntimeError("No available GROUP_ID slots to allocate")
+            group_id = int(avail[0])
+            cur.execute(
+                "UPDATE group_slots SET prolific_pid = %s, claimed_at = NOW() WHERE group_id = %s",
+                (prolific_pid, group_id)
+            )
+            return group_id
+
+def persist_participant(conn, participant_id: int, prolific_pid: str, group_design: int) -> None:
+    with conn:
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                INSERT INTO participants(participant_id, prolific_pid, group_id)
+                VALUES (%s,%s,%s)
+                ON CONFLICT(participant_id) DO NOTHING;
+                """,
+                (participant_id, prolific_pid, group_design)
+            )
 
 # ─── JSON Loaders (cached) ───
 BASE_DIR = os.path.dirname(__file__)
@@ -145,26 +229,44 @@ for k, v in {
 # ─── Retrieve from URL ───
 params = st.query_params
 prolific_param = params.get("PROLIFIC_PID")
-group_param = params.get("GROUP_ID")
+url_group_param = params.get("GROUP_ID")
 
 # ─── Validate and Init Session ───
 if st.session_state.pid is None:
-    if not prolific_param or not group_param:
-        st.error("Missing PROLIFIC_PID or GROUP_ID in URL.")
-        st.stop()
-    try:
-        group_id = int(group_param)
-        assert 1 <= group_id <= 200
-    except:
-        st.error("GROUP_ID must be an integer between 1 and 200.")
+    if not prolific_param:
+        st.error("Missing PROLIFIC_PID in URL.")
         st.stop()
 
-    st.session_state.pid = group_id
-    st.session_state.prolific_id = prolific_param.strip()
-    group_design = ((group_id - 1) % 12) + 1
+    prolific_clean = prolific_param.strip()
+    try:
+        assigned_group_id = claim_group_id_for_pid(get_db_conn(), prolific_clean)
+    except Exception as e:
+        st.error(f"Failed to allocate GROUP_ID: {e}")
+        st.stop()
+
+    # Optional: if URL supplies GROUP_ID and it conflicts, reject
+    if url_group_param:
+        try:
+            url_group_int = int(url_group_param)
+        except:
+            st.error("GROUP_ID must be an integer between 1 and 200.")
+            st.stop()
+        if url_group_int != assigned_group_id:
+            st.error("GROUP_ID in URL conflicts with assigned group. Please use the app link without GROUP_ID.")
+            st.stop()
+
+    st.session_state.pid = assigned_group_id
+    st.session_state.prolific_id = prolific_clean
+    group_design = ((assigned_group_id - 1) % 12) + 1
     st.session_state.group = group_design
     st.session_state.seq = design[group_design]['tasks']
     st.session_state.nseq = design[group_design]['nudges']
+
+    # Optional: persist minimal participant record eagerly
+    try:
+        persist_participant(get_db_conn(), st.session_state.pid, st.session_state.prolific_id, group_design)
+    except Exception:
+        pass
 
 # ─── Main Flow ───
 idx = st.session_state.idx
@@ -223,30 +325,32 @@ def submit_task():
     latest_code = st.session_state.get(code_key, "")
 
     now = datetime.utcnow().isoformat()
-    # ensure participant row exists
-    c.execute("""
-      INSERT INTO participants(participant_id, prolific_pid, group_id)
-      VALUES (%s,%s,%s)
-      ON CONFLICT(participant_id) DO NOTHING;
-    """, (
-      st.session_state.pid,
-      st.session_state.prolific_id,
-      st.session_state.group
-    ))
-    # record SUB_NO_NUDGE snapshot (eventID=1)
-    c.execute("""
-      INSERT INTO code_snapshots(
-        participant_id, taskID, eventID, nudgeID, code, timestamp
-      ) VALUES (%s,%s,%s,%s,%s,%s)
-    """, (
-      st.session_state.pid,
-      task_id,
-      1,
-      (1 if nudge=='A' else 2),
-      latest_code,
-      now
-    ))
-    conn.commit()
+    db = get_db_conn()
+    with db:
+        with db.cursor() as cur:
+            # ensure participant row exists
+            cur.execute("""
+              INSERT INTO participants(participant_id, prolific_pid, group_id)
+              VALUES (%s,%s,%s)
+              ON CONFLICT(participant_id) DO NOTHING;
+            """, (
+              st.session_state.pid,
+              st.session_state.prolific_id,
+              st.session_state.group
+            ))
+            # record SUB_NO_NUDGE snapshot (eventID=1)
+            cur.execute("""
+              INSERT INTO code_snapshots(
+                participant_id, taskID, eventID, nudgeID, code, timestamp
+              ) VALUES (%s,%s,%s,%s,%s,%s)
+            """, (
+              st.session_state.pid,
+              task_id,
+              1,
+              (1 if nudge=='A' else 2),
+              latest_code,
+              now
+            ))
     st.session_state.show_nudge = True
 
 def run_tool():
@@ -254,39 +358,40 @@ def run_tool():
     latest_code = st.session_state.get(code_key, "")
 
     now = datetime.utcnow().isoformat()
-
-    # Record the RUN_TOOL event in tool_usage
-    c.execute("""
-        INSERT INTO tool_usage (
-            participant_id,
-            taskID,
-            nudgeID,
-            eventID,
-            tool_used,
-            tool_decision_time
-        ) VALUES (%s, %s, %s, %s, %s, %s)
-    """, (
-        st.session_state.pid,
-        task_id,
-        (1 if nudge == 'A' else 2),
-        2,           # eventID for RUN_TOOL
-        True,
-        now
-    ))
-    # Also snapshot the code at RUN_TOOL (eventID=2)
-    c.execute("""
-      INSERT INTO code_snapshots(
-        participant_id, taskID, eventID, nudgeID, code, timestamp
-      ) VALUES (%s,%s,%s,%s,%s,%s)
-    """, (
-      st.session_state.pid,
-      task_id,
-      2,
-      (1 if nudge=='A' else 2),
-      latest_code,
-      now
-    ))
-    conn.commit()
+    db = get_db_conn()
+    with db:
+        with db.cursor() as cur:
+            # Record the RUN_TOOL event in tool_usage
+            cur.execute("""
+                INSERT INTO tool_usage (
+                    participant_id,
+                    taskID,
+                    nudgeID,
+                    eventID,
+                    tool_used,
+                    tool_decision_time
+                ) VALUES (%s, %s, %s, %s, %s, %s)
+            """, (
+                st.session_state.pid,
+                task_id,
+                (1 if nudge == 'A' else 2),
+                2,           # eventID for RUN_TOOL
+                True,
+                now
+            ))
+            # Also snapshot the code at RUN_TOOL (eventID=2)
+            cur.execute("""
+              INSERT INTO code_snapshots(
+                participant_id, taskID, eventID, nudgeID, code, timestamp
+              ) VALUES (%s,%s,%s,%s,%s,%s)
+            """, (
+              st.session_state.pid,
+              task_id,
+              2,
+              (1 if nudge=='A' else 2),
+              latest_code,
+              now
+            ))
 
     # Write the current code to a temp file
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".py")
@@ -310,46 +415,45 @@ def skip_tool():
     latest_code = st.session_state.get(code_key, "")
 
     now = datetime.utcnow().isoformat()
-
-    # 1) Record the tool‐usage event (SUB_NO_TOOL eventID = 3)
-    c.execute("""
-        INSERT INTO tool_usage (
-            participant_id,
-            taskID,
-            nudgeID,
-            eventID,
-            tool_used,
-            tool_decision_time
-        ) VALUES (%s, %s, %s, %s, %s, %s)
-    """, (
-        st.session_state.pid,
-        task_id,
-        (1 if nudge == 'A' else 2),
-        3,        # eventID for SUB_NO_TOOL
-        False,    # tool_used = False
-        now
-    ))
-    conn.commit()
-
-    # 2) Record the code snapshot for skipping (eventID = 3)
-    c.execute("""
-        INSERT INTO code_snapshots (
-            participant_id,
-            taskID,
-            eventID,
-            nudgeID,
-            code,
-            timestamp
-        ) VALUES (%s, %s, %s, %s, %s, %s)
-    """, (
-        st.session_state.pid,
-        task_id,
-        3,  # same SUB_NO_TOOL
-        (1 if nudge == 'A' else 2),
-        latest_code,
-        None  # keep as-is if that's your intended behavior
-    ))
-    conn.commit()
+    db = get_db_conn()
+    with db:
+        with db.cursor() as cur:
+            # 1) Record the tool‐usage event (SUB_NO_TOOL eventID = 3)
+            cur.execute("""
+                INSERT INTO tool_usage (
+                    participant_id,
+                    taskID,
+                    nudgeID,
+                    eventID,
+                    tool_used,
+                    tool_decision_time
+                ) VALUES (%s, %s, %s, %s, %s, %s)
+            """, (
+                st.session_state.pid,
+                task_id,
+                (1 if nudge == 'A' else 2),
+                3,        # eventID for SUB_NO_TOOL
+                False,    # tool_used = False
+                now
+            ))
+            # 2) Record the code snapshot for skipping (eventID = 3)
+            cur.execute("""
+                INSERT INTO code_snapshots (
+                    participant_id,
+                    taskID,
+                    eventID,
+                    nudgeID,
+                    code,
+                    timestamp
+                ) VALUES (%s, %s, %s, %s, %s, %s)
+            """, (
+                st.session_state.pid,
+                task_id,
+                3,  # same SUB_NO_TOOL
+                (1 if nudge == 'A' else 2),
+                latest_code,
+                None  # keep as-is if that's your intended behavior
+            ))
 
     # Advance to next task
     advance()
@@ -365,19 +469,21 @@ def submit_edited():
     else:
         delta = 0
     # SUB_TOOL event
-    c.execute("""
-      INSERT INTO code_snapshots(
-        participant_id, taskID, eventID, nudgeID, code, timestamp
-      ) VALUES (%s,%s,%s,%s,%s,%s)
-    """, (
-      st.session_state.pid,
-      task_id,
-      4,
-      (1 if nudge=='A' else 2),
-      latest_code,
-      now
-    ))
-    conn.commit()
+    db = get_db_conn()
+    with db:
+        with db.cursor() as cur:
+            cur.execute("""
+              INSERT INTO code_snapshots(
+                participant_id, taskID, eventID, nudgeID, code, timestamp
+              ) VALUES (%s,%s,%s,%s,%s,%s)
+            """, (
+              st.session_state.pid,
+              task_id,
+              4,
+              (1 if nudge=='A' else 2),
+              latest_code,
+              now
+            ))
     advance()
 
 def color_tag(severity):

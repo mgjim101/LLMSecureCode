@@ -226,34 +226,29 @@ for k, v in {
     if k not in st.session_state:
         st.session_state[k] = v
 
-# ─── Retrieve from URL ───
-params = st.query_params
-prolific_param = params.get("PROLIFIC_PID")
-url_group_param = params.get("GROUP_ID")
+# ─── Prolific ID Input ───
+if not st.session_state.get("prolific_id"):
+    st.markdown("### Enter Your Prolific ID")
+    with st.form("pid_form", clear_on_submit=True):
+        entered_pid = st.text_input("Prolific ID", "", help="Required to begin the study.")
+        submitted = st.form_submit_button("Start")
+    if not submitted:
+        st.stop()
+    cleaned_pid = entered_pid.strip()
+    if not cleaned_pid:
+        st.error("Prolific ID cannot be empty. Please enter your ID to continue.")
+        st.stop()
+    st.session_state.prolific_id = cleaned_pid
+    st.rerun()
 
 # ─── Validate and Init Session ───
 if st.session_state.pid is None:
-    if not prolific_param:
-        st.error("Missing PROLIFIC_PID in URL.")
-        st.stop()
-
-    prolific_clean = prolific_param.strip()
+    prolific_clean = st.session_state.prolific_id
     try:
         assigned_group_id = claim_group_id_for_pid(get_db_conn(), prolific_clean)
     except Exception as e:
         st.error(f"Failed to allocate GROUP_ID: {e}")
         st.stop()
-
-    # Optional: if URL supplies GROUP_ID and it conflicts, reject
-    if url_group_param:
-        try:
-            url_group_int = int(url_group_param)
-        except:
-            st.error("GROUP_ID must be an integer between 1 and 200.")
-            st.stop()
-        if url_group_int != assigned_group_id:
-            st.error("GROUP_ID in URL conflicts with assigned group. Please use the app link without GROUP_ID.")
-            st.stop()
 
     st.session_state.pid = assigned_group_id
     st.session_state.prolific_id = prolific_clean

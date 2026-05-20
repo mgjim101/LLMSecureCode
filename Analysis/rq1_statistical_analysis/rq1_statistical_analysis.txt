@@ -1,0 +1,360 @@
+RQ1 Statistical Analysis Report
+Generated: 2026-03-11 00:37:51
+
+Design: Independent samples (between-subjects), Group A vs Group B
+Primary alpha: 0.05
+Bonferroni-corrected alpha (3 primary tests): 0.0167
+
+Procedure per comparison:
+  1. Aggregate to participant level
+  2. Shapiro-Wilk normality test per group
+  3. Levene's test for homogeneity of variance
+  4. If normal -> Welch's t-test; otherwise -> Mann-Whitney U
+  5. Effect size: Hedges' g (parametric) or rank-biserial r (non-parametric)
+
+Effect size benchmarks:
+  Hedges' g:        |0.2| small, |0.5| medium, |0.8| large
+  Rank-biserial r:  |0.1| small, |0.3| medium, |0.5| large
+
+========================================================================
+  Analysis 1: Tool Usage — Total_Uses per participant
+========================================================================
+  Group A: n=48, M=2.5417, SD=0.8742, Mdn=3.0000
+  Group B: n=49, M=2.8163, SD=0.6349, Mdn=3.0000
+
+  Shapiro-Wilk A: W=0.5789, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.3208, p=0.0000 (NOT normal)
+  Levene's test:  F=3.1444, p=0.0794 (equal var)
+
+  Primary test: Mann-Whitney U  stat=1000.0000, p=0.0558
+  Effect size:  rank-biserial r = 0.1497
+  -> NOT significant at alpha=0.05 (p=0.0558)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.0558)
+
+  [Supplementary] Welch's t-test:  stat=-1.7675, p=0.0807
+  [Supplementary] Hedges' g = -0.3573
+
+========================================================================
+  Analysis 1 (per task): Task 1 — Tool Used (binary)
+========================================================================
+  Group A: n=48, M=0.8125, SD=0.3944, Mdn=1.0000
+  Group B: n=49, M=0.9388, SD=0.2422, Mdn=1.0000
+
+  Shapiro-Wilk A: W=0.4762, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.2580, p=0.0000 (NOT normal)
+  Levene's test:  F=3.6263, p=0.0599 (equal var)
+
+  Primary test: Mann-Whitney U  stat=1027.5000, p=0.0611
+  Effect size:  rank-biserial r = 0.1263
+  -> NOT significant at alpha=0.05 (p=0.0611)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.0611)
+
+  [Supplementary] Welch's t-test:  stat=-1.8953, p=0.0618
+  [Supplementary] Hedges' g = -0.3837
+
+========================================================================
+  Analysis 1 (per task): Task 2 — Tool Used (binary)
+========================================================================
+  Group A: n=48, M=0.8958, SD=0.3087, Mdn=1.0000
+  Group B: n=49, M=0.9592, SD=0.1999, Mdn=1.0000
+
+  Shapiro-Wilk A: W=0.3519, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.2008, p=0.0000 (NOT normal)
+  Levene's test:  F=1.4450, p=0.2323 (equal var)
+
+  Primary test: Mann-Whitney U  stat=1101.5000, p=0.2335
+  Effect size:  rank-biserial r = 0.0634
+  -> NOT significant at alpha=0.05 (p=0.2335)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.2335)
+
+  [Supplementary] Welch's t-test:  stat=-1.1970, p=0.2348
+  [Supplementary] Hedges' g = -0.2422
+
+========================================================================
+  Analysis 1 (per task): Task 3 — Tool Used (binary)
+========================================================================
+  Group A: n=48, M=0.8333, SD=0.3766, Mdn=1.0000
+  Group B: n=49, M=0.9184, SD=0.2766, Mdn=1.0000
+
+  Shapiro-Wilk A: W=0.4503, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.3062, p=0.0000 (NOT normal)
+  Levene's test:  F=1.6108, p=0.2075 (equal var)
+
+  Primary test: Mann-Whitney U  stat=1076.0000, p=0.2081
+  Effect size:  rank-biserial r = 0.0850
+  -> NOT significant at alpha=0.05 (p=0.2081)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.2081)
+
+  [Supplementary] Welch's t-test:  stat=-1.2652, p=0.2092
+  [Supplementary] Hedges' g = -0.2557
+
+========================================================================
+  Analysis 2a: New Vulnerabilities WITH TOOL (issue_count, aggregated)
+========================================================================
+  Group A: n=20, M=1.8000, SD=1.5424, Mdn=2.5000
+  Group B: n=31, M=1.6452, SD=1.4035, Mdn=1.0000
+
+  Shapiro-Wilk A: W=0.8030, p=0.0010 (NOT normal)
+  Shapiro-Wilk B: W=0.8305, p=0.0002 (NOT normal)
+  Levene's test:  F=0.4385, p=0.5109 (equal var)
+
+  Primary test: Mann-Whitney U  stat=323.0000, p=0.8004
+  Effect size:  rank-biserial r = -0.0419
+  -> NOT significant at alpha=0.05 (p=0.8004)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.8004)
+
+  [Supplementary] Welch's t-test:  stat=0.3625, p=0.7190
+  [Supplementary] Hedges' g = 0.1045
+
+========================================================================
+  Analysis 2a (per task): Task 1 — Vulns WITH TOOL
+========================================================================
+  Group A: n=6, M=0.1667, SD=0.4082, Mdn=0.0000
+  Group B: n=15, M=0.0667, SD=0.2582, Mdn=0.0000
+
+  Shapiro-Wilk A: W=0.4961, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.2841, p=0.0000 (NOT normal)
+  Levene's test:  F=0.4609, p=0.5054 (equal var)
+
+  Primary test: Mann-Whitney U  stat=49.5000, p=0.5407
+  Effect size:  rank-biserial r = -0.1000
+  -> NOT significant at alpha=0.05 (p=0.5407)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.5407)
+
+  [Supplementary] Welch's t-test:  stat=0.5571, p=0.5957
+  [Supplementary] Hedges' g = 0.3148
+
+========================================================================
+  Analysis 2a (per task): Task 2 — Vulns WITH TOOL
+========================================================================
+  Group A: n=14, M=0.1429, SD=0.3631, Mdn=0.0000
+  Group B: n=19, M=0.3158, SD=0.4776, Mdn=0.0000
+
+  Shapiro-Wilk A: W=0.4285, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.5905, p=0.0000 (NOT normal)
+  Levene's test:  F=1.2841, p=0.2658 (equal var)
+
+  Primary test: Mann-Whitney U  stat=110.0000, p=0.2697
+  Effect size:  rank-biserial r = 0.1729
+  -> NOT significant at alpha=0.05 (p=0.2697)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.2697)
+
+  [Supplementary] Welch's t-test:  stat=-1.1815, p=0.2464
+  [Supplementary] Hedges' g = -0.3894
+
+========================================================================
+  Analysis 2a (per task): Task 3 — Vulns WITH TOOL
+========================================================================
+  Group A: n=11, M=3.0000, SD=0.4472, Mdn=3.0000
+  Group B: n=18, M=2.4444, SD=1.2935, Mdn=3.0000
+
+  Shapiro-Wilk A: W=0.6273, p=0.0001 (NOT normal)
+  Shapiro-Wilk B: W=0.7390, p=0.0002 (NOT normal)
+  Levene's test:  F=2.6457, p=0.1154 (equal var)
+
+  Primary test: Mann-Whitney U  stat=116.0000, p=0.3650
+  Effect size:  rank-biserial r = -0.1717
+  -> NOT significant at alpha=0.05 (p=0.3650)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.3650)
+
+  [Supplementary] Welch's t-test:  stat=1.6665, p=0.1093
+  [Supplementary] Hedges' g = 0.5085
+
+========================================================================
+  Analysis 2a: severity_diff_high WITH TOOL (aggregated)
+========================================================================
+  Group A: n=20, M=-0.4000, SD=0.5026, Mdn=0.0000
+  Group B: n=31, M=-0.5161, SD=0.5080, Mdn=-1.0000
+
+  Shapiro-Wilk A: W=0.6265, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.6377, p=0.0000 (NOT normal)
+  Levene's test:  F=0.3341, p=0.5659 (equal var)
+
+  Primary test: Mann-Whitney U  stat=346.0000, p=0.4283
+  Effect size:  rank-biserial r = -0.1161
+  -> NOT significant at alpha=0.05 (p=0.4283)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.4283)
+
+  [Supplementary] Welch's t-test:  stat=0.8022, p=0.4271
+  [Supplementary] Hedges' g = 0.2260
+
+========================================================================
+  Analysis 2a: severity_diff_medium WITH TOOL (aggregated)
+========================================================================
+  Group A: n=20, M=0.0000, SD=0.0000, Mdn=0.0000
+  Group B: n=31, M=0.0000, SD=0.0000, Mdn=0.0000
+
+  Shapiro-Wilk A: W=nan, p=nan (NOT normal)
+  Shapiro-Wilk B: W=nan, p=nan (NOT normal)
+  Levene's test:  F=nan, p=nan (unequal var)
+
+  Primary test: (no variance in either group)  stat=nan, p=nan
+  Effect size:   = nan
+  -> NOT significant at alpha=0.05 (p=nan)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=nan)
+
+========================================================================
+  Analysis 2a: severity_diff_low WITH TOOL (aggregated)
+========================================================================
+  Group A: n=20, M=0.4000, SD=1.1425, Mdn=0.5000
+  Group B: n=31, M=0.3871, SD=1.1741, Mdn=0.0000
+
+  Shapiro-Wilk A: W=0.8572, p=0.0071 (NOT normal)
+  Shapiro-Wilk B: W=0.9378, p=0.0717 (normal)
+  Levene's test:  F=0.2170, p=0.6434 (equal var)
+
+  Primary test: Mann-Whitney U  stat=311.0000, p=0.9921
+  Effect size:  rank-biserial r = -0.0032
+  -> NOT significant at alpha=0.05 (p=0.9921)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.9921)
+
+  [Supplementary] Welch's t-test:  stat=0.0390, p=0.9691
+  [Supplementary] Hedges' g = 0.0109
+
+========================================================================
+  Analysis 2b: New Vulnerabilities WITHOUT TOOL (issue_count, aggregated)
+========================================================================
+  Group A: n=1
+  Group B: n=2
+  *** TOO FEW OBSERVATIONS FOR INFERENTIAL TESTING ***
+  Descriptive A: M=2.0000, SD=nan
+  Descriptive B: M=2.0000, SD=1.4142
+
+========================================================================
+  Analysis 3a: Code Changes WITH TOOL (changed_task_count)
+========================================================================
+  Group A: n=48, M=0.6458, SD=0.9107, Mdn=0.0000
+  Group B: n=49, M=1.0612, SD=0.9876, Mdn=1.0000
+
+  Shapiro-Wilk A: W=0.7190, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.8432, p=0.0000 (NOT normal)
+  Levene's test:  F=0.9445, p=0.3336 (equal var)
+
+  Primary test: Mann-Whitney U  stat=885.5000, p=0.0247
+  Effect size:  rank-biserial r = 0.2470
+  -> SIGNIFICANT at alpha=0.05 (p=0.0247)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.0247)
+
+  [Supplementary] Welch's t-test:  stat=-2.1542, p=0.0338
+  [Supplementary] Hedges' g = -0.4336
+
+========================================================================
+  Analysis 3a (per task): Task 1 — Code Changed WITH TOOL
+========================================================================
+  Group A: n=39, M=0.1538, SD=0.3655, Mdn=0.0000
+  Group B: n=46, M=0.3261, SD=0.4740, Mdn=0.0000
+
+  Shapiro-Wilk A: W=0.4335, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.5915, p=0.0000 (NOT normal)
+  Levene's test:  F=3.4223, p=0.0679 (equal var)
+
+  Primary test: Mann-Whitney U  stat=742.5000, p=0.0691
+  Effect size:  rank-biserial r = 0.1722
+  -> NOT significant at alpha=0.05 (p=0.0691)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.0691)
+
+  [Supplementary] Welch's t-test:  stat=-1.8895, p=0.0623
+  [Supplementary] Hedges' g = -0.3990
+
+========================================================================
+  Analysis 3a (per task): Task 2 — Code Changed WITH TOOL
+========================================================================
+  Group A: n=43, M=0.3256, SD=0.4741, Mdn=0.0000
+  Group B: n=48, M=0.3958, SD=0.4942, Mdn=0.0000
+
+  Shapiro-Wilk A: W=0.5913, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.6209, p=0.0000 (NOT normal)
+  Levene's test:  F=0.4762, p=0.4919 (equal var)
+
+  Primary test: Mann-Whitney U  stat=959.5000, p=0.4919
+  Effect size:  rank-biserial r = 0.0703
+  -> NOT significant at alpha=0.05 (p=0.4919)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.4919)
+
+  [Supplementary] Welch's t-test:  stat=-0.6917, p=0.4910
+  [Supplementary] Hedges' g = -0.1437
+
+========================================================================
+  Analysis 3a (per task): Task 3 — Code Changed WITH TOOL
+========================================================================
+  Group A: n=40, M=0.2750, SD=0.4522, Mdn=0.0000
+  Group B: n=45, M=0.4000, SD=0.4954, Mdn=0.0000
+
+  Shapiro-Wilk A: W=0.5592, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.6223, p=0.0000 (NOT normal)
+  Levene's test:  F=1.4628, p=0.2299 (equal var)
+
+  Primary test: Mann-Whitney U  stat=787.5000, p=0.2298
+  Effect size:  rank-biserial r = 0.1250
+  -> NOT significant at alpha=0.05 (p=0.2298)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.2298)
+
+  [Supplementary] Welch's t-test:  stat=-1.2160, p=0.2274
+  [Supplementary] Hedges' g = -0.2604
+
+========================================================================
+  Analysis 3b: Code Changes WITHOUT TOOL (changed_task_count)
+========================================================================
+  Group A: n=48, M=0.0417, SD=0.2887, Mdn=0.0000
+  Group B: n=49, M=0.0612, SD=0.3168, Mdn=0.0000
+
+  Shapiro-Wilk A: W=0.1292, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.1969, p=0.0000 (NOT normal)
+  Levene's test:  F=0.1009, p=0.7515 (equal var)
+
+  Primary test: Mann-Whitney U  stat=1153.0000, p=0.5883
+  Effect size:  rank-biserial r = 0.0196
+  -> NOT significant at alpha=0.05 (p=0.5883)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.5883)
+
+  [Supplementary] Welch's t-test:  stat=-0.3179, p=0.7512
+  [Supplementary] Hedges' g = -0.0640
+
+========================================================================
+  Analysis 3b (per task): Task 1 — Code Changed WITHOUT TOOL
+========================================================================
+  Group A: n=9, M=0.1111, SD=0.3333, Mdn=0.0000
+  Group B: n=3, M=0.3333, SD=0.5774, Mdn=0.0000
+
+  Shapiro-Wilk A: W=0.3898, p=0.0000 (NOT normal)
+  Shapiro-Wilk B: W=0.7500, p=0.0000 (NOT normal)
+  Levene's test:  F=0.7143, p=0.4178 (equal var)
+
+  Primary test: Mann-Whitney U  stat=10.5000, p=0.4755
+  Effect size:  rank-biserial r = 0.2222
+  -> NOT significant at alpha=0.05 (p=0.4755)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.4755)
+
+  [Supplementary] Welch's t-test:  stat=-0.6325, p=0.5809
+  [Supplementary] Hedges' g = -0.5201
+
+========================================================================
+  Analysis 3b (per task): Task 2 — Code Changed WITHOUT TOOL
+========================================================================
+  Group A: n=5
+  Group B: n=2
+  *** TOO FEW OBSERVATIONS FOR INFERENTIAL TESTING ***
+  Descriptive A: M=0.2000, SD=0.4472
+  Descriptive B: M=0.5000, SD=0.7071
+
+========================================================================
+  Analysis 3b (per task): Task 3 — Code Changed WITHOUT TOOL
+========================================================================
+  Group A: n=9, M=0.0000, SD=0.0000, Mdn=0.0000
+  Group B: n=4, M=0.2500, SD=0.5000, Mdn=0.0000
+
+  Shapiro-Wilk A: W=nan, p=1.0000 (normal)
+  Shapiro-Wilk B: W=0.6298, p=0.0012 (NOT normal)
+  Levene's test:  F=2.5385, p=0.1394 (equal var)
+
+  Primary test: Mann-Whitney U  stat=13.5000, p=0.1824
+  Effect size:  rank-biserial r = 0.2500
+  -> NOT significant at alpha=0.05 (p=0.1824)
+  -> NOT significant after Bonferroni correction (alpha=0.0167, p=0.1824)
+
+  [Supplementary] Welch's t-test:  stat=-1.0000, p=0.3910
+  [Supplementary] Hedges' g = -0.8906
+
+========================================================================
+  END OF REPORT
+========================================================================

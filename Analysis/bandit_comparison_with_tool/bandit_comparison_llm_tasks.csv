@@ -1,0 +1,4 @@
+task_id,issue_count,high_severity,medium_severity,low_severity
+1,0,0,0,0
+2,1,0,0,1
+3,2,1,0,1

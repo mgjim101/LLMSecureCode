@@ -1,0 +1,4 @@
+metric,cor_with_CodeChangesWithTool
+TotalHighSeverityDiff,-0.6464060815576714
+TotalMedSeverityDiff,NA
+TotalLowSeverityDiff,0.236579774889367

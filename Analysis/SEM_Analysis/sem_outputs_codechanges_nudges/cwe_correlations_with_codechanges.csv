@@ -1,0 +1,6 @@
+metric,cor_with_CodeChangesWithTool
+n_issues_fixed,0.8212385940412903
+n_issues_common,0.5573829951130523
+n_issues_new,0.6329915749348237
+TotalHighSeverityDiff,-0.6464060815576714
+TotalLowSeverityDiff,0.236579774889367

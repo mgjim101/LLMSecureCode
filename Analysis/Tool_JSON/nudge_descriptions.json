@@ -1,0 +1,10 @@
+[
+  {
+    "nudgeid": 1,
+    "description": "Do you want to run a tool for checking security issues?"
+  },
+  {
+    "nudgeid": 2,
+    "description": "LLMs can produce insecure code. Do you want to run a tool for checking security issues?"
+  }
+]

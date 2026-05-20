@@ -1,0 +1,21 @@
+analysis,n_A,n_B,mean_A,mean_B,sd_A,sd_B,shapiro_p_A,shapiro_p_B,levene_p,primary_test,test_statistic,p_value,significant_0.05,significant_bonferroni,effect_size_name,effect_size,too_small
+Analysis 1: Tool Usage — Total_Uses per participant,48,49,2.5417,2.8163,0.8742,0.6349,0.0000,0.0000,0.0794,Mann-Whitney U,1000.0000,0.0558,no,no,rank-biserial r,0.1497,no
+Analysis 1 (per task): Task 1 — Tool Used (binary),48,49,0.8125,0.9388,0.3944,0.2422,0.0000,0.0000,0.0599,Mann-Whitney U,1027.5000,0.0611,no,no,rank-biserial r,0.1263,no
+Analysis 1 (per task): Task 2 — Tool Used (binary),48,49,0.8958,0.9592,0.3087,0.1999,0.0000,0.0000,0.2323,Mann-Whitney U,1101.5000,0.2335,no,no,rank-biserial r,0.0634,no
+Analysis 1 (per task): Task 3 — Tool Used (binary),48,49,0.8333,0.9184,0.3766,0.2766,0.0000,0.0000,0.2075,Mann-Whitney U,1076.0000,0.2081,no,no,rank-biserial r,0.0850,no
+"Analysis 2a: New Vulnerabilities WITH TOOL (issue_count, aggregated)",20,31,1.8000,1.6452,1.5424,1.4035,0.0010,0.0002,0.5109,Mann-Whitney U,323.0000,0.8004,no,no,rank-biserial r,-0.0419,no
+Analysis 2a (per task): Task 1 — Vulns WITH TOOL,6,15,0.1667,0.0667,0.4082,0.2582,0.0000,0.0000,0.5054,Mann-Whitney U,49.5000,0.5407,no,no,rank-biserial r,-0.1000,no
+Analysis 2a (per task): Task 2 — Vulns WITH TOOL,14,19,0.1429,0.3158,0.3631,0.4776,0.0000,0.0000,0.2658,Mann-Whitney U,110.0000,0.2697,no,no,rank-biserial r,0.1729,no
+Analysis 2a (per task): Task 3 — Vulns WITH TOOL,11,18,3.0000,2.4444,0.4472,1.2935,0.0001,0.0002,0.1154,Mann-Whitney U,116.0000,0.3650,no,no,rank-biserial r,-0.1717,no
+Analysis 2a: severity_diff_high WITH TOOL (aggregated),20,31,-0.4000,-0.5161,0.5026,0.5080,0.0000,0.0000,0.5659,Mann-Whitney U,346.0000,0.4283,no,no,rank-biserial r,-0.1161,no
+Analysis 2a: severity_diff_medium WITH TOOL (aggregated),20,31,0.0000,0.0000,0.0000,0.0000,,,,(no variance in either group),,,,,,,no
+Analysis 2a: severity_diff_low WITH TOOL (aggregated),20,31,0.4000,0.3871,1.1425,1.1741,0.0071,0.0717,0.6434,Mann-Whitney U,311.0000,0.9921,no,no,rank-biserial r,-0.0032,no
+"Analysis 2b: New Vulnerabilities WITHOUT TOOL (issue_count, aggregated)",1,2,2.0000,2.0000,,1.4142,,,,,,,,,,,yes
+Analysis 3a: Code Changes WITH TOOL (changed_task_count),48,49,0.6458,1.0612,0.9107,0.9876,0.0000,0.0000,0.3336,Mann-Whitney U,885.5000,0.0247,yes,no,rank-biserial r,0.2470,no
+Analysis 3a (per task): Task 1 — Code Changed WITH TOOL,39,46,0.1538,0.3261,0.3655,0.4740,0.0000,0.0000,0.0679,Mann-Whitney U,742.5000,0.0691,no,no,rank-biserial r,0.1722,no
+Analysis 3a (per task): Task 2 — Code Changed WITH TOOL,43,48,0.3256,0.3958,0.4741,0.4942,0.0000,0.0000,0.4919,Mann-Whitney U,959.5000,0.4919,no,no,rank-biserial r,0.0703,no
+Analysis 3a (per task): Task 3 — Code Changed WITH TOOL,40,45,0.2750,0.4000,0.4522,0.4954,0.0000,0.0000,0.2299,Mann-Whitney U,787.5000,0.2298,no,no,rank-biserial r,0.1250,no
+Analysis 3b: Code Changes WITHOUT TOOL (changed_task_count),48,49,0.0417,0.0612,0.2887,0.3168,0.0000,0.0000,0.7515,Mann-Whitney U,1153.0000,0.5883,no,no,rank-biserial r,0.0196,no
+Analysis 3b (per task): Task 1 — Code Changed WITHOUT TOOL,9,3,0.1111,0.3333,0.3333,0.5774,0.0000,0.0000,0.4178,Mann-Whitney U,10.5000,0.4755,no,no,rank-biserial r,0.2222,no
+Analysis 3b (per task): Task 2 — Code Changed WITHOUT TOOL,5,2,0.2000,0.5000,0.4472,0.7071,,,,,,,,,,,yes
+Analysis 3b (per task): Task 3 — Code Changed WITHOUT TOOL,9,4,0.0000,0.2500,0.0000,0.5000,1.0000,0.0012,0.1394,Mann-Whitney U,13.5000,0.1824,no,no,rank-biserial r,0.2500,no

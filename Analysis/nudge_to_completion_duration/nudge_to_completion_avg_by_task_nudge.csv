@@ -1,0 +1,7 @@
+taskid,nudge,average_duration_seconds,average_duration_hh_mm_ss,sample_size
+1,A,31.53,00:00:32,39
+1,B,41.62,00:00:42,46
+2,A,76.26,00:01:16,43
+2,B,72.31,00:01:12,48
+3,A,114.32,00:01:54,40
+3,B,99.32,00:01:39,45

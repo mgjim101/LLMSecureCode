@@ -1,0 +1,8 @@
+bandit_id,cwe,Nudge_B,Nudge_A
+B311,CWE-330 (Insufficient Randomness),20,15
+B404,CWE-78 (OS Command Injection - import),19,11
+B602,CWE-78 (OS Command Injection),19,11
+B603,CWE-78 (OS Command Injection - no shell),16,11
+B701,CWE-80 (XSS via template injection),1,2
+B607,CWE-426 (Untrusted Search Path),1,1
+B105,CWE-259 (Use of Hard-coded Password),1,0

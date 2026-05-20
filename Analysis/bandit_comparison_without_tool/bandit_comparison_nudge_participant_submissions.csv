@@ -1,0 +1,6 @@
+participant_id,nudge,task_id,issue_count,high_severity,medium_severity,low_severity,severity_diff_high,severity_diff_medium,severity_diff_low
+45,B,1,0,0,0,0,0,0,0
+45,B,2,1,0,0,1,0,0,0
+66,A,1,1,1,0,0,1,0,0
+66,A,2,1,0,0,1,0,0,0
+67,B,3,3,0,0,3,-1,0,2

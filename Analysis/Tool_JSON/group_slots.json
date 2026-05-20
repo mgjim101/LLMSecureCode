@@ -1,0 +1,1002 @@
+[
+  {
+    "group_id": 1,
+    "prolific_pid": "11111",
+    "claimed_at": "2025-11-26 00:50:33.234683+00"
+  },
+  {
+    "group_id": 2,
+    "prolific_pid": "122222222",
+    "claimed_at": "2025-11-26 00:54:10.621333+00"
+  },
+  {
+    "group_id": 3,
+    "prolific_pid": "54545454",
+    "claimed_at": "2025-11-26 01:04:25.275987+00"
+  },
+  {
+    "group_id": 4,
+    "prolific_pid": "qqqq",
+    "claimed_at": "2025-11-26 01:47:15.951632+00"
+  },
+  {
+    "group_id": 5,
+    "prolific_pid": "aaaa",
+    "claimed_at": "2025-11-26 01:51:57.688158+00"
+  },
+  {
+    "group_id": 6,
+    "prolific_pid": "44444",
+    "claimed_at": "2025-11-26 01:52:18.51695+00"
+  },
+  {
+    "group_id": 7,
+    "prolific_pid": "jojoy",
+    "claimed_at": "2025-11-26 16:53:29.126514+00"
+  },
+  {
+    "group_id": 8,
+    "prolific_pid": "583fe092d639d0000142fb2e",
+    "claimed_at": "2025-11-26 17:48:09.64737+00"
+  },
+  {
+    "group_id": 9,
+    "prolific_pid": "68d81c3c92ab53a2166931ac",
+    "claimed_at": "2025-11-26 17:57:14.149782+00"
+  },
+  {
+    "group_id": 10,
+    "prolific_pid": "5cfb53d4c04a940015aab805",
+    "claimed_at": "2025-11-26 19:06:33.745196+00"
+  },
+  {
+    "group_id": 11,
+    "prolific_pid": "6156fef09d1ab07148870099",
+    "claimed_at": "2025-11-26 19:06:41.473516+00"
+  },
+  {
+    "group_id": 12,
+    "prolific_pid": "65fb1a12337cd3edfa4dd6fc",
+    "claimed_at": "2025-11-26 19:08:36.089799+00"
+  },
+  {
+    "group_id": 13,
+    "prolific_pid": "661ff0336322c3c05a16a8af",
+    "claimed_at": "2025-11-26 19:09:52.018838+00"
+  },
+  {
+    "group_id": 14,
+    "prolific_pid": "60c770d5d536d798d92c6ee9",
+    "claimed_at": "2025-11-26 19:18:04.724194+00"
+  },
+  {
+    "group_id": 15,
+    "prolific_pid": "5c093a3f600aff0001d7002c",
+    "claimed_at": "2025-11-28 21:51:18.993984+00"
+  },
+  {
+    "group_id": 16,
+    "prolific_pid": "5dd671942b033b5ec8bc97b4",
+    "claimed_at": "2025-11-28 21:58:27.870758+00"
+  },
+  {
+    "group_id": 17,
+    "prolific_pid": "665b1c771d3f242a05ffd1b3",
+    "claimed_at": "2025-11-28 22:06:04.069472+00"
+  },
+  {
+    "group_id": 18,
+    "prolific_pid": "671d5cda4bb11257ce4bcda0",
+    "claimed_at": "2025-11-28 23:04:45.089307+00"
+  },
+  {
+    "group_id": 19,
+    "prolific_pid": "678b955998db06a51ad68305",
+    "claimed_at": "2025-11-29 01:50:49.406262+00"
+  },
+  {
+    "group_id": 20,
+    "prolific_pid": "665017cd16c82792f5b364ef",
+    "claimed_at": "2025-11-29 03:08:02.492595+00"
+  },
+  {
+    "group_id": 21,
+    "prolific_pid": "67ec0db875c63c368cce8118",
+    "claimed_at": "2025-11-29 05:39:47.514687+00"
+  },
+  {
+    "group_id": 22,
+    "prolific_pid": "6914c90c80bcbb0ee3307396",
+    "claimed_at": "2025-11-29 06:20:08.170238+00"
+  },
+  {
+    "group_id": 23,
+    "prolific_pid": "637f7d52d1a517e820233f7a",
+    "claimed_at": "2025-11-29 07:33:18.766617+00"
+  },
+  {
+    "group_id": 24,
+    "prolific_pid": "67896102d98295a520a25ebb",
+    "claimed_at": "2025-11-30 07:06:21.268992+00"
+  },
+  {
+    "group_id": 25,
+    "prolific_pid": "6718c55c0df4407cbaf8e00b",
+    "claimed_at": "2025-11-30 12:06:16.827217+00"
+  },
+  {
+    "group_id": 26,
+    "prolific_pid": "66a93d22605b24790c435be2",
+    "claimed_at": "2025-12-02 07:34:23.743591+00"
+  },
+  {
+    "group_id": 27,
+    "prolific_pid": "601941db6605160008690742",
+    "claimed_at": "2025-12-04 22:17:22.63277+00"
+  },
+  {
+    "group_id": 28,
+    "prolific_pid": "605415efff124848ed5fd8e3",
+    "claimed_at": "2025-12-04 22:44:28.977256+00"
+  },
+  {
+    "group_id": 29,
+    "prolific_pid": "68d6735a42a45ae88db9691a",
+    "claimed_at": "2025-12-04 23:04:54.147509+00"
+  },
+  {
+    "group_id": 30,
+    "prolific_pid": "68c84dcc3bc98e934dd2fffa",
+    "claimed_at": "2025-12-04 23:17:51.794636+00"
+  },
+  {
+    "group_id": 31,
+    "prolific_pid": "602d86345f6c24812bfc3a4e",
+    "claimed_at": "2025-12-04 23:25:40.347343+00"
+  },
+  {
+    "group_id": 32,
+    "prolific_pid": "692b2dc2fabccc75b20df0a8",
+    "claimed_at": "2025-12-04 23:55:18.637727+00"
+  },
+  {
+    "group_id": 33,
+    "prolific_pid": "611a702fa7003f9ed350ebb4",
+    "claimed_at": "2025-12-04 23:58:10.412454+00"
+  },
+  {
+    "group_id": 34,
+    "prolific_pid": "605b787e15c5cdab9f698cb4",
+    "claimed_at": "2025-12-05 00:10:30.518213+00"
+  },
+  {
+    "group_id": 35,
+    "prolific_pid": "614929e5dc437220dafb260c",
+    "claimed_at": "2025-12-05 02:33:48.154887+00"
+  },
+  {
+    "group_id": 36,
+    "prolific_pid": "69289ee670aad30bf97ccddf",
+    "claimed_at": "2025-12-05 05:55:01.209793+00"
+  },
+  {
+    "group_id": 37,
+    "prolific_pid": "677297960b61e2b0c736be56",
+    "claimed_at": "2025-12-05 06:00:31.605016+00"
+  },
+  {
+    "group_id": 38,
+    "prolific_pid": "5bacc09b709f60000104352f",
+    "claimed_at": "2025-12-05 06:00:53.764593+00"
+  },
+  {
+    "group_id": 39,
+    "prolific_pid": "68d56ac9a18490172556aaba",
+    "claimed_at": "2025-12-05 06:01:46.921321+00"
+  },
+  {
+    "group_id": 40,
+    "prolific_pid": "609867b0b776ee0e3d256324",
+    "claimed_at": "2025-12-05 06:14:54.098873+00"
+  },
+  {
+    "group_id": 41,
+    "prolific_pid": "664b876ebe0680d014a1c471",
+    "claimed_at": "2025-12-05 06:29:28.126133+00"
+  },
+  {
+    "group_id": 42,
+    "prolific_pid": "6916bcd9fde520e1f46976cb",
+    "claimed_at": "2025-12-05 06:36:51.877079+00"
+  },
+  {
+    "group_id": 43,
+    "prolific_pid": "667b1ca693a1d52a0447f22f",
+    "claimed_at": "2025-12-05 08:17:09.471425+00"
+  },
+  {
+    "group_id": 44,
+    "prolific_pid": "656afc419322351c400138f7",
+    "claimed_at": "2025-12-05 09:32:07.467604+00"
+  },
+  {
+    "group_id": 45,
+    "prolific_pid": "609ea1092e52cba6578846a2",
+    "claimed_at": "2025-12-05 09:40:03.528671+00"
+  },
+  {
+    "group_id": 46,
+    "prolific_pid": "60b7b8126c0c4524e913236e",
+    "claimed_at": "2025-12-05 10:29:18.840315+00"
+  },
+  {
+    "group_id": 47,
+    "prolific_pid": "60f5d1dfd8ff71196982160b",
+    "claimed_at": "2025-12-05 13:28:32.904193+00"
+  },
+  {
+    "group_id": 48,
+    "prolific_pid": "5d08f2345cb5cf0017ccbb95",
+    "claimed_at": "2025-12-05 18:30:26.365028+00"
+  },
+  {
+    "group_id": 49,
+    "prolific_pid": "5eb5fe677dd9764f6a7b0692",
+    "claimed_at": "2025-12-05 20:19:37.790384+00"
+  },
+  {
+    "group_id": 50,
+    "prolific_pid": "654fc4ada27c650347fd0446",
+    "claimed_at": "2025-12-05 21:12:45.343532+00"
+  },
+  {
+    "group_id": 51,
+    "prolific_pid": "66c4cefb3e98086ecca28a29",
+    "claimed_at": "2025-12-05 22:46:22.714781+00"
+  },
+  {
+    "group_id": 52,
+    "prolific_pid": "65df54ece89515308c1cae4b",
+    "claimed_at": "2025-12-06 00:10:44.502337+00"
+  },
+  {
+    "group_id": 53,
+    "prolific_pid": "65707f7057bfe1f9f1e9ef2c",
+    "claimed_at": "2025-12-06 06:02:59.711932+00"
+  },
+  {
+    "group_id": 54,
+    "prolific_pid": "66604a3a17f83e06a5d82378",
+    "claimed_at": "2025-12-06 06:27:58.902776+00"
+  },
+  {
+    "group_id": 55,
+    "prolific_pid": "66049c36acdc2fde734b0983",
+    "claimed_at": "2025-12-06 15:51:32.907997+00"
+  },
+  {
+    "group_id": 56,
+    "prolific_pid": "5be30d2451ed78000195c6b6",
+    "claimed_at": "2025-12-06 18:11:25.819635+00"
+  },
+  {
+    "group_id": 57,
+    "prolific_pid": "66bf10e19271dfdd1f7723dc",
+    "claimed_at": "2025-12-06 18:52:06.479582+00"
+  },
+  {
+    "group_id": 58,
+    "prolific_pid": "5e8244d17412d49657c3e6d8",
+    "claimed_at": "2025-12-06 21:50:29.823032+00"
+  },
+  {
+    "group_id": 59,
+    "prolific_pid": "6005e777d1d8768d5808b5fd",
+    "claimed_at": "2025-12-07 00:40:47.446934+00"
+  },
+  {
+    "group_id": 60,
+    "prolific_pid": "66854dacc87d341b452931d9",
+    "claimed_at": "2025-12-07 00:43:24.287839+00"
+  },
+  {
+    "group_id": 61,
+    "prolific_pid": "68c18047338d71b59d4e843d",
+    "claimed_at": "2025-12-07 05:32:39.927879+00"
+  },
+  {
+    "group_id": 62,
+    "prolific_pid": "652a97574fa0e1dd16211b91",
+    "claimed_at": "2025-12-07 10:07:07.48979+00"
+  },
+  {
+    "group_id": 63,
+    "prolific_pid": "68e54271b188d748c1a258bb",
+    "claimed_at": "2025-12-07 11:05:48.136221+00"
+  },
+  {
+    "group_id": 64,
+    "prolific_pid": "5d14bd7a49a18f0001e1e8b4",
+    "claimed_at": "2025-12-07 11:08:41.061519+00"
+  },
+  {
+    "group_id": 65,
+    "prolific_pid": "611842195ebcbb197bc11c0e",
+    "claimed_at": "2025-12-07 17:32:45.987928+00"
+  },
+  {
+    "group_id": 66,
+    "prolific_pid": "5cb7852e044ae900011ff74e",
+    "claimed_at": "2025-12-07 18:12:12.89727+00"
+  },
+  {
+    "group_id": 67,
+    "prolific_pid": "6525aebf13661dcdfda045f8",
+    "claimed_at": "2025-12-07 19:36:43.590718+00"
+  },
+  {
+    "group_id": 68,
+    "prolific_pid": "5dfb75507caa1e89ad5df828",
+    "claimed_at": "2025-12-07 20:47:30.138604+00"
+  },
+  {
+    "group_id": 69,
+    "prolific_pid": "5e69475fe2fe7b1ef2d2bb92",
+    "claimed_at": "2025-12-08 04:05:01.930789+00"
+  },
+  {
+    "group_id": 70,
+    "prolific_pid": "68c835d056de62062e18aba2",
+    "claimed_at": "2025-12-08 07:14:25.178414+00"
+  },
+  {
+    "group_id": 71,
+    "prolific_pid": "5f73375bf67991000855a6d7",
+    "claimed_at": "2025-12-08 08:02:57.340164+00"
+  },
+  {
+    "group_id": 72,
+    "prolific_pid": "6127f94d2af664941ae3bf4f",
+    "claimed_at": "2025-12-08 09:14:07.981781+00"
+  },
+  {
+    "group_id": 73,
+    "prolific_pid": "611e912ecd86ccea242bb5aa",
+    "claimed_at": "2025-12-08 13:18:32.481255+00"
+  },
+  {
+    "group_id": 74,
+    "prolific_pid": "66a2741b8cc4486c4d2032d9",
+    "claimed_at": "2025-12-08 15:11:21.283297+00"
+  },
+  {
+    "group_id": 75,
+    "prolific_pid": "65f3ffb89b13487e9bba801f",
+    "claimed_at": "2025-12-09 07:49:08.64227+00"
+  },
+  {
+    "group_id": 76,
+    "prolific_pid": "6672d9dfb3878b6f6c5fa763",
+    "claimed_at": "2025-12-09 07:52:43.887441+00"
+  },
+  {
+    "group_id": 77,
+    "prolific_pid": "67bae34ff802e124adfe7189",
+    "claimed_at": "2025-12-09 17:41:50.286216+00"
+  },
+  {
+    "group_id": 78,
+    "prolific_pid": "605cb6593cc166d022a9d17c",
+    "claimed_at": "2025-12-09 17:57:16.32341+00"
+  },
+  {
+    "group_id": 79,
+    "prolific_pid": "6932bac20fb8bc77a2965352",
+    "claimed_at": "2025-12-09 17:57:28.4979+00"
+  },
+  {
+    "group_id": 80,
+    "prolific_pid": "67194d1ba278571e0e4b6f87",
+    "claimed_at": "2025-12-09 18:48:29.851254+00"
+  },
+  {
+    "group_id": 81,
+    "prolific_pid": "6623c5f5e925484c99ce611a",
+    "claimed_at": "2025-12-09 23:53:41.187709+00"
+  },
+  {
+    "group_id": 82,
+    "prolific_pid": "67f16925364c696866c13aa3",
+    "claimed_at": "2025-12-10 12:53:42.592313+00"
+  },
+  {
+    "group_id": 83,
+    "prolific_pid": "66be0672a499baee058dc3f6",
+    "claimed_at": "2025-12-11 18:51:17.199884+00"
+  },
+  {
+    "group_id": 84,
+    "prolific_pid": "64df6f97391ce879a62edf28",
+    "claimed_at": "2025-12-11 18:56:19.943779+00"
+  },
+  {
+    "group_id": 85,
+    "prolific_pid": "6916458f262a97b6c99ce704",
+    "claimed_at": "2025-12-11 19:01:04.8024+00"
+  },
+  {
+    "group_id": 86,
+    "prolific_pid": "67d1c2ab7be66a6085721f6c",
+    "claimed_at": "2025-12-11 19:51:16.636695+00"
+  },
+  {
+    "group_id": 87,
+    "prolific_pid": "6717a701fec39ffe22799038",
+    "claimed_at": "2025-12-12 10:11:19.383135+00"
+  },
+  {
+    "group_id": 88,
+    "prolific_pid": "5f1c2f87a73eec487b58ad9a",
+    "claimed_at": "2025-12-12 10:46:22.483878+00"
+  },
+  {
+    "group_id": 89,
+    "prolific_pid": "65f45a87d68ec9b74898401d",
+    "claimed_at": "2025-12-12 15:41:18.375814+00"
+  },
+  {
+    "group_id": 90,
+    "prolific_pid": "67e7cdfb2d3c81d83ccef700",
+    "claimed_at": "2025-12-13 12:53:55.098674+00"
+  },
+  {
+    "group_id": 91,
+    "prolific_pid": "5f61371454efa10bdcfc588d",
+    "claimed_at": "2025-12-14 13:19:43.999712+00"
+  },
+  {
+    "group_id": 92,
+    "prolific_pid": "5eeb70e011363a08142ff479",
+    "claimed_at": "2025-12-14 20:29:04.67013+00"
+  },
+  {
+    "group_id": 93,
+    "prolific_pid": "6658e797b169774877e72acb",
+    "claimed_at": "2025-12-14 20:52:45.702355+00"
+  },
+  {
+    "group_id": 94,
+    "prolific_pid": "60baef9aa0cb140b69d72f5a",
+    "claimed_at": "2025-12-15 00:00:56.301547+00"
+  },
+  {
+    "group_id": 95,
+    "prolific_pid": "65968bbba0c39a6be3f20d8e",
+    "claimed_at": "2025-12-15 09:14:26.110148+00"
+  },
+  {
+    "group_id": 96,
+    "prolific_pid": "566ae5587da0350012b50b13",
+    "claimed_at": "2025-12-15 09:22:41.464915+00"
+  },
+  {
+    "group_id": 97,
+    "prolific_pid": "6932e95879b6ebb379d7a9db@email.prolific.com",
+    "claimed_at": "2025-12-16 08:20:40.7136+00"
+  },
+  {
+    "group_id": 98,
+    "prolific_pid": "647d94be8426dcb4838d8f73",
+    "claimed_at": "2025-12-16 12:40:33.19971+00"
+  },
+  {
+    "group_id": 99,
+    "prolific_pid": "609bcf27b68e518541b4a827",
+    "claimed_at": "2025-12-16 19:25:32.537545+00"
+  },
+  {
+    "group_id": 100,
+    "prolific_pid": "6869318f8be1d4ab8cabb66f",
+    "claimed_at": "2025-12-16 23:19:08.452948+00"
+  },
+  {
+    "group_id": 101,
+    "prolific_pid": "65a7f794e124362a1ae7b3d9",
+    "claimed_at": "2025-12-20 00:20:37.031033+00"
+  },
+  {
+    "group_id": 102,
+    "prolific_pid": "60df5be77153bc3056607d3b",
+    "claimed_at": "2025-12-20 10:00:07.596864+00"
+  },
+  {
+    "group_id": 103,
+    "prolific_pid": "654e3926a9f47dd3e0bd5471",
+    "claimed_at": "2025-12-21 14:17:46.311514+00"
+  },
+  {
+    "group_id": 104,
+    "prolific_pid": "610af0eb860dfb6aeb567a49",
+    "claimed_at": "2025-12-21 16:34:03.57477+00"
+  },
+  {
+    "group_id": 105,
+    "prolific_pid": "5ed8e72416627f40d066278f",
+    "claimed_at": "2025-12-22 13:06:23.850056+00"
+  },
+  {
+    "group_id": 106,
+    "prolific_pid": "55a1321efdf99b6ec83c214e",
+    "claimed_at": "2025-12-31 09:32:32.214434+00"
+  },
+  {
+    "group_id": 107,
+    "prolific_pid": "6521569441baced19add37ca",
+    "claimed_at": "2026-01-10 13:29:21.45032+00"
+  },
+  {
+    "group_id": 108,
+    "prolific_pid": "6563514258fc1a6958660b37",
+    "claimed_at": "2026-01-10 13:40:13.408468+00"
+  },
+  {
+    "group_id": 109,
+    "prolific_pid": "665f58b57749126beb1be1e6",
+    "claimed_at": "2026-01-10 16:35:10.142103+00"
+  },
+  {
+    "group_id": 110,
+    "prolific_pid": "562a52d2c8ffc2000f5139dd",
+    "claimed_at": "2026-01-10 17:32:12.130913+00"
+  },
+  {
+    "group_id": 111,
+    "prolific_pid": "692ed5436fca8c59b41c2eea",
+    "claimed_at": "2026-01-11 09:31:56.06516+00"
+  },
+  {
+    "group_id": 112,
+    "prolific_pid": "64db89316721f33ed942da45",
+    "claimed_at": "2026-01-11 11:45:34.996767+00"
+  },
+  {
+    "group_id": 113,
+    "prolific_pid": "5f0610c3da28a412967e1123",
+    "claimed_at": "2026-01-11 15:15:29.290497+00"
+  },
+  {
+    "group_id": 114,
+    "prolific_pid": "658054690a72503441d25c4f",
+    "claimed_at": "2026-01-12 01:00:20.397666+00"
+  },
+  {
+    "group_id": 115,
+    "prolific_pid": "66463e4efb99fba5a67a010a",
+    "claimed_at": "2026-01-12 16:53:43.92978+00"
+  },
+  {
+    "group_id": 116,
+    "prolific_pid": "6172d63097f568ea03559adb",
+    "claimed_at": "2026-01-12 16:57:09.996949+00"
+  },
+  {
+    "group_id": 117,
+    "prolific_pid": "5d0845f9e4b46500019376af",
+    "claimed_at": "2026-01-12 21:54:55.548318+00"
+  },
+  {
+    "group_id": 118,
+    "prolific_pid": "5e6f570ab3d22551924c818a",
+    "claimed_at": "2026-01-13 18:13:58.505483+00"
+  },
+  {
+    "group_id": 119,
+    "prolific_pid": "65b16b33c01181795aafb797",
+    "claimed_at": "2026-01-14 17:46:01.909045+00"
+  },
+  {
+    "group_id": 120,
+    "prolific_pid": "5bec01bfe9b3490001e63ff4",
+    "claimed_at": "2026-01-15 09:30:43.5038+00"
+  },
+  {
+    "group_id": 121,
+    "prolific_pid": "5ec84e710b73c13203ba9f3f",
+    "claimed_at": "2026-01-15 18:12:39.129033+00"
+  },
+  {
+    "group_id": 122,
+    "prolific_pid": "5f216c1707456f055831aa5d",
+    "claimed_at": "2026-01-17 12:05:47.744007+00"
+  },
+  {
+    "group_id": 123,
+    "prolific_pid": "56cb8858edf8da000b6df354",
+    "claimed_at": "2026-01-19 16:19:40.638301+00"
+  },
+  {
+    "group_id": 124,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 125,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 126,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 127,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 128,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 129,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 130,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 131,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 132,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 133,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 134,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 135,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 136,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 137,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 138,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 139,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 140,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 141,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 142,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 143,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 144,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 145,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 146,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 147,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 148,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 149,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 150,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 151,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 152,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 153,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 154,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 155,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 156,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 157,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 158,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 159,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 160,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 161,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 162,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 163,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 164,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 165,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 166,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 167,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 168,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 169,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 170,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 171,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 172,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 173,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 174,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 175,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 176,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 177,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 178,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 179,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 180,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 181,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 182,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 183,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 184,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 185,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 186,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 187,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 188,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 189,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 190,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 191,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 192,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 193,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 194,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 195,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 196,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 197,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 198,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 199,
+    "prolific_pid": null,
+    "claimed_at": null
+  },
+  {
+    "group_id": 200,
+    "prolific_pid": null,
+    "claimed_at": null
+  }
+]

@@ -1,0 +1,3098 @@
+[
+  {
+    "interaction_id": 1,
+    "participant_id": 3,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-11-26T01:04:33.212648"
+  },
+  {
+    "interaction_id": 2,
+    "participant_id": 3,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T01:04:37.970332"
+  },
+  {
+    "interaction_id": 3,
+    "participant_id": 3,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-11-26T01:04:51.312131"
+  },
+  {
+    "interaction_id": 4,
+    "participant_id": 4,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T01:47:28.412771"
+  },
+  {
+    "interaction_id": 5,
+    "participant_id": 4,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-11-26T01:47:38.364153"
+  },
+  {
+    "interaction_id": 6,
+    "participant_id": 4,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T01:47:46.412836"
+  },
+  {
+    "interaction_id": 7,
+    "participant_id": 8,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T17:51:19.771033"
+  },
+  {
+    "interaction_id": 8,
+    "participant_id": 8,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T17:51:42.858147"
+  },
+  {
+    "interaction_id": 9,
+    "participant_id": 8,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T17:54:05.727953"
+  },
+  {
+    "interaction_id": 10,
+    "participant_id": 9,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T18:01:04.280671"
+  },
+  {
+    "interaction_id": 11,
+    "participant_id": 9,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T18:03:14.995782"
+  },
+  {
+    "interaction_id": 12,
+    "participant_id": 9,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T18:06:52.842102"
+  },
+  {
+    "interaction_id": 13,
+    "participant_id": 10,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:06:49.499551"
+  },
+  {
+    "interaction_id": 14,
+    "participant_id": 11,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:06:53.305862"
+  },
+  {
+    "interaction_id": 15,
+    "participant_id": 10,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-11-26T19:07:05.199044"
+  },
+  {
+    "interaction_id": 16,
+    "participant_id": 11,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-11-26T19:07:12.990875"
+  },
+  {
+    "interaction_id": 17,
+    "participant_id": 10,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:07:16.688851"
+  },
+  {
+    "interaction_id": 18,
+    "participant_id": 13,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:12:26.233282"
+  },
+  {
+    "interaction_id": 19,
+    "participant_id": 12,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:13:15.825828"
+  },
+  {
+    "interaction_id": 20,
+    "participant_id": 12,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:15:35.252419"
+  },
+  {
+    "interaction_id": 21,
+    "participant_id": 13,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:16:27.067603"
+  },
+  {
+    "interaction_id": 22,
+    "participant_id": 13,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:17:24.583298"
+  },
+  {
+    "interaction_id": 23,
+    "participant_id": 12,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:18:12.785945"
+  },
+  {
+    "interaction_id": 24,
+    "participant_id": 13,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:18:22.769513"
+  },
+  {
+    "interaction_id": 25,
+    "participant_id": 14,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:24:43.229740"
+  },
+  {
+    "interaction_id": 26,
+    "participant_id": 14,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:28:24.510680"
+  },
+  {
+    "interaction_id": 27,
+    "participant_id": 14,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-26T19:33:36.207361"
+  },
+  {
+    "interaction_id": 28,
+    "participant_id": 15,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T21:57:46.673877"
+  },
+  {
+    "interaction_id": 29,
+    "participant_id": 16,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T22:03:32.695910"
+  },
+  {
+    "interaction_id": 30,
+    "participant_id": 15,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-11-28T22:05:00.886575"
+  },
+  {
+    "interaction_id": 31,
+    "participant_id": 16,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T22:07:37.229148"
+  },
+  {
+    "interaction_id": 32,
+    "participant_id": 15,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T22:08:34.435557"
+  },
+  {
+    "interaction_id": 33,
+    "participant_id": 16,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T22:08:45.207925"
+  },
+  {
+    "interaction_id": 34,
+    "participant_id": 17,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T22:10:32.341482"
+  },
+  {
+    "interaction_id": 35,
+    "participant_id": 17,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T22:15:03.408265"
+  },
+  {
+    "interaction_id": 36,
+    "participant_id": 17,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T22:16:07.976741"
+  },
+  {
+    "interaction_id": 37,
+    "participant_id": 18,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T23:18:06.823685"
+  },
+  {
+    "interaction_id": 38,
+    "participant_id": 18,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T23:27:21.869375"
+  },
+  {
+    "interaction_id": 39,
+    "participant_id": 18,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-28T23:34:23.141068"
+  },
+  {
+    "interaction_id": 40,
+    "participant_id": 19,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T01:54:58.362791"
+  },
+  {
+    "interaction_id": 41,
+    "participant_id": 19,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T02:00:25.266381"
+  },
+  {
+    "interaction_id": 42,
+    "participant_id": 19,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T02:01:26.081734"
+  },
+  {
+    "interaction_id": 43,
+    "participant_id": 20,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T03:26:30.578204"
+  },
+  {
+    "interaction_id": 44,
+    "participant_id": 20,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T03:26:57.234526"
+  },
+  {
+    "interaction_id": 45,
+    "participant_id": 20,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T03:32:29.194059"
+  },
+  {
+    "interaction_id": 46,
+    "participant_id": 20,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T03:32:45.012108"
+  },
+  {
+    "interaction_id": 47,
+    "participant_id": 20,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T03:35:24.039097"
+  },
+  {
+    "interaction_id": 48,
+    "participant_id": 22,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T06:25:56.247007"
+  },
+  {
+    "interaction_id": 49,
+    "participant_id": 22,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T06:30:33.869741"
+  },
+  {
+    "interaction_id": 50,
+    "participant_id": 22,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T06:34:38.798881"
+  },
+  {
+    "interaction_id": 51,
+    "participant_id": 23,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T07:42:48.020963"
+  },
+  {
+    "interaction_id": 52,
+    "participant_id": 23,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T07:46:31.085701"
+  },
+  {
+    "interaction_id": 53,
+    "participant_id": 23,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-29T07:48:45.643283"
+  },
+  {
+    "interaction_id": 54,
+    "participant_id": 24,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-30T07:27:59.220384"
+  },
+  {
+    "interaction_id": 55,
+    "participant_id": 24,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-30T07:38:36.277679"
+  },
+  {
+    "interaction_id": 56,
+    "participant_id": 24,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-30T07:43:48.290851"
+  },
+  {
+    "interaction_id": 57,
+    "participant_id": 24,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-30T07:46:20.181185"
+  },
+  {
+    "interaction_id": 58,
+    "participant_id": 25,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-30T12:12:46.025206"
+  },
+  {
+    "interaction_id": 59,
+    "participant_id": 25,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-30T12:16:38.671271"
+  },
+  {
+    "interaction_id": 60,
+    "participant_id": 25,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-11-30T12:17:28.264197"
+  },
+  {
+    "interaction_id": 61,
+    "participant_id": 27,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T22:20:57.979710"
+  },
+  {
+    "interaction_id": 62,
+    "participant_id": 27,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T22:23:56.996088"
+  },
+  {
+    "interaction_id": 63,
+    "participant_id": 27,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T22:25:02.677605"
+  },
+  {
+    "interaction_id": 64,
+    "participant_id": 28,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T22:47:06.722392"
+  },
+  {
+    "interaction_id": 65,
+    "participant_id": 28,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T22:48:38.782067"
+  },
+  {
+    "interaction_id": 66,
+    "participant_id": 28,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T22:52:56.138268"
+  },
+  {
+    "interaction_id": 67,
+    "participant_id": 29,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:07:23.518183"
+  },
+  {
+    "interaction_id": 68,
+    "participant_id": 29,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:09:31.694763"
+  },
+  {
+    "interaction_id": 69,
+    "participant_id": 29,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:10:44.035924"
+  },
+  {
+    "interaction_id": 70,
+    "participant_id": 30,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:23:59.925222"
+  },
+  {
+    "interaction_id": 71,
+    "participant_id": 30,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:25:56.408032"
+  },
+  {
+    "interaction_id": 72,
+    "participant_id": 30,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:27:43.589423"
+  },
+  {
+    "interaction_id": 73,
+    "participant_id": 31,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:33:01.504497"
+  },
+  {
+    "interaction_id": 74,
+    "participant_id": 31,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:39:11.005650"
+  },
+  {
+    "interaction_id": 75,
+    "participant_id": 31,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:49:16.482111"
+  },
+  {
+    "interaction_id": 76,
+    "participant_id": 31,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-04T23:49:24.371403"
+  },
+  {
+    "interaction_id": 77,
+    "participant_id": 31,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-04T23:49:30.654072"
+  },
+  {
+    "interaction_id": 78,
+    "participant_id": 32,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:08:24.805897"
+  },
+  {
+    "interaction_id": 79,
+    "participant_id": 32,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:12:58.921326"
+  },
+  {
+    "interaction_id": 80,
+    "participant_id": 32,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:14:14.616411"
+  },
+  {
+    "interaction_id": 81,
+    "participant_id": 32,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:17:18.270869"
+  },
+  {
+    "interaction_id": 82,
+    "participant_id": 34,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:18:36.106808"
+  },
+  {
+    "interaction_id": 83,
+    "participant_id": 33,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:26:26.693849"
+  },
+  {
+    "interaction_id": 84,
+    "participant_id": 34,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:27:13.860731"
+  },
+  {
+    "interaction_id": 85,
+    "participant_id": 34,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:28:25.078007"
+  },
+  {
+    "interaction_id": 86,
+    "participant_id": 33,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:32:44.660381"
+  },
+  {
+    "interaction_id": 87,
+    "participant_id": 34,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:34:37.378281"
+  },
+  {
+    "interaction_id": 88,
+    "participant_id": 33,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T00:38:58.963074"
+  },
+  {
+    "interaction_id": 89,
+    "participant_id": 35,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-05T02:46:51.253696"
+  },
+  {
+    "interaction_id": 90,
+    "participant_id": 36,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T05:59:24.105771"
+  },
+  {
+    "interaction_id": 91,
+    "participant_id": 36,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:03:13.300532"
+  },
+  {
+    "interaction_id": 92,
+    "participant_id": 39,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:04:57.033039"
+  },
+  {
+    "interaction_id": 93,
+    "participant_id": 36,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:06:02.209334"
+  },
+  {
+    "interaction_id": 94,
+    "participant_id": 38,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:07:47.987058"
+  },
+  {
+    "interaction_id": 95,
+    "participant_id": 39,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-05T06:08:29.532423"
+  },
+  {
+    "interaction_id": 96,
+    "participant_id": 39,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-05T06:10:47.403276"
+  },
+  {
+    "interaction_id": 97,
+    "participant_id": 38,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:13:26.478491"
+  },
+  {
+    "interaction_id": 98,
+    "participant_id": 38,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:16:30.734433"
+  },
+  {
+    "interaction_id": 99,
+    "participant_id": 41,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:38:29.353122"
+  },
+  {
+    "interaction_id": 100,
+    "participant_id": 42,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:41:03.965018"
+  },
+  {
+    "interaction_id": 101,
+    "participant_id": 42,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:44:41.028381"
+  },
+  {
+    "interaction_id": 102,
+    "participant_id": 41,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:45:20.721869"
+  },
+  {
+    "interaction_id": 103,
+    "participant_id": 41,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:47:35.926513"
+  },
+  {
+    "interaction_id": 104,
+    "participant_id": 42,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T06:47:58.492224"
+  },
+  {
+    "interaction_id": 105,
+    "participant_id": 43,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T08:25:40.232979"
+  },
+  {
+    "interaction_id": 106,
+    "participant_id": 43,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T08:25:40.453714"
+  },
+  {
+    "interaction_id": 107,
+    "participant_id": 44,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T09:34:35.015829"
+  },
+  {
+    "interaction_id": 108,
+    "participant_id": 44,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T09:36:16.684707"
+  },
+  {
+    "interaction_id": 109,
+    "participant_id": 44,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T09:38:27.837273"
+  },
+  {
+    "interaction_id": 110,
+    "participant_id": 45,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T09:45:01.195870"
+  },
+  {
+    "interaction_id": 111,
+    "participant_id": 45,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-05T09:45:31.483904"
+  },
+  {
+    "interaction_id": 112,
+    "participant_id": 45,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-05T09:51:53.934149"
+  },
+  {
+    "interaction_id": 113,
+    "participant_id": 45,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-05T09:59:10.365406"
+  },
+  {
+    "interaction_id": 114,
+    "participant_id": 45,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-05T10:00:31.524326"
+  },
+  {
+    "interaction_id": 115,
+    "participant_id": 46,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T10:33:41.839347"
+  },
+  {
+    "interaction_id": 116,
+    "participant_id": 46,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T10:35:36.209927"
+  },
+  {
+    "interaction_id": 117,
+    "participant_id": 46,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T10:37:55.356750"
+  },
+  {
+    "interaction_id": 118,
+    "participant_id": 47,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T13:33:38.471231"
+  },
+  {
+    "interaction_id": 119,
+    "participant_id": 47,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T13:34:56.382873"
+  },
+  {
+    "interaction_id": 120,
+    "participant_id": 47,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T13:35:54.196090"
+  },
+  {
+    "interaction_id": 121,
+    "participant_id": 48,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T18:37:32.013020"
+  },
+  {
+    "interaction_id": 122,
+    "participant_id": 48,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T18:42:11.867968"
+  },
+  {
+    "interaction_id": 123,
+    "participant_id": 48,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-05T18:45:37.691797"
+  },
+  {
+    "interaction_id": 124,
+    "participant_id": 49,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T20:24:25.674940"
+  },
+  {
+    "interaction_id": 125,
+    "participant_id": 49,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T20:27:37.414673"
+  },
+  {
+    "interaction_id": 126,
+    "participant_id": 49,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T20:32:22.490359"
+  },
+  {
+    "interaction_id": 127,
+    "participant_id": 50,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T21:15:55.646248"
+  },
+  {
+    "interaction_id": 128,
+    "participant_id": 50,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T21:18:23.106549"
+  },
+  {
+    "interaction_id": 129,
+    "participant_id": 50,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T21:21:07.136265"
+  },
+  {
+    "interaction_id": 130,
+    "participant_id": 51,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T22:51:50.194759"
+  },
+  {
+    "interaction_id": 131,
+    "participant_id": 51,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T23:00:54.562170"
+  },
+  {
+    "interaction_id": 132,
+    "participant_id": 51,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-05T23:03:13.284023"
+  },
+  {
+    "interaction_id": 133,
+    "participant_id": 52,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T00:16:36.212670"
+  },
+  {
+    "interaction_id": 134,
+    "participant_id": 52,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T00:29:14.396342"
+  },
+  {
+    "interaction_id": 135,
+    "participant_id": 52,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T00:32:12.997179"
+  },
+  {
+    "interaction_id": 136,
+    "participant_id": 53,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T06:05:59.744337"
+  },
+  {
+    "interaction_id": 137,
+    "participant_id": 53,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T06:12:39.770782"
+  },
+  {
+    "interaction_id": 138,
+    "participant_id": 53,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T06:15:56.732696"
+  },
+  {
+    "interaction_id": 139,
+    "participant_id": 54,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T06:34:46.707654"
+  },
+  {
+    "interaction_id": 140,
+    "participant_id": 54,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-06T06:35:01.034322"
+  },
+  {
+    "interaction_id": 141,
+    "participant_id": 54,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-06T06:35:10.514373"
+  },
+  {
+    "interaction_id": 142,
+    "participant_id": 55,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T15:57:32.444074"
+  },
+  {
+    "interaction_id": 143,
+    "participant_id": 55,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T16:04:17.450176"
+  },
+  {
+    "interaction_id": 144,
+    "participant_id": 55,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T16:08:08.954447"
+  },
+  {
+    "interaction_id": 145,
+    "participant_id": 56,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T18:14:52.062447"
+  },
+  {
+    "interaction_id": 146,
+    "participant_id": 56,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T18:19:18.239334"
+  },
+  {
+    "interaction_id": 147,
+    "participant_id": 56,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T18:23:38.578241"
+  },
+  {
+    "interaction_id": 148,
+    "participant_id": 57,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T19:01:45.238901"
+  },
+  {
+    "interaction_id": 149,
+    "participant_id": 57,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T19:08:10.609419"
+  },
+  {
+    "interaction_id": 150,
+    "participant_id": 57,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T19:13:33.394431"
+  },
+  {
+    "interaction_id": 151,
+    "participant_id": 58,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T22:00:06.496635"
+  },
+  {
+    "interaction_id": 152,
+    "participant_id": 58,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T22:09:58.392562"
+  },
+  {
+    "interaction_id": 153,
+    "participant_id": 58,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-06T22:15:53.739841"
+  },
+  {
+    "interaction_id": 154,
+    "participant_id": 59,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T00:45:36.022518"
+  },
+  {
+    "interaction_id": 155,
+    "participant_id": 60,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T00:47:39.352878"
+  },
+  {
+    "interaction_id": 156,
+    "participant_id": 60,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T00:49:42.491762"
+  },
+  {
+    "interaction_id": 157,
+    "participant_id": 59,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T00:50:23.418847"
+  },
+  {
+    "interaction_id": 158,
+    "participant_id": 60,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T00:51:17.945399"
+  },
+  {
+    "interaction_id": 159,
+    "participant_id": 59,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T00:54:02.301280"
+  },
+  {
+    "interaction_id": 160,
+    "participant_id": 61,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T05:36:53.066062"
+  },
+  {
+    "interaction_id": 161,
+    "participant_id": 61,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T05:42:41.399235"
+  },
+  {
+    "interaction_id": 162,
+    "participant_id": 61,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T05:47:53.201169"
+  },
+  {
+    "interaction_id": 163,
+    "participant_id": 61,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T05:50:42.632220"
+  },
+  {
+    "interaction_id": 164,
+    "participant_id": 61,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T05:51:53.234872"
+  },
+  {
+    "interaction_id": 165,
+    "participant_id": 61,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T05:52:25.195791"
+  },
+  {
+    "interaction_id": 166,
+    "participant_id": 61,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T05:54:30.172138"
+  },
+  {
+    "interaction_id": 167,
+    "participant_id": 61,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T05:55:10.626582"
+  },
+  {
+    "interaction_id": 168,
+    "participant_id": 61,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T05:55:51.353489"
+  },
+  {
+    "interaction_id": 169,
+    "participant_id": 62,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T10:12:20.894313"
+  },
+  {
+    "interaction_id": 170,
+    "participant_id": 62,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T10:14:16.109875"
+  },
+  {
+    "interaction_id": 171,
+    "participant_id": 62,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T10:16:18.125662"
+  },
+  {
+    "interaction_id": 172,
+    "participant_id": 64,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T11:13:02.317274"
+  },
+  {
+    "interaction_id": 173,
+    "participant_id": 63,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T11:17:02.820573"
+  },
+  {
+    "interaction_id": 174,
+    "participant_id": 64,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T11:18:44.463904"
+  },
+  {
+    "interaction_id": 175,
+    "participant_id": 63,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T11:20:10.122346"
+  },
+  {
+    "interaction_id": 176,
+    "participant_id": 63,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T11:24:46.292197"
+  },
+  {
+    "interaction_id": 177,
+    "participant_id": 64,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T11:28:36.439028"
+  },
+  {
+    "interaction_id": 178,
+    "participant_id": 65,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T17:34:48.630765"
+  },
+  {
+    "interaction_id": 179,
+    "participant_id": 65,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T17:37:17.306495"
+  },
+  {
+    "interaction_id": 180,
+    "participant_id": 65,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T17:40:13.240333"
+  },
+  {
+    "interaction_id": 181,
+    "participant_id": 66,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T18:17:14.485162"
+  },
+  {
+    "interaction_id": 182,
+    "participant_id": 66,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T18:20:13.150750"
+  },
+  {
+    "interaction_id": 183,
+    "participant_id": 66,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T18:22:22.587531"
+  },
+  {
+    "interaction_id": 184,
+    "participant_id": 66,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T18:26:13.013742"
+  },
+  {
+    "interaction_id": 185,
+    "participant_id": 66,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T18:27:12.613315"
+  },
+  {
+    "interaction_id": 186,
+    "participant_id": 66,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T18:27:42.012800"
+  },
+  {
+    "interaction_id": 187,
+    "participant_id": 67,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T19:43:00.213706"
+  },
+  {
+    "interaction_id": 188,
+    "participant_id": 67,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T19:44:53.346337"
+  },
+  {
+    "interaction_id": 189,
+    "participant_id": 67,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T19:46:38.980616"
+  },
+  {
+    "interaction_id": 190,
+    "participant_id": 67,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T19:52:06.861100"
+  },
+  {
+    "interaction_id": 191,
+    "participant_id": 67,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T19:52:26.396312"
+  },
+  {
+    "interaction_id": 192,
+    "participant_id": 67,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-07T19:52:41.875397"
+  },
+  {
+    "interaction_id": 193,
+    "participant_id": 68,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T20:51:34.888226"
+  },
+  {
+    "interaction_id": 194,
+    "participant_id": 68,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T20:53:09.712257"
+  },
+  {
+    "interaction_id": 195,
+    "participant_id": 68,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-07T20:55:38.869071"
+  },
+  {
+    "interaction_id": 196,
+    "participant_id": 69,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T04:09:49.509779"
+  },
+  {
+    "interaction_id": 197,
+    "participant_id": 69,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T04:14:31.144305"
+  },
+  {
+    "interaction_id": 198,
+    "participant_id": 69,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T04:18:19.484060"
+  },
+  {
+    "interaction_id": 199,
+    "participant_id": 70,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T07:20:20.766576"
+  },
+  {
+    "interaction_id": 200,
+    "participant_id": 70,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T07:26:35.148342"
+  },
+  {
+    "interaction_id": 201,
+    "participant_id": 70,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T07:36:09.960265"
+  },
+  {
+    "interaction_id": 202,
+    "participant_id": 71,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T08:13:21.155671"
+  },
+  {
+    "interaction_id": 203,
+    "participant_id": 71,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T08:15:57.764038"
+  },
+  {
+    "interaction_id": 204,
+    "participant_id": 71,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T08:16:35.476919"
+  },
+  {
+    "interaction_id": 205,
+    "participant_id": 72,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T09:18:30.037782"
+  },
+  {
+    "interaction_id": 206,
+    "participant_id": 72,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T09:22:08.471621"
+  },
+  {
+    "interaction_id": 207,
+    "participant_id": 72,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T09:24:18.764672"
+  },
+  {
+    "interaction_id": 208,
+    "participant_id": 73,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T13:54:48.589031"
+  },
+  {
+    "interaction_id": 209,
+    "participant_id": 73,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T14:13:29.984645"
+  },
+  {
+    "interaction_id": 210,
+    "participant_id": 73,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T14:41:31.045502"
+  },
+  {
+    "interaction_id": 211,
+    "participant_id": 74,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-08T15:15:37.799418"
+  },
+  {
+    "interaction_id": 212,
+    "participant_id": 76,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-09T07:53:51.096273"
+  },
+  {
+    "interaction_id": 213,
+    "participant_id": 75,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-09T07:54:13.832637"
+  },
+  {
+    "interaction_id": 214,
+    "participant_id": 76,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-09T07:54:39.043040"
+  },
+  {
+    "interaction_id": 215,
+    "participant_id": 76,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-09T07:54:44.157466"
+  },
+  {
+    "interaction_id": 216,
+    "participant_id": 75,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-09T07:56:15.053219"
+  },
+  {
+    "interaction_id": 217,
+    "participant_id": 75,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-09T07:57:45.617885"
+  },
+  {
+    "interaction_id": 218,
+    "participant_id": 77,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T17:46:42.545776"
+  },
+  {
+    "interaction_id": 219,
+    "participant_id": 77,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T17:49:24.230696"
+  },
+  {
+    "interaction_id": 220,
+    "participant_id": 77,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T17:50:51.358657"
+  },
+  {
+    "interaction_id": 221,
+    "participant_id": 79,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-09T18:00:22.516010"
+  },
+  {
+    "interaction_id": 222,
+    "participant_id": 79,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-09T18:03:33.017568"
+  },
+  {
+    "interaction_id": 223,
+    "participant_id": 78,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T18:13:34.907208"
+  },
+  {
+    "interaction_id": 224,
+    "participant_id": 78,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T18:19:05.060623"
+  },
+  {
+    "interaction_id": 225,
+    "participant_id": 78,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T18:27:32.138785"
+  },
+  {
+    "interaction_id": 226,
+    "participant_id": 80,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T18:50:30.170075"
+  },
+  {
+    "interaction_id": 227,
+    "participant_id": 80,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T18:52:07.022941"
+  },
+  {
+    "interaction_id": 228,
+    "participant_id": 80,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T18:53:40.903631"
+  },
+  {
+    "interaction_id": 229,
+    "participant_id": 81,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-09T23:57:44.402973"
+  },
+  {
+    "interaction_id": 230,
+    "participant_id": 81,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-10T00:24:35.310817"
+  },
+  {
+    "interaction_id": 231,
+    "participant_id": 81,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-10T00:30:22.666767"
+  },
+  {
+    "interaction_id": 232,
+    "participant_id": 82,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-10T13:08:42.514630"
+  },
+  {
+    "interaction_id": 233,
+    "participant_id": 82,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-10T13:08:54.884256"
+  },
+  {
+    "interaction_id": 234,
+    "participant_id": 82,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-10T13:09:14.984277"
+  },
+  {
+    "interaction_id": 235,
+    "participant_id": 83,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T18:56:03.231910"
+  },
+  {
+    "interaction_id": 236,
+    "participant_id": 83,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T18:59:06.906346"
+  },
+  {
+    "interaction_id": 237,
+    "participant_id": 84,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T18:59:28.778900"
+  },
+  {
+    "interaction_id": 238,
+    "participant_id": 83,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T19:00:18.692064"
+  },
+  {
+    "interaction_id": 239,
+    "participant_id": 84,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T19:02:48.400325"
+  },
+  {
+    "interaction_id": 240,
+    "participant_id": 84,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T19:05:35.448045"
+  },
+  {
+    "interaction_id": 241,
+    "participant_id": 85,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-11T19:09:24.557235"
+  },
+  {
+    "interaction_id": 242,
+    "participant_id": 85,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T19:09:54.841380"
+  },
+  {
+    "interaction_id": 243,
+    "participant_id": 85,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-11T19:17:01.383436"
+  },
+  {
+    "interaction_id": 244,
+    "participant_id": 86,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T20:06:16.681142"
+  },
+  {
+    "interaction_id": 245,
+    "participant_id": 86,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T20:25:28.843365"
+  },
+  {
+    "interaction_id": 246,
+    "participant_id": 86,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-11T20:26:41.632107"
+  },
+  {
+    "interaction_id": 247,
+    "participant_id": 87,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-12T10:13:37.049080"
+  },
+  {
+    "interaction_id": 248,
+    "participant_id": 87,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-12T10:15:10.993343"
+  },
+  {
+    "interaction_id": 249,
+    "participant_id": 87,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-12T10:18:19.840826"
+  },
+  {
+    "interaction_id": 250,
+    "participant_id": 88,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-12T10:51:54.882444"
+  },
+  {
+    "interaction_id": 251,
+    "participant_id": 88,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-12T10:55:24.327898"
+  },
+  {
+    "interaction_id": 252,
+    "participant_id": 88,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-12T10:57:18.973813"
+  },
+  {
+    "interaction_id": 253,
+    "participant_id": 89,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-12T15:47:36.622875"
+  },
+  {
+    "interaction_id": 254,
+    "participant_id": 89,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-12T15:51:00.312092"
+  },
+  {
+    "interaction_id": 255,
+    "participant_id": 89,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-12T15:52:38.323453"
+  },
+  {
+    "interaction_id": 256,
+    "participant_id": 90,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-13T12:58:29.286432"
+  },
+  {
+    "interaction_id": 257,
+    "participant_id": 90,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-13T13:05:23.663977"
+  },
+  {
+    "interaction_id": 258,
+    "participant_id": 90,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-13T13:06:09.388346"
+  },
+  {
+    "interaction_id": 259,
+    "participant_id": 90,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-13T13:07:56.665522"
+  },
+  {
+    "interaction_id": 260,
+    "participant_id": 91,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-14T13:25:33.004900"
+  },
+  {
+    "interaction_id": 261,
+    "participant_id": 91,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-14T13:27:27.286181"
+  },
+  {
+    "interaction_id": 262,
+    "participant_id": 91,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-14T13:30:30.656178"
+  },
+  {
+    "interaction_id": 263,
+    "participant_id": 93,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-14T20:56:32.885992"
+  },
+  {
+    "interaction_id": 264,
+    "participant_id": 93,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-14T21:01:20.464016"
+  },
+  {
+    "interaction_id": 265,
+    "participant_id": 93,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-14T21:02:51.678722"
+  },
+  {
+    "interaction_id": 266,
+    "participant_id": 94,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-15T00:05:06.147239"
+  },
+  {
+    "interaction_id": 267,
+    "participant_id": 94,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-15T00:10:18.002668"
+  },
+  {
+    "interaction_id": 268,
+    "participant_id": 94,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-15T00:13:01.087473"
+  },
+  {
+    "interaction_id": 269,
+    "participant_id": 95,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-15T09:17:35.251440"
+  },
+  {
+    "interaction_id": 270,
+    "participant_id": 95,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-15T09:19:52.476663"
+  },
+  {
+    "interaction_id": 271,
+    "participant_id": 95,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-15T09:21:21.123160"
+  },
+  {
+    "interaction_id": 272,
+    "participant_id": 96,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-15T09:24:58.960829"
+  },
+  {
+    "interaction_id": 273,
+    "participant_id": 96,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-15T09:26:09.464788"
+  },
+  {
+    "interaction_id": 274,
+    "participant_id": 96,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-15T09:29:20.381869"
+  },
+  {
+    "interaction_id": 275,
+    "participant_id": 97,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-16T08:21:00.061354"
+  },
+  {
+    "interaction_id": 276,
+    "participant_id": 97,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-16T08:22:09.461444"
+  },
+  {
+    "interaction_id": 277,
+    "participant_id": 97,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-16T08:22:20.159617"
+  },
+  {
+    "interaction_id": 278,
+    "participant_id": 98,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-16T12:45:26.895176"
+  },
+  {
+    "interaction_id": 279,
+    "participant_id": 98,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-16T12:46:11.147459"
+  },
+  {
+    "interaction_id": 280,
+    "participant_id": 98,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-16T12:48:37.358422"
+  },
+  {
+    "interaction_id": 281,
+    "participant_id": 100,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-16T23:33:08.914982"
+  },
+  {
+    "interaction_id": 282,
+    "participant_id": 100,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-16T23:33:26.902165"
+  },
+  {
+    "interaction_id": 283,
+    "participant_id": 100,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-16T23:38:59.661055"
+  },
+  {
+    "interaction_id": 284,
+    "participant_id": 101,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-20T00:22:14.767457"
+  },
+  {
+    "interaction_id": 285,
+    "participant_id": 101,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-20T00:43:47.789113"
+  },
+  {
+    "interaction_id": 286,
+    "participant_id": 101,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-20T00:45:33.075224"
+  },
+  {
+    "interaction_id": 287,
+    "participant_id": 102,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-20T10:03:19.281128"
+  },
+  {
+    "interaction_id": 288,
+    "participant_id": 102,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2025-12-20T10:03:27.491662"
+  },
+  {
+    "interaction_id": 289,
+    "participant_id": 103,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-21T14:22:45.532397"
+  },
+  {
+    "interaction_id": 290,
+    "participant_id": 103,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-21T14:27:09.935957"
+  },
+  {
+    "interaction_id": 291,
+    "participant_id": 103,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-21T14:33:47.367424"
+  },
+  {
+    "interaction_id": 292,
+    "participant_id": 104,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-21T16:35:46.527170"
+  },
+  {
+    "interaction_id": 293,
+    "participant_id": 104,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-21T16:37:05.194471"
+  },
+  {
+    "interaction_id": 294,
+    "participant_id": 104,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-21T16:40:58.360016"
+  },
+  {
+    "interaction_id": 295,
+    "participant_id": 105,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2025-12-22T13:24:22.800003"
+  },
+  {
+    "interaction_id": 296,
+    "participant_id": 107,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T13:34:12.062435"
+  },
+  {
+    "interaction_id": 297,
+    "participant_id": 107,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T13:40:08.619532"
+  },
+  {
+    "interaction_id": 298,
+    "participant_id": 107,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T13:41:25.197705"
+  },
+  {
+    "interaction_id": 299,
+    "participant_id": 108,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T13:41:40.066294"
+  },
+  {
+    "interaction_id": 300,
+    "participant_id": 108,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T13:42:48.023326"
+  },
+  {
+    "interaction_id": 301,
+    "participant_id": 108,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T13:43:26.571452"
+  },
+  {
+    "interaction_id": 302,
+    "participant_id": 109,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T16:38:46.117080"
+  },
+  {
+    "interaction_id": 303,
+    "participant_id": 109,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T16:40:06.970488"
+  },
+  {
+    "interaction_id": 304,
+    "participant_id": 109,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T16:43:17.652606"
+  },
+  {
+    "interaction_id": 305,
+    "participant_id": 109,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T16:45:13.522162"
+  },
+  {
+    "interaction_id": 306,
+    "participant_id": 109,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T16:47:02.121575"
+  },
+  {
+    "interaction_id": 307,
+    "participant_id": 110,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T17:38:36.794815"
+  },
+  {
+    "interaction_id": 308,
+    "participant_id": 110,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T17:41:39.515750"
+  },
+  {
+    "interaction_id": 309,
+    "participant_id": 110,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-10T17:50:18.183876"
+  },
+  {
+    "interaction_id": 310,
+    "participant_id": 111,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-11T09:35:45.875529"
+  },
+  {
+    "interaction_id": 311,
+    "participant_id": 111,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-11T09:37:33.251067"
+  },
+  {
+    "interaction_id": 312,
+    "participant_id": 111,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2026-01-11T09:37:46.499991"
+  },
+  {
+    "interaction_id": 313,
+    "participant_id": 112,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-11T11:58:18.501703"
+  },
+  {
+    "interaction_id": 314,
+    "participant_id": 112,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2026-01-11T12:34:28.461587"
+  },
+  {
+    "interaction_id": 315,
+    "participant_id": 112,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 3,
+    "tool_used": false,
+    "tool_decision_time": "2026-01-11T12:44:16.977247"
+  },
+  {
+    "interaction_id": 316,
+    "participant_id": 113,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-11T15:18:21.199250"
+  },
+  {
+    "interaction_id": 317,
+    "participant_id": 113,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-11T15:19:55.819714"
+  },
+  {
+    "interaction_id": 318,
+    "participant_id": 114,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-12T01:05:48.935384"
+  },
+  {
+    "interaction_id": 319,
+    "participant_id": 114,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-12T01:09:42.059408"
+  },
+  {
+    "interaction_id": 320,
+    "participant_id": 114,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-12T01:10:59.415253"
+  },
+  {
+    "interaction_id": 321,
+    "participant_id": 115,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-12T16:57:37.630915"
+  },
+  {
+    "interaction_id": 322,
+    "participant_id": 115,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-12T16:59:47.115364"
+  },
+  {
+    "interaction_id": 323,
+    "participant_id": 115,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-12T17:04:09.233469"
+  },
+  {
+    "interaction_id": 324,
+    "participant_id": 117,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-12T21:59:54.861090"
+  },
+  {
+    "interaction_id": 325,
+    "participant_id": 117,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-12T22:04:33.236308"
+  },
+  {
+    "interaction_id": 326,
+    "participant_id": 117,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-12T22:07:01.322411"
+  },
+  {
+    "interaction_id": 327,
+    "participant_id": 118,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-13T18:24:50.476531"
+  },
+  {
+    "interaction_id": 328,
+    "participant_id": 118,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-13T18:35:04.369607"
+  },
+  {
+    "interaction_id": 329,
+    "participant_id": 118,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-13T18:45:52.158564"
+  },
+  {
+    "interaction_id": 330,
+    "participant_id": 119,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-14T17:53:55.271011"
+  },
+  {
+    "interaction_id": 331,
+    "participant_id": 119,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-14T18:00:35.036965"
+  },
+  {
+    "interaction_id": 332,
+    "participant_id": 119,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-14T18:02:14.679659"
+  },
+  {
+    "interaction_id": 333,
+    "participant_id": 120,
+    "taskid": 3,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-15T09:37:47.918658"
+  },
+  {
+    "interaction_id": 334,
+    "participant_id": 120,
+    "taskid": 2,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-15T09:46:27.777352"
+  },
+  {
+    "interaction_id": 335,
+    "participant_id": 120,
+    "taskid": 1,
+    "nudgeid": 2,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-15T09:50:57.760442"
+  },
+  {
+    "interaction_id": 336,
+    "participant_id": 121,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-15T18:20:42.255198"
+  },
+  {
+    "interaction_id": 337,
+    "participant_id": 121,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-15T18:25:29.544733"
+  },
+  {
+    "interaction_id": 338,
+    "participant_id": 121,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-15T18:28:09.848774"
+  },
+  {
+    "interaction_id": 339,
+    "participant_id": 122,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-17T12:20:36.310776"
+  },
+  {
+    "interaction_id": 340,
+    "participant_id": 122,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-17T12:23:22.705794"
+  },
+  {
+    "interaction_id": 341,
+    "participant_id": 122,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-17T12:24:36.015789"
+  },
+  {
+    "interaction_id": 342,
+    "participant_id": 123,
+    "taskid": 2,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-19T16:25:41.787584"
+  },
+  {
+    "interaction_id": 343,
+    "participant_id": 123,
+    "taskid": 1,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-19T16:30:07.017802"
+  },
+  {
+    "interaction_id": 344,
+    "participant_id": 123,
+    "taskid": 3,
+    "nudgeid": 1,
+    "eventid": 2,
+    "tool_used": true,
+    "tool_decision_time": "2026-01-19T16:33:58.953949"
+  }
+]

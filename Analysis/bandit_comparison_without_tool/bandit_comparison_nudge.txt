@@ -1,0 +1,190 @@
+================================================================================
+BANDIT SECURITY ANALYSIS: LLM-GENERATED TASKS
+================================================================================
+
+Task 1:
+  Total issues found: 0
+  No security issues detected.
+
+Task 2:
+  Total issues found: 1
+  Issues by type:
+    - B311 (blacklist): 1 issue(s)
+        1. Line 16
+           Severity: LOW, Confidence: HIGH
+           Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+Task 3:
+  Total issues found: 2
+  Issues by type:
+    - B404 (blacklist): 1 issue(s)
+        1. Line 2
+           Severity: LOW, Confidence: HIGH
+           Description: Consider possible security implications associated with the subprocess module.
+    - B602 (subprocess_popen_with_shell_equals_true): 1 issue(s)
+        1. Line 18
+           Severity: HIGH, Confidence: HIGH
+           Description: subprocess call with shell=True identified, security issue.
+
+LLM-Generated Tasks Summary:
+  Total issues across all tasks: 3
+  Issue types found: ['B311', 'B404', 'B602']
+    - B311 (blacklist): 1 occurrence(s)
+    - B404 (blacklist): 1 occurrence(s)
+    - B602 (subprocess_popen_with_shell_equals_true): 1 occurrence(s)
+
+================================================================================
+BANDIT SECURITY ANALYSIS: PARTICIPANT SUBMISSIONS AFTER NUDGE (CHANGED TASKS ONLY)
+================================================================================
+
+Note: These are submissions after seeing the nudge (event 1 -> event 3),
+      before running the security tool.
+
+Total changed task submissions analyzed: 5
+
+Participant 45 (Nudge B):
+  Task 1 (eventID=3 submission, after nudge):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=3 submission, after nudge):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 16
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 66 (Nudge A):
+  Task 1 (eventID=3 submission, after nudge):
+    Issues found: 1
+    Issues by type:
+      - B701 (jinja2_autoescape_false): 1 issue(s)
+          1. Line 9
+             Severity: HIGH, Confidence: HIGH
+             Description: By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 1
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=1 (+1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+        New (introduced): ['B701 (jinja2_autoescape_false)']
+  Task 2 (eventID=3 submission, after nudge):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 16
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 67 (Nudge B):
+  Task 3 (eventID=3 submission, after nudge):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 23
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 37
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+================================================================================
+OVERALL COMPARISON SUMMARY (AFTER NUDGE)
+================================================================================
+
+Changed task submissions analyzed: 5
+
+Issue Count Comparison:
+  Total LLM issues (for compared tasks): 4
+  Total submitted issues (after nudge): 6
+  Net change: +2
+
+Severity Breakdown (Aggregated):
+  Severity          LLM    Submitted     Change
+  ------------ -------- ------------ ----------
+  HIGH                1            1          0
+  MEDIUM              0            0          0
+  LOW                 3            5         +2
+
+Submission Outcomes:
+  Improved (fewer issues): 0 submissions
+  Worsened (more issues): 2 submissions
+  Same issue count: 3 submissions
+
+Issue Types Analysis:
+  Fixed (removed) across submissions: ['B602 (subprocess_popen_with_shell_equals_true)']
+  New (introduced) across submissions: ['B603 (subprocess_without_shell_equals_true)', 'B701 (jinja2_autoescape_false)']
+  Common (present in both): ['B311 (blacklist)', 'B404 (blacklist)']
+
+Per-Task Breakdown:
+  Task 1:
+    Changed submissions: 2
+    LLM issues per task: 0
+    Outcomes - Improved: 0, Worsened: 1, Same: 1
+    Severity changes: HIGH: 0→1 (+1)
+    New types: ['B701 (jinja2_autoescape_false)']
+  Task 2:
+    Changed submissions: 2
+    LLM issues per task: 1
+    Outcomes - Improved: 0, Worsened: 0, Same: 2
+    Severity changes: LOW: 2→2 (0)
+  Task 3:
+    Changed submissions: 1
+    LLM issues per task: 2
+    Outcomes - Improved: 0, Worsened: 1, Same: 0
+    Severity changes: HIGH: 1→0 (-1), LOW: 1→3 (+2)
+    Fixed types: ['B602 (subprocess_popen_with_shell_equals_true)']
+    New types: ['B603 (subprocess_without_shell_equals_true)']
+
+================================================================================
+PER-NUDGE PER-TASK COUNTS
+================================================================================
+
+  Nudge A, Task 1 (n=1): total_issues=1, high=1, medium=0, low=0
+  Nudge A, Task 2 (n=1): total_issues=1, high=0, medium=0, low=1
+  Nudge B, Task 1 (n=1): total_issues=0, high=0, medium=0, low=0
+  Nudge B, Task 2 (n=1): total_issues=1, high=0, medium=0, low=1
+  Nudge B, Task 3 (n=1): total_issues=3, high=0, medium=0, low=3

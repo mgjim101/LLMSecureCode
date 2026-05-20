@@ -1,0 +1,11 @@
+bandit_id,change_kind,Nudge_B,Nudge_A
+B105,new,1,0
+B311,common,7,3
+B311,fixed,13,12
+B404,common,15,11
+B404,fixed,4,0
+B602,common,1,2
+B602,fixed,18,9
+B603,new,16,11
+B607,new,1,1
+B701,new,1,2

@@ -1,0 +1,7 @@
+nudge,task_id,n,total_issue_count,total_high_severity,total_medium_severity,total_low_severity
+A,1,6,1,1,0,0
+A,2,14,2,0,0,2
+A,3,11,33,2,0,31
+B,1,15,1,1,0,0
+B,2,19,6,0,0,6
+B,3,18,44,1,0,43

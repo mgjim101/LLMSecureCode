@@ -1,0 +1,893 @@
+Code changes after nudge only (event 1 vs event 3)
+Participants in scope: 97 (from prolific_ids_with_counts.txt)
+Comparison rule: eventid=1 code is start (nudge seen), eventid=3 code is after.
+
+Participant 8 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 9 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 10 (Nudge B)
+  Task pairs analyzed: 1
+  Changed after nudge: 0
+  No change after nudge: 1
+  Task details:
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 12 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 13 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 14 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 15 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after nudge: 0
+  No change after nudge: 1
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+
+Participant 16 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 17 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 18 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 19 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 20 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 22 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 23 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 24 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 25 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 27 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 28 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 29 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 30 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 31 (Nudge B)
+  Task pairs analyzed: 1
+  Changed after nudge: 0
+  No change after nudge: 1
+  Task details:
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 32 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 33 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 34 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 36 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 38 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 39 (Nudge A)
+  Task pairs analyzed: 2
+  Changed after nudge: 0
+  No change after nudge: 2
+  Task details:
+    - taskid=1: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 33 -> 33)
+
+Participant 41 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 42 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 44 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 45 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after nudge: 2
+  No change after nudge: 1
+  Task details:
+    - taskid=1: changed (lines 30 -> 33)
+    - taskid=2: changed (lines 31 -> 31)
+    - taskid=3: no change (lines 32 -> 32)
+
+Participant 46 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 47 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 48 (Nudge B)
+  Task pairs analyzed: 1
+  Changed after nudge: 0
+  No change after nudge: 1
+  Task details:
+    - taskid=1: no change (lines 34 -> 34)
+
+Participant 49 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 50 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 51 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 52 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 53 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 54 (Nudge A)
+  Task pairs analyzed: 2
+  Changed after nudge: 0
+  No change after nudge: 2
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 29 -> 29)
+
+Participant 55 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 56 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 57 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 58 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 59 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 60 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 62 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 63 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 64 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 65 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 66 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after nudge: 2
+  No change after nudge: 1
+  Task details:
+    - taskid=1: changed (lines 49 -> 36)
+    - taskid=2: changed (lines 37 -> 39)
+    - taskid=3: no change (lines 53 -> 53)
+
+Participant 67 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after nudge: 1
+  No change after nudge: 2
+  Task details:
+    - taskid=1: no change (lines 40 -> 40)
+    - taskid=2: no change (lines 35 -> 35)
+    - taskid=3: changed (lines 40 -> 47)
+
+Participant 68 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 69 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 70 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 71 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 72 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 73 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 75 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after nudge: 0
+  No change after nudge: 3
+  Task details:
+    - taskid=1: no change (lines 40 -> 40)
+    - taskid=2: no change (lines 38 -> 38)
+    - taskid=3: no change (lines 43 -> 43)
+
+Participant 76 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after nudge: 0
+  No change after nudge: 3
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 29 -> 29)
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 77 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 78 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 80 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 81 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 82 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 83 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 84 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 85 (Nudge A)
+  Task pairs analyzed: 2
+  Changed after nudge: 0
+  No change after nudge: 2
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 86 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 87 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 88 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 89 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 90 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after nudge: 0
+  No change after nudge: 1
+  Task details:
+    - taskid=1: no change (lines 31 -> 31)
+
+Participant 91 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 93 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 94 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 96 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 98 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after nudge: 0
+  No change after nudge: 1
+  Task details:
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 100 (Nudge A)
+  Task pairs analyzed: 2
+  Changed after nudge: 0
+  No change after nudge: 2
+  Task details:
+    - taskid=2: no change (lines 36 -> 36)
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 101 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 103 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 104 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 107 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 108 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 109 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 110 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 111 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after nudge: 0
+  No change after nudge: 1
+  Task details:
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 112 (Nudge A)
+  Task pairs analyzed: 2
+  Changed after nudge: 0
+  No change after nudge: 2
+  Task details:
+    - taskid=1: no change (lines 35 -> 35)
+    - taskid=3: no change (lines 68 -> 68)
+
+Participant 114 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 115 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 117 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 118 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 119 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 120 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 121 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 122 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Participant 123 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after nudge: 0
+  No change after nudge: 0
+  Task details: none (no event 1 & 3 pair found)
+
+Summary
+  Task pairs analyzed: 32
+    with changes: 5
+    no changes: 27
+  Participants with >=1 change: 3
+  Participants with zero changes: 94
+  Incomplete pairs skipped (missing event 1 or 3): 259
+  Skipped pair list (participant_id, taskid):
+    - 8, taskid=1
+    - 8, taskid=2
+    - 8, taskid=3
+    - 9, taskid=1
+    - 9, taskid=2
+    - 9, taskid=3
+    - 10, taskid=1
+    - 10, taskid=2
+    - 12, taskid=1
+    - 12, taskid=2
+    - 12, taskid=3
+    - 13, taskid=1
+    - 13, taskid=2
+    - 13, taskid=3
+    - 14, taskid=1
+    - 14, taskid=2
+    - 14, taskid=3
+    - 15, taskid=2
+    - 15, taskid=3
+    - 16, taskid=1
+    - 16, taskid=2
+    - 16, taskid=3
+    - 17, taskid=1
+    - 17, taskid=2
+    - 17, taskid=3
+    - 18, taskid=1
+    - 18, taskid=2
+    - 18, taskid=3
+    - 19, taskid=1
+    - 19, taskid=2
+    - 19, taskid=3
+    - 20, taskid=1
+    - 20, taskid=2
+    - 20, taskid=3
+    - 22, taskid=1
+    - 22, taskid=2
+    - 22, taskid=3
+    - 23, taskid=1
+    - 23, taskid=2
+    - 23, taskid=3
+    - 24, taskid=1
+    - 24, taskid=2
+    - 24, taskid=3
+    - 25, taskid=1
+    - 25, taskid=2
+    - 25, taskid=3
+    - 27, taskid=1
+    - 27, taskid=2
+    - 27, taskid=3
+    - 28, taskid=1
+    - 28, taskid=2
+    - 28, taskid=3
+    - 29, taskid=1
+    - 29, taskid=2
+    - 29, taskid=3
+    - 30, taskid=1
+    - 30, taskid=2
+    - 30, taskid=3
+    - 31, taskid=1
+    - 31, taskid=2
+    - 32, taskid=1
+    - 32, taskid=2
+    - 32, taskid=3
+    - 33, taskid=1
+    - 33, taskid=2
+    - 33, taskid=3
+    - 34, taskid=1
+    - 34, taskid=2
+    - 34, taskid=3
+    - 36, taskid=1
+    - 36, taskid=2
+    - 36, taskid=3
+    - 38, taskid=1
+    - 38, taskid=2
+    - 38, taskid=3
+    - 39, taskid=2
+    - 41, taskid=1
+    - 41, taskid=2
+    - 41, taskid=3
+    - 42, taskid=1
+    - 42, taskid=2
+    - 42, taskid=3
+    - 44, taskid=1
+    - 44, taskid=2
+    - 44, taskid=3
+    - 46, taskid=1
+    - 46, taskid=2
+    - 46, taskid=3
+    - 47, taskid=1
+    - 47, taskid=2
+    - 47, taskid=3
+    - 48, taskid=2
+    - 48, taskid=3
+    - 49, taskid=1
+    - 49, taskid=2
+    - 49, taskid=3
+    - 50, taskid=1
+    - 50, taskid=2
+    - 50, taskid=3
+    - 51, taskid=1
+    - 51, taskid=2
+    - 51, taskid=3
+    - 52, taskid=1
+    - 52, taskid=2
+    - 52, taskid=3
+    - 53, taskid=1
+    - 53, taskid=2
+    - 53, taskid=3
+    - 54, taskid=3
+    - 55, taskid=1
+    - 55, taskid=2
+    - 55, taskid=3
+    - 56, taskid=1
+    - 56, taskid=2
+    - 56, taskid=3
+    - 57, taskid=1
+    - 57, taskid=2
+    - 57, taskid=3
+    - 58, taskid=1
+    - 58, taskid=2
+    - 58, taskid=3
+    - 59, taskid=1
+    - 59, taskid=2
+    - 59, taskid=3
+    - 60, taskid=1
+    - 60, taskid=2
+    - 60, taskid=3
+    - 62, taskid=1
+    - 62, taskid=2
+    - 62, taskid=3
+    - 63, taskid=1
+    - 63, taskid=2
+    - 63, taskid=3
+    - 64, taskid=1
+    - 64, taskid=2
+    - 64, taskid=3
+    - 65, taskid=1
+    - 65, taskid=2
+    - 65, taskid=3
+    - 68, taskid=1
+    - 68, taskid=2
+    - 68, taskid=3
+    - 69, taskid=1
+    - 69, taskid=2
+    - 69, taskid=3
+    - 70, taskid=1
+    - 70, taskid=2
+    - 70, taskid=3
+    - 71, taskid=1
+    - 71, taskid=2
+    - 71, taskid=3
+    - 72, taskid=1
+    - 72, taskid=2
+    - 72, taskid=3
+    - 73, taskid=1
+    - 73, taskid=2
+    - 73, taskid=3
+    - 77, taskid=1
+    - 77, taskid=2
+    - 77, taskid=3
+    - 78, taskid=1
+    - 78, taskid=2
+    - 78, taskid=3
+    - 80, taskid=1
+    - 80, taskid=2
+    - 80, taskid=3
+    - 81, taskid=1
+    - 81, taskid=2
+    - 81, taskid=3
+    - 82, taskid=1
+    - 82, taskid=2
+    - 82, taskid=3
+    - 83, taskid=1
+    - 83, taskid=2
+    - 83, taskid=3
+    - 84, taskid=1
+    - 84, taskid=2
+    - 84, taskid=3
+    - 85, taskid=2
+    - 86, taskid=1
+    - 86, taskid=2
+    - 86, taskid=3
+    - 87, taskid=1
+    - 87, taskid=2
+    - 87, taskid=3
+    - 88, taskid=1
+    - 88, taskid=2
+    - 88, taskid=3
+    - 89, taskid=1
+    - 89, taskid=2
+    - 89, taskid=3
+    - 90, taskid=2
+    - 90, taskid=3
+    - 91, taskid=1
+    - 91, taskid=2
+    - 91, taskid=3
+    - 93, taskid=1
+    - 93, taskid=2
+    - 93, taskid=3
+    - 94, taskid=1
+    - 94, taskid=2
+    - 94, taskid=3
+    - 96, taskid=1
+    - 96, taskid=2
+    - 96, taskid=3
+    - 98, taskid=1
+    - 98, taskid=2
+    - 100, taskid=1
+    - 101, taskid=1
+    - 101, taskid=2
+    - 101, taskid=3
+    - 103, taskid=1
+    - 103, taskid=2
+    - 103, taskid=3
+    - 104, taskid=1
+    - 104, taskid=2
+    - 104, taskid=3
+    - 107, taskid=1
+    - 107, taskid=2
+    - 107, taskid=3
+    - 108, taskid=1
+    - 108, taskid=2
+    - 108, taskid=3
+    - 109, taskid=1
+    - 109, taskid=2
+    - 109, taskid=3
+    - 110, taskid=1
+    - 110, taskid=2
+    - 110, taskid=3
+    - 111, taskid=1
+    - 111, taskid=2
+    - 112, taskid=2
+    - 114, taskid=1
+    - 114, taskid=2
+    - 114, taskid=3
+    - 115, taskid=1
+    - 115, taskid=2
+    - 115, taskid=3
+    - 117, taskid=1
+    - 117, taskid=2
+    - 117, taskid=3
+    - 118, taskid=1
+    - 118, taskid=2
+    - 118, taskid=3
+    - 119, taskid=1
+    - 119, taskid=2
+    - 119, taskid=3
+    - 120, taskid=1
+    - 120, taskid=2
+    - 120, taskid=3
+    - 121, taskid=1
+    - 121, taskid=2
+    - 121, taskid=3
+    - 122, taskid=1
+    - 122, taskid=2
+    - 122, taskid=3
+    - 123, taskid=1
+    - 123, taskid=2
+    - 123, taskid=3
+
+Per-Nudge Per-Task Counts
+  Nudge A, taskid=1 (n=9): changed=1, unchanged=8
+  Nudge A, taskid=2 (n=5): changed=1, unchanged=4
+  Nudge A, taskid=3 (n=9): changed=0, unchanged=9
+  Nudge B, taskid=1 (n=3): changed=1, unchanged=2
+  Nudge B, taskid=2 (n=2): changed=1, unchanged=1
+  Nudge B, taskid=3 (n=4): changed=1, unchanged=3

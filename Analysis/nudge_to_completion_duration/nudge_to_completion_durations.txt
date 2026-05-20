@@ -1,0 +1,714 @@
+Nudge to completion durations (eventid 1 -> eventid 3 or 4)
+Participants in scope: 97 (from prolific_ids_with_counts.txt)
+Rule: take earliest nudge (event 1) and earliest completion (event 3/4) at or after that nudge.
+
+Participant 8 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-26 17:51:14.515978, completion(event 4)=2025-11-26 17:51:32.050281, duration=00:00:18 (17.53 seconds)
+    - taskid=2: nudge=2025-11-26 17:54:03.379581, completion(event 4)=2025-11-26 17:54:08.135659, duration=00:00:05 (4.76 seconds)
+    - taskid=3: nudge=2025-11-26 17:51:40.351001, completion(event 4)=2025-11-26 17:51:59.808341, duration=00:00:19 (19.46 seconds)
+
+Participant 9 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-26 18:03:13.045010, completion(event 4)=2025-11-26 18:03:18.600799, duration=00:00:06 (5.56 seconds)
+    - taskid=2: nudge=2025-11-26 18:00:56.789705, completion(event 4)=2025-11-26 18:01:24.121061, duration=00:00:27 (27.33 seconds)
+    - taskid=3: nudge=2025-11-26 18:06:49.558393, completion(event 4)=2025-11-26 18:08:01.859500, duration=00:01:12 (72.30 seconds)
+
+Participant 10 (Nudge B)
+  Tasks with duration: 2
+  Task details:
+    - taskid=1: nudge=2025-11-26 19:07:15.327505, completion(event 4)=2025-11-26 19:07:19.344176, duration=00:00:04 (4.02 seconds)
+    - taskid=2: nudge=2025-11-26 19:06:43.403718, completion(event 4)=2025-11-26 19:06:58.706168, duration=00:00:15 (15.30 seconds)
+  Missing pairs:
+    - taskid=3: no completion timestamp after nudge
+
+Participant 12 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-26 19:18:10.150470, completion(event 4)=2025-11-26 19:18:18.732027, duration=00:00:09 (8.58 seconds)
+    - taskid=2: nudge=2025-11-26 19:15:31.179717, completion(event 4)=2025-11-26 19:15:54.622131, duration=00:00:23 (23.44 seconds)
+    - taskid=3: nudge=2025-11-26 19:13:00.152079, completion(event 4)=2025-11-26 19:13:30.858568, duration=00:00:31 (30.71 seconds)
+
+Participant 13 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-26 19:12:22.381292, completion(event 4)=2025-11-26 19:12:30.568642, duration=00:00:08 (8.19 seconds)
+    - taskid=2: nudge=2025-11-26 19:17:21.729972, completion(event 4)=2025-11-26 19:17:44.514122, duration=00:00:23 (22.78 seconds)
+    - taskid=3: nudge=2025-11-26 19:18:19.847979, completion(event 4)=2025-11-26 19:18:25.049199, duration=00:00:05 (5.20 seconds)
+
+Participant 14 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-26 19:24:37.390205, completion(event 4)=2025-11-26 19:24:47.667069, duration=00:00:10 (10.28 seconds)
+    - taskid=2: nudge=2025-11-26 19:33:34.620454, completion(event 4)=2025-11-26 19:33:48.065464, duration=00:00:13 (13.45 seconds)
+    - taskid=3: nudge=2025-11-26 19:28:22.695958, completion(event 4)=2025-11-26 19:28:54.431787, duration=00:00:32 (31.74 seconds)
+
+Participant 15 (Nudge A)
+  Tasks with duration: 2
+  Task details:
+    - taskid=2: nudge=2025-11-28 21:57:42.055249, completion(event 4)=2025-11-28 21:58:22.308518, duration=00:00:40 (40.25 seconds)
+    - taskid=3: nudge=2025-11-28 22:08:31.426578, completion(event 4)=2025-11-28 22:09:12.889613, duration=00:00:41 (41.46 seconds)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+
+Participant 16 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-28 22:08:43.205515, completion(event 4)=2025-11-28 22:09:00.054680, duration=00:00:17 (16.85 seconds)
+    - taskid=2: nudge=2025-11-28 22:03:28.914545, completion(event 4)=2025-11-28 22:03:48.501203, duration=00:00:20 (19.59 seconds)
+    - taskid=3: nudge=2025-11-28 22:07:35.117718, completion(event 4)=2025-11-28 22:07:46.255623, duration=00:00:11 (11.14 seconds)
+
+Participant 17 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-28 22:15:00.792163, completion(event 4)=2025-11-28 22:15:08.546049, duration=00:00:08 (7.75 seconds)
+    - taskid=2: nudge=2025-11-28 22:16:05.399597, completion(event 4)=2025-11-28 22:16:16.993185, duration=00:00:12 (11.59 seconds)
+    - taskid=3: nudge=2025-11-28 22:10:22.662311, completion(event 4)=2025-11-28 22:12:34.580582, duration=00:02:12 (131.92 seconds)
+
+Participant 18 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-28 23:34:21.115671, completion(event 4)=2025-11-28 23:34:30.225134, duration=00:00:09 (9.11 seconds)
+    - taskid=2: nudge=2025-11-28 23:27:16.325332, completion(event 4)=2025-11-28 23:27:37.864615, duration=00:00:22 (21.54 seconds)
+    - taskid=3: nudge=2025-11-28 23:17:55.135697, completion(event 4)=2025-11-28 23:22:24.075196, duration=00:04:29 (268.94 seconds)
+
+Participant 19 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-29 01:54:44.385348, completion(event 4)=2025-11-29 01:58:49.276946, duration=00:04:05 (244.89 seconds)
+    - taskid=2: nudge=2025-11-29 02:00:21.285732, completion(event 4)=2025-11-29 02:00:28.690645, duration=00:00:07 (7.40 seconds)
+    - taskid=3: nudge=2025-11-29 02:01:22.567313, completion(event 4)=2025-11-29 02:02:07.069839, duration=00:00:45 (44.50 seconds)
+
+Participant 20 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-29 03:26:18.075583, completion(event 4)=2025-11-29 03:26:43.551131, duration=00:00:25 (25.48 seconds)
+    - taskid=2: nudge=2025-11-29 03:35:20.008838, completion(event 4)=2025-11-29 03:36:53.537323, duration=00:01:34 (93.53 seconds)
+    - taskid=3: nudge=2025-11-29 03:26:51.555489, completion(event 4)=2025-11-29 03:35:15.002583, duration=00:08:23 (503.45 seconds)
+
+Participant 22 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-29 06:34:35.957784, completion(event 4)=2025-11-29 06:34:42.321625, duration=00:00:06 (6.36 seconds)
+    - taskid=2: nudge=2025-11-29 06:25:44.908361, completion(event 4)=2025-11-29 06:26:53.735116, duration=00:01:09 (68.83 seconds)
+    - taskid=3: nudge=2025-11-29 06:30:30.229861, completion(event 4)=2025-11-29 06:30:39.216290, duration=00:00:09 (8.99 seconds)
+
+Participant 23 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-29 07:46:27.978629, completion(event 4)=2025-11-29 07:46:34.588805, duration=00:00:07 (6.61 seconds)
+    - taskid=2: nudge=2025-11-29 07:48:43.804738, completion(event 4)=2025-11-29 07:49:51.405474, duration=00:01:08 (67.60 seconds)
+    - taskid=3: nudge=2025-11-29 07:42:39.767889, completion(event 4)=2025-11-29 07:42:56.380948, duration=00:00:17 (16.61 seconds)
+
+Participant 24 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-30 07:46:17.737436, completion(event 4)=2025-11-30 07:46:25.139846, duration=00:00:07 (7.40 seconds)
+    - taskid=2: nudge=2025-11-30 07:33:05.854660, completion(event 4)=2025-11-30 07:43:52.264646, duration=00:10:46 (646.41 seconds)
+    - taskid=3: nudge=2025-11-30 07:27:43.941419, completion(event 4)=2025-11-30 07:28:12.689968, duration=00:00:29 (28.75 seconds)
+
+Participant 25 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-11-30 12:12:31.781558, completion(event 4)=2025-11-30 12:15:13.513810, duration=00:02:42 (161.73 seconds)
+    - taskid=2: nudge=2025-11-30 12:16:31.903130, completion(event 4)=2025-11-30 12:16:43.804044, duration=00:00:12 (11.90 seconds)
+    - taskid=3: nudge=2025-11-30 12:17:25.365119, completion(event 4)=2025-11-30 12:18:44.810952, duration=00:01:19 (79.45 seconds)
+
+Participant 27 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-04 22:23:54.157637, completion(event 4)=2025-12-04 22:24:01.958215, duration=00:00:08 (7.80 seconds)
+    - taskid=2: nudge=2025-12-04 22:20:49.859477, completion(event 4)=2025-12-04 22:22:25.377942, duration=00:01:36 (95.52 seconds)
+    - taskid=3: nudge=2025-12-04 22:24:58.268942, completion(event 4)=2025-12-04 22:25:18.320183, duration=00:00:20 (20.05 seconds)
+
+Participant 28 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-04 22:52:54.671362, completion(event 4)=2025-12-04 22:52:59.730205, duration=00:00:05 (5.06 seconds)
+    - taskid=2: nudge=2025-12-04 22:46:57.387468, completion(event 4)=2025-12-04 22:47:52.552760, duration=00:00:55 (55.17 seconds)
+    - taskid=3: nudge=2025-12-04 22:48:34.570900, completion(event 4)=2025-12-04 22:50:51.867578, duration=00:02:17 (137.30 seconds)
+
+Participant 29 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-04 23:09:29.871777, completion(event 4)=2025-12-04 23:09:38.818115, duration=00:00:09 (8.95 seconds)
+    - taskid=2: nudge=2025-12-04 23:10:41.362837, completion(event 4)=2025-12-04 23:10:57.569931, duration=00:00:16 (16.21 seconds)
+    - taskid=3: nudge=2025-12-04 23:07:18.294600, completion(event 4)=2025-12-04 23:07:41.461368, duration=00:00:23 (23.17 seconds)
+
+Participant 30 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-04 23:27:42.037494, completion(event 4)=2025-12-04 23:27:46.452556, duration=00:00:04 (4.42 seconds)
+    - taskid=2: nudge=2025-12-04 23:25:54.167018, completion(event 4)=2025-12-04 23:26:00.047478, duration=00:00:06 (5.88 seconds)
+    - taskid=3: nudge=2025-12-04 23:23:55.395103, completion(event 4)=2025-12-04 23:24:25.449829, duration=00:00:30 (30.05 seconds)
+
+Participant 31 (Nudge B)
+  Tasks with duration: 2
+  Task details:
+    - taskid=1: nudge=2025-12-04 23:32:55.889329, completion(event 4)=2025-12-04 23:33:09.852122, duration=00:00:14 (13.96 seconds)
+    - taskid=2: nudge=2025-12-04 23:33:14.974666, completion(event 4)=2025-12-04 23:39:37.430973, duration=00:06:22 (382.46 seconds)
+  Missing pairs:
+    - taskid=3: no completion timestamp after nudge
+
+Participant 32 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 00:08:18.966041, completion(event 4)=2025-12-05 00:08:33.142251, duration=00:00:14 (14.18 seconds)
+    - taskid=2: nudge=2025-12-05 00:17:16.731813, completion(event 4)=2025-12-05 00:17:24.491438, duration=00:00:08 (7.76 seconds)
+    - taskid=3: nudge=2025-12-05 00:14:12.431835, completion(event 4)=2025-12-05 00:15:22.495256, duration=00:01:10 (70.06 seconds)
+
+Participant 33 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 00:32:39.891489, completion(event 4)=2025-12-05 00:37:14.621250, duration=00:04:35 (274.73 seconds)
+    - taskid=2: nudge=2025-12-05 00:19:55.182407, completion(event 4)=2025-12-05 00:27:34.505383, duration=00:07:39 (459.32 seconds)
+    - taskid=3: nudge=2025-12-05 00:38:53.612480, completion(event 4)=2025-12-05 00:39:51.510954, duration=00:00:58 (57.90 seconds)
+
+Participant 34 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 00:34:34.108287, completion(event 4)=2025-12-05 00:34:41.121809, duration=00:00:07 (7.01 seconds)
+    - taskid=2: nudge=2025-12-05 00:18:20.622639, completion(event 4)=2025-12-05 00:19:11.550988, duration=00:00:51 (50.93 seconds)
+    - taskid=3: nudge=2025-12-05 00:28:22.338014, completion(event 4)=2025-12-05 00:28:29.242978, duration=00:00:07 (6.90 seconds)
+
+Participant 36 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 06:06:00.666929, completion(event 4)=2025-12-05 06:06:06.136055, duration=00:00:05 (5.47 seconds)
+    - taskid=2: nudge=2025-12-05 06:03:11.229024, completion(event 4)=2025-12-05 06:05:07.307333, duration=00:01:56 (116.08 seconds)
+    - taskid=3: nudge=2025-12-05 05:59:16.704479, completion(event 4)=2025-12-05 06:01:36.857284, duration=00:02:20 (140.15 seconds)
+
+Participant 38 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 06:07:44.117509, completion(event 4)=2025-12-05 06:07:52.482211, duration=00:00:08 (8.36 seconds)
+    - taskid=2: nudge=2025-12-05 06:16:26.626608, completion(event 4)=2025-12-05 06:16:37.197597, duration=00:00:11 (10.57 seconds)
+    - taskid=3: nudge=2025-12-05 06:13:24.556121, completion(event 4)=2025-12-05 06:14:06.645235, duration=00:00:42 (42.09 seconds)
+
+Participant 39 (Nudge A)
+  Tasks with duration: 1
+  Task details:
+    - taskid=2: nudge=2025-12-05 06:04:46.157296, completion(event 4)=2025-12-05 06:06:09.820948, duration=00:01:24 (83.66 seconds)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+    - taskid=3: no completion timestamp after nudge
+
+Participant 41 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 06:45:18.092066, completion(event 4)=2025-12-05 06:46:09.804116, duration=00:00:52 (51.71 seconds)
+    - taskid=2: nudge=2025-12-05 06:46:11.003665, completion(event 4)=2025-12-05 06:48:12.772429, duration=00:02:02 (121.77 seconds)
+    - taskid=3: nudge=2025-12-05 06:38:22.248926, completion(event 4)=2025-12-05 06:42:50.056018, duration=00:04:28 (267.81 seconds)
+
+Participant 42 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 06:47:57.050507, completion(event 4)=2025-12-05 06:48:00.993941, duration=00:00:04 (3.94 seconds)
+    - taskid=2: nudge=2025-12-05 06:44:38.773710, completion(event 4)=2025-12-05 06:45:32.359205, duration=00:00:54 (53.59 seconds)
+    - taskid=3: nudge=2025-12-05 06:40:49.436522, completion(event 4)=2025-12-05 06:43:05.300533, duration=00:02:16 (135.86 seconds)
+
+Participant 44 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 09:34:31.103391, completion(event 4)=2025-12-05 09:34:37.968206, duration=00:00:07 (6.86 seconds)
+    - taskid=2: nudge=2025-12-05 09:38:26.027444, completion(event 4)=2025-12-05 09:38:32.637124, duration=00:00:07 (6.61 seconds)
+    - taskid=3: nudge=2025-12-05 09:36:14.740690, completion(event 4)=2025-12-05 09:37:09.915371, duration=00:00:55 (55.17 seconds)
+
+Participant 45 (Nudge B)
+  Tasks with duration: 1
+  Task details:
+    - taskid=2: nudge=2025-12-05 09:44:53.551028, completion(event 4)=2025-12-05 09:45:17.724792, duration=00:00:24 (24.17 seconds)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+    - taskid=3: no completion timestamp after nudge
+
+Participant 46 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 10:37:52.979575, completion(event 4)=2025-12-05 10:37:57.676509, duration=00:00:05 (4.70 seconds)
+    - taskid=2: nudge=2025-12-05 10:33:35.574194, completion(event 4)=2025-12-05 10:33:55.856521, duration=00:00:20 (20.28 seconds)
+    - taskid=3: nudge=2025-12-05 10:35:33.065261, completion(event 4)=2025-12-05 10:35:47.356894, duration=00:00:14 (14.29 seconds)
+
+Participant 47 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 13:34:53.969467, completion(event 4)=2025-12-05 13:35:00.225418, duration=00:00:06 (6.26 seconds)
+    - taskid=2: nudge=2025-12-05 13:35:52.702792, completion(event 4)=2025-12-05 13:36:51.302500, duration=00:00:59 (58.60 seconds)
+    - taskid=3: nudge=2025-12-05 13:33:32.558283, completion(event 4)=2025-12-05 13:33:57.859101, duration=00:00:25 (25.30 seconds)
+
+Participant 48 (Nudge B)
+  Tasks with duration: 2
+  Task details:
+    - taskid=2: nudge=2025-12-05 18:42:09.286676, completion(event 4)=2025-12-05 18:42:26.569770, duration=00:00:17 (17.28 seconds)
+    - taskid=3: nudge=2025-12-05 18:37:22.985200, completion(event 4)=2025-12-05 18:38:47.697036, duration=00:01:25 (84.71 seconds)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+
+Participant 49 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 20:24:19.097263, completion(event 4)=2025-12-05 20:24:29.672059, duration=00:00:11 (10.57 seconds)
+    - taskid=2: nudge=2025-12-05 20:27:35.732100, completion(event 4)=2025-12-05 20:27:51.899082, duration=00:00:16 (16.17 seconds)
+    - taskid=3: nudge=2025-12-05 20:32:20.739392, completion(event 4)=2025-12-05 20:32:55.264711, duration=00:00:35 (34.53 seconds)
+
+Participant 50 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 21:15:52.548199, completion(event 4)=2025-12-05 21:16:02.458224, duration=00:00:10 (9.91 seconds)
+    - taskid=2: nudge=2025-12-05 21:21:04.972596, completion(event 4)=2025-12-05 21:21:35.794918, duration=00:00:31 (30.82 seconds)
+    - taskid=3: nudge=2025-12-05 21:18:21.375289, completion(event 4)=2025-12-05 21:19:49.480037, duration=00:01:28 (88.10 seconds)
+
+Participant 51 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-05 23:00:52.544678, completion(event 4)=2025-12-05 23:00:57.406621, duration=00:00:05 (4.86 seconds)
+    - taskid=2: nudge=2025-12-05 22:51:45.852847, completion(event 4)=2025-12-05 22:53:34.341900, duration=00:01:48 (108.49 seconds)
+    - taskid=3: nudge=2025-12-05 23:03:11.466896, completion(event 4)=2025-12-05 23:05:44.456053, duration=00:02:33 (152.99 seconds)
+
+Participant 52 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-06 00:32:10.134826, completion(event 4)=2025-12-06 00:32:15.399345, duration=00:00:05 (5.26 seconds)
+    - taskid=2: nudge=2025-12-06 00:16:29.913880, completion(event 4)=2025-12-06 00:20:26.606368, duration=00:03:57 (236.69 seconds)
+    - taskid=3: nudge=2025-12-06 00:29:10.556714, completion(event 4)=2025-12-06 00:29:39.366659, duration=00:00:29 (28.81 seconds)
+
+Participant 53 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-06 06:12:06.474823, completion(event 4)=2025-12-06 06:15:13.906951, duration=00:03:07 (187.43 seconds)
+    - taskid=2: nudge=2025-12-06 06:15:54.567531, completion(event 4)=2025-12-06 06:17:27.048636, duration=00:01:32 (92.48 seconds)
+    - taskid=3: nudge=2025-12-06 06:05:54.436144, completion(event 4)=2025-12-06 06:12:01.435129, duration=00:06:07 (367.00 seconds)
+
+Participant 54 (Nudge A)
+  Tasks with duration: 1
+  Task details:
+    - taskid=3: nudge=2025-12-06 06:34:41.407692, completion(event 4)=2025-12-06 06:34:49.932511, duration=00:00:09 (8.52 seconds)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+    - taskid=2: no completion timestamp after nudge
+
+Participant 55 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-06 15:57:25.305059, completion(event 4)=2025-12-06 15:59:18.380234, duration=00:01:53 (113.08 seconds)
+    - taskid=2: nudge=2025-12-06 16:04:14.720823, completion(event 4)=2025-12-06 16:04:25.694668, duration=00:00:11 (10.97 seconds)
+    - taskid=3: nudge=2025-12-06 16:08:07.334012, completion(event 4)=2025-12-06 16:08:44.130770, duration=00:00:37 (36.80 seconds)
+
+Participant 56 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-06 18:14:45.463613, completion(event 4)=2025-12-06 18:17:20.077739, duration=00:02:35 (154.61 seconds)
+    - taskid=2: nudge=2025-12-06 18:23:37.123399, completion(event 4)=2025-12-06 18:24:41.538640, duration=00:01:04 (64.42 seconds)
+    - taskid=3: nudge=2025-12-06 18:19:15.308937, completion(event 4)=2025-12-06 18:21:46.359947, duration=00:02:31 (151.05 seconds)
+
+Participant 57 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-06 19:08:08.578690, completion(event 4)=2025-12-06 19:08:13.372245, duration=00:00:05 (4.79 seconds)
+    - taskid=2: nudge=2025-12-06 19:01:37.955631, completion(event 4)=2025-12-06 19:03:05.928660, duration=00:01:28 (87.97 seconds)
+    - taskid=3: nudge=2025-12-06 19:13:31.720439, completion(event 4)=2025-12-06 19:16:29.661107, duration=00:02:58 (177.94 seconds)
+
+Participant 58 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-06 22:15:51.515212, completion(event 4)=2025-12-06 22:18:39.131789, duration=00:02:48 (167.62 seconds)
+    - taskid=2: nudge=2025-12-06 21:59:59.808617, completion(event 4)=2025-12-06 22:00:13.775941, duration=00:00:14 (13.97 seconds)
+    - taskid=3: nudge=2025-12-06 22:09:54.160073, completion(event 4)=2025-12-06 22:12:36.360565, duration=00:02:42 (162.20 seconds)
+
+Participant 59 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-07 00:50:21.160867, completion(event 4)=2025-12-07 00:51:05.331491, duration=00:00:44 (44.17 seconds)
+    - taskid=2: nudge=2025-12-07 00:54:00.390244, completion(event 4)=2025-12-07 00:54:09.300660, duration=00:00:09 (8.91 seconds)
+    - taskid=3: nudge=2025-12-07 00:44:48.283364, completion(event 4)=2025-12-07 00:46:52.301803, duration=00:02:04 (124.02 seconds)
+
+Participant 60 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-07 00:51:16.463794, completion(event 4)=2025-12-07 00:51:23.791063, duration=00:00:07 (7.33 seconds)
+    - taskid=2: nudge=2025-12-07 00:49:39.763783, completion(event 4)=2025-12-07 00:49:51.386060, duration=00:00:12 (11.62 seconds)
+    - taskid=3: nudge=2025-12-07 00:47:32.667292, completion(event 4)=2025-12-07 00:48:04.396239, duration=00:00:32 (31.73 seconds)
+
+Participant 62 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-07 10:12:16.109936, completion(event 4)=2025-12-07 10:14:10.185899, duration=00:01:54 (114.08 seconds)
+    - taskid=2: nudge=2025-12-07 10:16:16.675487, completion(event 4)=2025-12-07 10:21:22.059867, duration=00:05:05 (305.38 seconds)
+    - taskid=3: nudge=2025-12-07 10:14:14.073109, completion(event 4)=2025-12-07 10:16:14.842456, duration=00:02:01 (120.77 seconds)
+
+Participant 63 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-07 11:20:06.978658, completion(event 4)=2025-12-07 11:20:12.857162, duration=00:00:06 (5.88 seconds)
+    - taskid=2: nudge=2025-12-07 11:16:35.890456, completion(event 4)=2025-12-07 11:17:09.547586, duration=00:00:34 (33.66 seconds)
+    - taskid=3: nudge=2025-12-07 11:24:44.252495, completion(event 4)=2025-12-07 11:25:50.176374, duration=00:01:06 (65.92 seconds)
+
+Participant 64 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-07 11:28:34.306409, completion(event 4)=2025-12-07 11:29:23.158593, duration=00:00:49 (48.85 seconds)
+    - taskid=2: nudge=2025-12-07 11:12:56.890741, completion(event 4)=2025-12-07 11:16:43.702502, duration=00:03:47 (226.81 seconds)
+    - taskid=3: nudge=2025-12-07 11:18:42.391276, completion(event 4)=2025-12-07 11:26:30.028255, duration=00:07:48 (467.64 seconds)
+
+Participant 65 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-07 17:37:15.163590, completion(event 4)=2025-12-07 17:37:21.020205, duration=00:00:06 (5.86 seconds)
+    - taskid=2: nudge=2025-12-07 17:40:11.555995, completion(event 4)=2025-12-07 17:40:25.780442, duration=00:00:14 (14.22 seconds)
+    - taskid=3: nudge=2025-12-07 17:34:44.856902, completion(event 4)=2025-12-07 17:35:22.202250, duration=00:00:37 (37.35 seconds)
+
+Participant 66 (Nudge A)
+  Tasks with duration: 1
+  Task details:
+    - taskid=3: nudge=2025-12-07 18:17:08.888997, completion(event 4)=2025-12-07 18:26:38.995497, duration=00:09:30 (570.11 seconds)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+    - taskid=2: no completion timestamp after nudge
+
+Participant 67 (Nudge B)
+  Tasks with duration: 0
+  Task details: none (no matched nudge & completion)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+    - taskid=2: no completion timestamp after nudge
+    - taskid=3: no completion timestamp after nudge
+
+Participant 68 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-07 20:51:29.856982, completion(event 4)=2025-12-07 20:51:40.951234, duration=00:00:11 (11.09 seconds)
+    - taskid=2: nudge=2025-12-07 20:55:37.461065, completion(event 4)=2025-12-07 20:56:00.008880, duration=00:00:23 (22.55 seconds)
+    - taskid=3: nudge=2025-12-07 20:53:07.959165, completion(event 4)=2025-12-07 20:55:21.073448, duration=00:02:13 (133.11 seconds)
+
+Participant 69 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-08 04:14:25.303583, completion(event 4)=2025-12-08 04:14:40.454709, duration=00:00:15 (15.15 seconds)
+    - taskid=2: nudge=2025-12-08 04:09:39.313439, completion(event 4)=2025-12-08 04:11:45.090376, duration=00:02:06 (125.78 seconds)
+    - taskid=3: nudge=2025-12-08 04:18:14.648226, completion(event 4)=2025-12-08 04:26:57.042068, duration=00:08:42 (522.39 seconds)
+
+Participant 70 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-08 07:36:06.554876, completion(event 4)=2025-12-08 07:38:34.060447, duration=00:02:28 (147.51 seconds)
+    - taskid=2: nudge=2025-12-08 07:20:11.363919, completion(event 4)=2025-12-08 07:22:11.536791, duration=00:02:00 (120.17 seconds)
+    - taskid=3: nudge=2025-12-08 07:26:31.485468, completion(event 4)=2025-12-08 07:32:46.258078, duration=00:06:15 (374.77 seconds)
+
+Participant 71 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-08 08:15:50.799929, completion(event 4)=2025-12-08 08:16:02.357477, duration=00:00:12 (11.56 seconds)
+    - taskid=2: nudge=2025-12-08 08:16:33.396135, completion(event 4)=2025-12-08 08:17:17.517232, duration=00:00:44 (44.12 seconds)
+    - taskid=3: nudge=2025-12-08 08:13:11.996222, completion(event 4)=2025-12-08 08:14:56.934946, duration=00:01:45 (104.94 seconds)
+
+Participant 72 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-08 09:24:17.603941, completion(event 4)=2025-12-08 09:24:20.760602, duration=00:00:03 (3.16 seconds)
+    - taskid=2: nudge=2025-12-08 09:22:06.476855, completion(event 4)=2025-12-08 09:22:22.576841, duration=00:00:16 (16.10 seconds)
+    - taskid=3: nudge=2025-12-08 09:18:25.443802, completion(event 4)=2025-12-08 09:19:12.143432, duration=00:00:47 (46.70 seconds)
+
+Participant 73 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-08 13:54:38.305588, completion(event 4)=2025-12-08 13:55:02.911979, duration=00:00:25 (24.61 seconds)
+    - taskid=2: nudge=2025-12-08 14:13:26.601606, completion(event 4)=2025-12-08 14:13:38.593592, duration=00:00:12 (11.99 seconds)
+    - taskid=3: nudge=2025-12-08 14:41:28.516281, completion(event 4)=2025-12-08 14:41:37.297573, duration=00:00:09 (8.78 seconds)
+
+Participant 75 (Nudge A)
+  Tasks with duration: 0
+  Task details: none (no matched nudge & completion)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+    - taskid=2: no completion timestamp after nudge
+    - taskid=3: no completion timestamp after nudge
+
+Participant 76 (Nudge A)
+  Tasks with duration: 0
+  Task details: none (no matched nudge & completion)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+    - taskid=2: no completion timestamp after nudge
+    - taskid=3: no completion timestamp after nudge
+
+Participant 77 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-09 17:49:22.268017, completion(event 4)=2025-12-09 17:49:27.550761, duration=00:00:05 (5.28 seconds)
+    - taskid=2: nudge=2025-12-09 17:50:48.180882, completion(event 4)=2025-12-09 17:51:00.549267, duration=00:00:12 (12.37 seconds)
+    - taskid=3: nudge=2025-12-09 17:46:37.355076, completion(event 4)=2025-12-09 17:47:44.966646, duration=00:01:08 (67.61 seconds)
+
+Participant 78 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-09 18:27:29.059808, completion(event 4)=2025-12-09 18:27:37.210771, duration=00:00:08 (8.15 seconds)
+    - taskid=2: nudge=2025-12-09 18:19:01.687278, completion(event 4)=2025-12-09 18:21:16.594250, duration=00:02:15 (134.91 seconds)
+    - taskid=3: nudge=2025-12-09 18:13:27.143329, completion(event 4)=2025-12-09 18:13:41.373977, duration=00:00:14 (14.23 seconds)
+
+Participant 80 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-09 18:50:15.418870, completion(event 4)=2025-12-09 18:50:36.572449, duration=00:00:21 (21.15 seconds)
+    - taskid=2: nudge=2025-12-09 18:53:38.566959, completion(event 4)=2025-12-09 18:53:46.122276, duration=00:00:08 (7.56 seconds)
+    - taskid=3: nudge=2025-12-09 18:52:05.444207, completion(event 4)=2025-12-09 18:52:40.060193, duration=00:00:35 (34.62 seconds)
+
+Participant 81 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-10 00:24:32.534142, completion(event 4)=2025-12-10 00:25:13.720863, duration=00:00:41 (41.19 seconds)
+    - taskid=2: nudge=2025-12-09 23:57:38.855230, completion(event 4)=2025-12-10 00:01:05.324787, duration=00:03:26 (206.47 seconds)
+    - taskid=3: nudge=2025-12-10 00:30:20.932392, completion(event 4)=2025-12-10 00:30:36.210578, duration=00:00:15 (15.28 seconds)
+
+Participant 82 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-10 13:09:12.320949, completion(event 4)=2025-12-10 13:09:18.622976, duration=00:00:06 (6.30 seconds)
+    - taskid=2: nudge=2025-12-10 13:08:31.400919, completion(event 4)=2025-12-10 13:08:46.212839, duration=00:00:15 (14.81 seconds)
+    - taskid=3: nudge=2025-12-10 13:08:51.351726, completion(event 4)=2025-12-10 13:09:08.065482, duration=00:00:17 (16.71 seconds)
+
+Participant 83 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-11 18:59:05.177180, completion(event 4)=2025-12-11 18:59:10.177182, duration=00:00:05 (5.00 seconds)
+    - taskid=2: nudge=2025-12-11 19:00:16.893349, completion(event 4)=2025-12-11 19:00:21.487059, duration=00:00:05 (4.59 seconds)
+    - taskid=3: nudge=2025-12-11 18:55:58.813969, completion(event 4)=2025-12-11 18:57:35.553754, duration=00:01:37 (96.74 seconds)
+
+Participant 84 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-11 19:05:33.719716, completion(event 4)=2025-12-11 19:08:14.250417, duration=00:02:41 (160.53 seconds)
+    - taskid=2: nudge=2025-12-11 19:02:46.469894, completion(event 4)=2025-12-11 19:03:48.274214, duration=00:01:02 (61.80 seconds)
+    - taskid=3: nudge=2025-12-11 18:59:20.251721, completion(event 4)=2025-12-11 19:01:01.933878, duration=00:01:42 (101.68 seconds)
+
+Participant 85 (Nudge A)
+  Tasks with duration: 1
+  Task details:
+    - taskid=2: nudge=2025-12-11 19:09:52.269056, completion(event 4)=2025-12-11 19:16:51.300263, duration=00:06:59 (419.03 seconds)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+    - taskid=3: no completion timestamp after nudge
+
+Participant 86 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-11 20:06:10.211345, completion(event 4)=2025-12-11 20:06:25.804582, duration=00:00:16 (15.59 seconds)
+    - taskid=2: nudge=2025-12-11 20:26:39.512719, completion(event 4)=2025-12-11 20:26:54.236717, duration=00:00:15 (14.72 seconds)
+    - taskid=3: nudge=2025-12-11 20:25:26.323712, completion(event 4)=2025-12-11 20:25:31.832054, duration=00:00:06 (5.51 seconds)
+
+Participant 87 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-12 10:15:08.751848, completion(event 4)=2025-12-12 10:16:59.219940, duration=00:01:50 (110.47 seconds)
+    - taskid=2: nudge=2025-12-12 10:13:32.732876, completion(event 4)=2025-12-12 10:14:14.661327, duration=00:00:42 (41.93 seconds)
+    - taskid=3: nudge=2025-12-12 10:18:17.503721, completion(event 4)=2025-12-12 10:19:19.645078, duration=00:01:02 (62.14 seconds)
+
+Participant 88 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-12 10:57:16.835510, completion(event 4)=2025-12-12 10:57:21.939771, duration=00:00:05 (5.10 seconds)
+    - taskid=2: nudge=2025-12-12 10:51:49.655065, completion(event 4)=2025-12-12 10:52:37.501113, duration=00:00:48 (47.85 seconds)
+    - taskid=3: nudge=2025-12-12 10:55:20.812712, completion(event 4)=2025-12-12 10:55:28.840719, duration=00:00:08 (8.03 seconds)
+
+Participant 89 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-12 15:50:58.483589, completion(event 4)=2025-12-12 15:51:04.008980, duration=00:00:06 (5.53 seconds)
+    - taskid=2: nudge=2025-12-12 15:52:36.522035, completion(event 4)=2025-12-12 15:52:55.702848, duration=00:00:19 (19.18 seconds)
+    - taskid=3: nudge=2025-12-12 15:47:30.926404, completion(event 4)=2025-12-12 15:48:03.466258, duration=00:00:33 (32.54 seconds)
+
+Participant 90 (Nudge A)
+  Tasks with duration: 2
+  Task details:
+    - taskid=2: nudge=2025-12-13 13:06:06.403974, completion(event 4)=2025-12-13 13:06:19.879294, duration=00:00:13 (13.48 seconds)
+    - taskid=3: nudge=2025-12-13 12:58:18.411325, completion(event 4)=2025-12-13 12:59:37.944819, duration=00:01:20 (79.53 seconds)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+
+Participant 91 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-14 13:25:24.373793, completion(event 4)=2025-12-14 13:25:36.632530, duration=00:00:12 (12.26 seconds)
+    - taskid=2: nudge=2025-12-14 13:27:24.222844, completion(event 4)=2025-12-14 13:27:29.422780, duration=00:00:05 (5.20 seconds)
+    - taskid=3: nudge=2025-12-14 13:30:28.423930, completion(event 4)=2025-12-14 13:30:33.330558, duration=00:00:05 (4.91 seconds)
+
+Participant 93 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-14 21:01:18.856466, completion(event 4)=2025-12-14 21:01:23.184157, duration=00:00:04 (4.33 seconds)
+    - taskid=2: nudge=2025-12-14 20:56:21.960637, completion(event 4)=2025-12-14 20:56:54.838479, duration=00:00:33 (32.88 seconds)
+    - taskid=3: nudge=2025-12-14 21:02:50.042896, completion(event 4)=2025-12-14 21:03:32.723696, duration=00:00:43 (42.68 seconds)
+
+Participant 94 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-15 00:12:59.590112, completion(event 4)=2025-12-15 00:13:03.105387, duration=00:00:04 (3.52 seconds)
+    - taskid=2: nudge=2025-12-15 00:05:00.719300, completion(event 4)=2025-12-15 00:06:58.928529, duration=00:01:58 (118.21 seconds)
+    - taskid=3: nudge=2025-12-15 00:10:15.406529, completion(event 4)=2025-12-15 00:10:22.868551, duration=00:00:07 (7.46 seconds)
+
+Participant 96 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-15 09:29:18.708583, completion(event 4)=2025-12-15 09:30:59.668978, duration=00:01:41 (100.96 seconds)
+    - taskid=2: nudge=2025-12-15 09:26:07.778590, completion(event 4)=2025-12-15 09:26:25.705598, duration=00:00:18 (17.93 seconds)
+    - taskid=3: nudge=2025-12-15 09:24:54.175477, completion(event 4)=2025-12-15 09:25:18.378218, duration=00:00:24 (24.20 seconds)
+
+Participant 98 (Nudge A)
+  Tasks with duration: 2
+  Task details:
+    - taskid=1: nudge=2025-12-16 12:45:17.954647, completion(event 4)=2025-12-16 12:46:00.916175, duration=00:00:43 (42.96 seconds)
+    - taskid=2: nudge=2025-12-16 12:48:35.062657, completion(event 4)=2025-12-16 12:49:31.578082, duration=00:00:57 (56.52 seconds)
+  Missing pairs:
+    - taskid=3: no completion timestamp after nudge
+
+Participant 100 (Nudge A)
+  Tasks with duration: 1
+  Task details:
+    - taskid=1: nudge=2025-12-16 23:36:46.341461, completion(event 4)=2025-12-16 23:39:05.388506, duration=00:02:19 (139.05 seconds)
+  Missing pairs:
+    - taskid=2: no completion timestamp after nudge
+    - taskid=3: no completion timestamp after nudge
+
+Participant 101 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-20 00:43:45.850964, completion(event 4)=2025-12-20 00:43:51.805129, duration=00:00:06 (5.95 seconds)
+    - taskid=2: nudge=2025-12-20 00:45:31.785250, completion(event 4)=2025-12-20 00:45:35.310343, duration=00:00:04 (3.53 seconds)
+    - taskid=3: nudge=2025-12-20 00:22:10.078697, completion(event 4)=2025-12-20 00:24:24.560417, duration=00:02:14 (134.48 seconds)
+
+Participant 103 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-21 14:22:41.264139, completion(event 4)=2025-12-21 14:23:59.715257, duration=00:01:18 (78.45 seconds)
+    - taskid=2: nudge=2025-12-21 14:27:08.145581, completion(event 4)=2025-12-21 14:27:43.615322, duration=00:00:35 (35.47 seconds)
+    - taskid=3: nudge=2025-12-21 14:33:45.520604, completion(event 4)=2025-12-21 14:36:55.577999, duration=00:03:10 (190.06 seconds)
+
+Participant 104 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2025-12-21 16:35:35.229316, completion(event 4)=2025-12-21 16:35:53.544356, duration=00:00:18 (18.32 seconds)
+    - taskid=2: nudge=2025-12-21 16:40:56.039649, completion(event 4)=2025-12-21 16:41:00.549466, duration=00:00:05 (4.51 seconds)
+    - taskid=3: nudge=2025-12-21 16:37:02.000346, completion(event 4)=2025-12-21 16:39:06.848868, duration=00:02:05 (124.85 seconds)
+
+Participant 107 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-10 13:40:06.401327, completion(event 4)=2026-01-10 13:40:12.082578, duration=00:00:06 (5.68 seconds)
+    - taskid=2: nudge=2026-01-10 13:41:23.666753, completion(event 4)=2026-01-10 13:41:27.882250, duration=00:00:04 (4.22 seconds)
+    - taskid=3: nudge=2026-01-10 13:34:06.403404, completion(event 4)=2026-01-10 13:37:20.702328, duration=00:03:14 (194.30 seconds)
+
+Participant 108 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-10 13:43:25.122135, completion(event 4)=2026-01-10 13:43:43.004510, duration=00:00:18 (17.88 seconds)
+    - taskid=2: nudge=2026-01-10 13:42:45.468145, completion(event 4)=2026-01-10 13:43:02.439182, duration=00:00:17 (16.97 seconds)
+    - taskid=3: nudge=2026-01-10 13:41:34.456765, completion(event 4)=2026-01-10 13:42:13.569049, duration=00:00:39 (39.11 seconds)
+
+Participant 109 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-10 16:38:40.868635, completion(event 4)=2026-01-10 16:39:43.650397, duration=00:01:03 (62.78 seconds)
+    - taskid=2: nudge=2026-01-10 16:40:03.786364, completion(event 4)=2026-01-10 16:46:42.345776, duration=00:06:39 (398.56 seconds)
+    - taskid=3: nudge=2026-01-10 16:47:00.480529, completion(event 4)=2026-01-10 16:47:06.028011, duration=00:00:06 (5.55 seconds)
+
+Participant 110 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-10 17:38:33.169819, completion(event 4)=2026-01-10 17:38:41.342229, duration=00:00:08 (8.17 seconds)
+    - taskid=2: nudge=2026-01-10 17:50:15.306624, completion(event 4)=2026-01-10 17:50:26.873595, duration=00:00:12 (11.57 seconds)
+    - taskid=3: nudge=2026-01-10 17:41:37.004551, completion(event 4)=2026-01-10 17:45:11.491210, duration=00:03:34 (214.49 seconds)
+
+Participant 111 (Nudge A)
+  Tasks with duration: 2
+  Task details:
+    - taskid=1: nudge=2026-01-11 09:37:31.036562, completion(event 4)=2026-01-11 09:37:37.449567, duration=00:00:06 (6.41 seconds)
+    - taskid=2: nudge=2026-01-11 09:35:40.119487, completion(event 4)=2026-01-11 09:37:26.502616, duration=00:01:46 (106.38 seconds)
+  Missing pairs:
+    - taskid=3: no completion timestamp after nudge
+
+Participant 112 (Nudge A)
+  Tasks with duration: 1
+  Task details:
+    - taskid=2: nudge=2026-01-11 11:58:13.614584, completion(event 4)=2026-01-11 12:02:40.671114, duration=00:04:27 (267.06 seconds)
+  Missing pairs:
+    - taskid=1: no completion timestamp after nudge
+    - taskid=3: no completion timestamp after nudge
+
+Participant 114 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-12 01:10:57.541255, completion(event 4)=2026-01-12 01:11:02.445769, duration=00:00:05 (4.90 seconds)
+    - taskid=2: nudge=2026-01-12 01:09:39.883971, completion(event 4)=2026-01-12 01:10:02.777696, duration=00:00:23 (22.89 seconds)
+    - taskid=3: nudge=2026-01-12 01:05:42.687010, completion(event 4)=2026-01-12 01:08:11.971277, duration=00:02:29 (149.28 seconds)
+
+Participant 115 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-12 16:57:32.459117, completion(event 4)=2026-01-12 16:57:41.512113, duration=00:00:09 (9.05 seconds)
+    - taskid=2: nudge=2026-01-12 16:59:45.119018, completion(event 4)=2026-01-12 17:00:36.872525, duration=00:00:52 (51.75 seconds)
+    - taskid=3: nudge=2026-01-12 17:04:07.784937, completion(event 4)=2026-01-12 17:04:11.130058, duration=00:00:03 (3.35 seconds)
+
+Participant 117 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-12 22:04:30.552997, completion(event 4)=2026-01-12 22:04:41.541286, duration=00:00:11 (10.99 seconds)
+    - taskid=2: nudge=2026-01-12 21:59:48.042486, completion(event 4)=2026-01-12 22:00:33.940243, duration=00:00:46 (45.90 seconds)
+    - taskid=3: nudge=2026-01-12 22:06:58.373966, completion(event 4)=2026-01-12 22:07:36.360039, duration=00:00:38 (37.99 seconds)
+
+Participant 118 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-13 18:45:44.867023, completion(event 4)=2026-01-13 18:45:56.109457, duration=00:00:11 (11.24 seconds)
+    - taskid=2: nudge=2026-01-13 18:24:41.001206, completion(event 4)=2026-01-13 18:25:33.415508, duration=00:00:52 (52.41 seconds)
+    - taskid=3: nudge=2026-01-13 18:35:00.217404, completion(event 4)=2026-01-13 18:35:57.932242, duration=00:00:58 (57.71 seconds)
+
+Participant 119 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-14 18:00:31.333202, completion(event 4)=2026-01-14 18:00:39.497184, duration=00:00:08 (8.16 seconds)
+    - taskid=2: nudge=2026-01-14 18:02:12.111689, completion(event 4)=2026-01-14 18:02:28.232431, duration=00:00:16 (16.12 seconds)
+    - taskid=3: nudge=2026-01-14 17:53:50.301888, completion(event 4)=2026-01-14 17:55:01.159901, duration=00:01:11 (70.86 seconds)
+
+Participant 120 (Nudge B)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-15 09:50:56.110846, completion(event 4)=2026-01-15 09:51:56.067824, duration=00:01:00 (59.96 seconds)
+    - taskid=2: nudge=2026-01-15 09:46:25.353480, completion(event 4)=2026-01-15 09:48:54.864123, duration=00:02:30 (149.51 seconds)
+    - taskid=3: nudge=2026-01-15 09:37:40.356985, completion(event 4)=2026-01-15 09:43:42.440348, duration=00:06:02 (362.08 seconds)
+
+Participant 121 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-15 18:20:37.477987, completion(event 4)=2026-01-15 18:21:41.681357, duration=00:01:04 (64.20 seconds)
+    - taskid=2: nudge=2026-01-15 18:25:24.840914, completion(event 4)=2026-01-15 18:25:35.403282, duration=00:00:11 (10.56 seconds)
+    - taskid=3: nudge=2026-01-15 18:28:07.601590, completion(event 4)=2026-01-15 18:37:17.442118, duration=00:09:10 (549.84 seconds)
+
+Participant 122 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-17 12:20:26.245009, completion(event 4)=2026-01-17 12:20:44.843033, duration=00:00:19 (18.60 seconds)
+    - taskid=2: nudge=2026-01-17 12:24:34.228669, completion(event 4)=2026-01-17 12:24:38.337871, duration=00:00:04 (4.11 seconds)
+    - taskid=3: nudge=2026-01-17 12:23:21.231099, completion(event 4)=2026-01-17 12:23:52.167376, duration=00:00:31 (30.94 seconds)
+
+Participant 123 (Nudge A)
+  Tasks with duration: 3
+  Task details:
+    - taskid=1: nudge=2026-01-19 16:30:05.229902, completion(event 4)=2026-01-19 16:30:10.303029, duration=00:00:05 (5.07 seconds)
+    - taskid=2: nudge=2026-01-19 16:25:36.636516, completion(event 4)=2026-01-19 16:26:11.045835, duration=00:00:34 (34.41 seconds)
+    - taskid=3: nudge=2026-01-19 16:33:57.425596, completion(event 4)=2026-01-19 16:34:39.207194, duration=00:00:42 (41.78 seconds)
+
+Summary
+  Matched task pairs: 261
+  Mean duration: 00:01:13 (72.55 seconds)
+  Median duration: 00:00:27 (27.33 seconds)
+  Min duration: 00:00:03 (3.16 seconds)
+  Max duration: 00:10:46 (646.41 seconds)
+
+Per-Nudge Per-Task Counts
+  Nudge A, taskid=1 (n=39): total_duration=00:20:30 (1229.70 sec)
+  Nudge A, taskid=2 (n=43): total_duration=00:54:39 (3279.23 sec)
+  Nudge A, taskid=3 (n=40): total_duration=01:16:13 (4572.64 sec)
+  Nudge B, taskid=1 (n=46): total_duration=00:31:55 (1914.63 sec)
+  Nudge B, taskid=2 (n=48): total_duration=00:57:51 (3470.99 sec)
+  Nudge B, taskid=3 (n=45): total_duration=01:14:30 (4469.50 sec)

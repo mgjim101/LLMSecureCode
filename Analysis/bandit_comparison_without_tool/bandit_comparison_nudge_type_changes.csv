@@ -1,0 +1,7 @@
+participant_id,nudge,task_id,type_id,type_name,change_kind
+45,B,2,B311,blacklist,common
+66,A,1,B701,jinja2_autoescape_false,new
+66,A,2,B311,blacklist,common
+67,B,3,B603,subprocess_without_shell_equals_true,new
+67,B,3,B602,subprocess_popen_with_shell_equals_true,fixed
+67,B,3,B404,blacklist,common

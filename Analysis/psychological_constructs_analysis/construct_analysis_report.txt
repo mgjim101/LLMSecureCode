@@ -1,0 +1,415 @@
+============================================================================
+  PSYCHOLOGICAL CONSTRUCTS ANALYSIS REPORT
+  Generated: 2026-03-17 19:48:28
+============================================================================
+
+----------------------------------------------------------------------------
+  SECTION 1: CONSTRUCT DEFINITIONS AND ITEM MAPPING
+----------------------------------------------------------------------------
+
+  Risk Avoidance (PRE):
+    col  84: [I avoid advanced GenAI features or options.]
+    col  85: [I avoid activities when using GenAI tools that are dangerous or risky.]
+    col  86: [Despite the risks I use GenAI features that haven’t been proven to work.] [REVERSE]
+
+  Motivation (PRE only):
+    col  92: [I explore GenAI technology even if it’s not critical to my job.]
+    col  93: [I use GenAI tools because it’s a way for me to look good with peers.]
+    col  94: [Its fun to try new GenAI technology that is not yet available to everyone such as being a participant in beta testing programs.]
+
+  Self-Efficacy (PRE):
+    col  96: [I am able to use GenAI tools when I have just the built-in help for assistance.]
+    col  97: [I don’t feel confident to use and learn GenAI tools, as I have other strengths.] [REVERSE]
+    col  98: [I am able to use GenAI tools when someone shows me how to do it first.]
+    col  99: [I am able to use GenAI tools even when no one is around to help me if I need it.]
+
+  Trust (PRE):
+    col 100: [I am confident in GenAI tools. I feel that it works well.]
+    col 101: [GenAI tools are reliable. I can count on it to be correct for my use cases.]
+    col 102: [I feel safe that when I rely on GenAI, I will get the right answers.]
+    col 103: [I like using GenAI for decision making.]
+
+  Behavioral Intention (PRE):
+    col 104: [I intend to use GenAI tools in the future.]
+    col 105: [I plan to continue using GenAI tools.]
+    col 106: [I will always try to use GenAI tools in my work.]
+
+  Behavioral Intention (POST):
+    col 114: [I intend to use GenAI tools in the future.]
+    col 115: [I plan to continue using GenAI tools.]
+    col 116: [I will always try to use GenAI tools in my work.]
+
+  Risk Avoidance (POST):
+    col 117: [I avoid advanced GenAI features or options.]
+    col 118: [I avoid activities when using GenAI tools that are dangerous or risky.]
+    col 119: [Despite the risks I use GenAI features that haven’t been proven to work.] [REVERSE]
+
+  Trust (POST):
+    col 120: [I am confident in GenAI tools. I feel that it works well.]__2
+    col 121: [GenAI tools are reliable. I can count on it to be correct for my use cases.]__2
+    col 122: [I feel safe that when I rely on GenAI, I will get the right answers.]__2
+    col 123: [I like using GenAI for decision making.]__2
+
+  Self-Efficacy (POST):
+    col 124: [I am able to use GenAI tools when I have just the built-in help for assistance.]__2
+    col 125: [I don’t feel confident to use and learn GenAI tools, as I have other strengths.]__2 [REVERSE]
+    col 126: [I am able to use GenAI tools when someone shows me how to do it first.]__2
+    col 127: [I am able to use GenAI tools even when no one is around to help me if I need it.]__2
+
+  NOTE: PRE Risk uses 6-point agreement scale (1-6).
+        POST Risk uses 5-point frequency scale (1-5).
+        For paired t-tests on Risk Avoidance, both are
+        normalized to 0-1 range before comparison.
+
+----------------------------------------------------------------------------
+  SECTION 2: RELIABILITY (CRONBACH'S ALPHA)
+----------------------------------------------------------------------------
+  Construct                                    Alpha      n
+  ----------------------------------------  --------  -----
+  Risk Avoidance (PRE)                        0.4180     95
+  Motivation (PRE)                            0.5548     95
+  Self-Efficacy (PRE)                         0.3895     93
+  Trust (PRE)                                 0.8484     93
+  Intention (PRE)                             0.8819     93
+  Intention (POST)                            0.8769     92
+  Risk Avoidance (POST)                       0.2428     92
+  Trust (POST)                                0.8656     92
+  Self-Efficacy (POST)                        0.3304     92
+
+  Interpretation: alpha >= 0.70 is acceptable;
+                  alpha >= 0.80 is good.
+
+----------------------------------------------------------------------------
+  SECTION 3: DESCRIPTIVE STATISTICS (COMPOSITE SCORES)
+----------------------------------------------------------------------------
+  Measure                                    n        M       SD      Mdn      Min      Max
+  --------------------------------------  ----  -------  -------  -------  -------  -------
+  Risk Avoidance (PRE, 1-6)                 95    3.375    0.885    3.333    1.000    5.667
+  Risk Avoidance (POST, 1-5)                92    2.982    0.680    3.000    1.333    4.667
+  Risk Avoidance PRE (norm 0-1)             95    0.475    0.177    0.467    0.000    0.933
+  Risk Avoidance POST (norm 0-1)            92    0.495    0.170    0.500    0.083    0.917
+  Motivation (PRE, 1-6)                     95    4.063    0.905    4.000    2.000    6.000
+  Self-Efficacy (PRE, 1-6)                  93    4.691    0.676    4.750    2.250    6.000
+  Self-Efficacy (POST, 1-6)                 92    4.712    0.699    4.750    2.750    6.000
+  Trust (PRE, 1-6)                          93    4.215    0.942    4.250    1.250    6.000
+  Trust (POST, 1-6)                         92    4.296    0.995    4.250    1.250    6.000
+  Intention (PRE, 1-6)                      93    5.323    0.741    5.333    2.667    6.000
+  Intention (POST, 1-6)                     92    5.203    0.728    5.000    3.000    6.000
+  Tool Uses (count)                         97    2.680    0.771    3.000    0.000    3.000
+  Code Changes (count)                      97    0.907    0.969    1.000    0.000    3.000
+  Vuln Severity Diff (total)                97   -0.021    0.707    0.000   -3.000    2.000
+
+  --- Nudge A ---
+  Measure                                    n        M       SD
+  --------------------------------------  ----  -------  -------
+  Risk Avoidance (PRE, 1-6)                 46    3.420    0.690
+  Risk Avoidance (POST, 1-5)                44    2.909    0.612
+  Risk Avoidance PRE (norm 0-1)             46    0.484    0.138
+  Risk Avoidance POST (norm 0-1)            44    0.477    0.153
+  Motivation (PRE, 1-6)                     46    4.072    0.855
+  Self-Efficacy (PRE, 1-6)                  45    4.611    0.764
+  Self-Efficacy (POST, 1-6)                 44    4.636    0.795
+  Trust (PRE, 1-6)                          45    4.367    0.924
+  Trust (POST, 1-6)                         44    4.347    0.948
+  Intention (PRE, 1-6)                      45    5.319    0.703
+  Intention (POST, 1-6)                     44    5.174    0.691
+  Tool Uses (count)                         48    2.542    0.874
+  Code Changes (count)                      48    0.688    0.926
+  Vuln Severity Diff (total)                48    0.021    0.601
+
+  --- Nudge B ---
+  Measure                                    n        M       SD
+  --------------------------------------  ----  -------  -------
+  Risk Avoidance (PRE, 1-6)                 49    3.333    1.041
+  Risk Avoidance (POST, 1-5)                48    3.049    0.737
+  Risk Avoidance PRE (norm 0-1)             49    0.467    0.208
+  Risk Avoidance POST (norm 0-1)            48    0.512    0.184
+  Motivation (PRE, 1-6)                     49    4.054    0.958
+  Self-Efficacy (PRE, 1-6)                  48    4.766    0.580
+  Self-Efficacy (POST, 1-6)                 48    4.781    0.598
+  Trust (PRE, 1-6)                          48    4.073    0.945
+  Trust (POST, 1-6)                         48    4.250    1.044
+  Intention (PRE, 1-6)                      48    5.326    0.782
+  Intention (POST, 1-6)                     48    5.229    0.766
+  Tool Uses (count)                         49    2.816    0.635
+  Code Changes (count)                      49    1.122    0.971
+  Vuln Severity Diff (total)                49   -0.061    0.801
+
+----------------------------------------------------------------------------
+  SECTION 4: PAIRED-SAMPLE T-TESTS (PRE vs POST)
+----------------------------------------------------------------------------
+
+  Number of primary comparisons: 4
+  Bonferroni-corrected alpha: 0.0125
+
+  ======================================================================
+  Trust — Overall
+  ======================================================================
+    n = 92
+    PRE:   M = 4.2174, SD = 0.9465
+    POST:  M = 4.2962, SD = 0.9951
+    Mean difference (POST - PRE): 0.0788
+    SD of differences: 0.5121
+    Shapiro-Wilk on diffs: W=0.9041, p=0.0000 (NOT normal)
+    Paired t-test: t = -1.4760, p = 0.1434
+    Cohen's d = 0.1539
+    -> NOT significant at alpha = 0.05
+    -> NOT significant after Bonferroni correction (alpha = 0.0125)
+    [Non-parametric] Wilcoxon signed-rank: W = 662.0000, p = 0.1285
+
+  ======================================================================
+  Trust — Nudge A
+  ======================================================================
+    n = 44
+    PRE:   M = 4.3750, SD = 0.9331
+    POST:  M = 4.3466, SD = 0.9481
+    Mean difference (POST - PRE): -0.0284
+    SD of differences: 0.4738
+    Shapiro-Wilk on diffs: W=0.9205, p=0.0050 (NOT normal)
+    Paired t-test: t = 0.3977, p = 0.6928
+    Cohen's d = -0.0600
+    -> NOT significant at alpha = 0.05
+    [Non-parametric] Wilcoxon signed-rank: W = 192.0000, p = 0.7995
+
+  ======================================================================
+  Trust — Nudge B
+  ======================================================================
+    n = 48
+    PRE:   M = 4.0729, SD = 0.9453
+    POST:  M = 4.2500, SD = 1.0442
+    Mean difference (POST - PRE): 0.1771
+    SD of differences: 0.5309
+    Shapiro-Wilk on diffs: W=0.8538, p=0.0000 (NOT normal)
+    Paired t-test: t = -2.3111, p = 0.0253
+    Cohen's d = 0.3336
+    -> SIGNIFICANT at alpha = 0.05
+    [Non-parametric] Wilcoxon signed-rank: W = 120.5000, p = 0.0195
+
+  ======================================================================
+  Self-Efficacy — Overall
+  ======================================================================
+    n = 92
+    PRE:   M = 4.6875, SD = 0.6790
+    POST:  M = 4.7120, SD = 0.6992
+    Mean difference (POST - PRE): 0.0245
+    SD of differences: 0.5307
+    Shapiro-Wilk on diffs: W=0.9415, p=0.0004 (NOT normal)
+    Paired t-test: t = -0.4420, p = 0.6595
+    Cohen's d = 0.0461
+    -> NOT significant at alpha = 0.05
+    -> NOT significant after Bonferroni correction (alpha = 0.0125)
+    [Non-parametric] Wilcoxon signed-rank: W = 880.5000, p = 0.4947
+
+  ======================================================================
+  Self-Efficacy — Nudge A
+  ======================================================================
+    n = 44
+    PRE:   M = 4.6023, SD = 0.7707
+    POST:  M = 4.6364, SD = 0.7951
+    Mean difference (POST - PRE): 0.0341
+    SD of differences: 0.5188
+    Shapiro-Wilk on diffs: W=0.9145, p=0.0031 (NOT normal)
+    Paired t-test: t = -0.4359, p = 0.6651
+    Cohen's d = 0.0657
+    -> NOT significant at alpha = 0.05
+    [Non-parametric] Wilcoxon signed-rank: W = 198.5000, p = 0.4756
+
+  ======================================================================
+  Self-Efficacy — Nudge B
+  ======================================================================
+    n = 48
+    PRE:   M = 4.7656, SD = 0.5798
+    POST:  M = 4.7812, SD = 0.5984
+    Mean difference (POST - PRE): 0.0156
+    SD of differences: 0.5468
+    Shapiro-Wilk on diffs: W=0.9525, p=0.0503 (normal)
+    Paired t-test: t = -0.1980, p = 0.8439
+    Cohen's d = 0.0286
+    -> NOT significant at alpha = 0.05
+    [Non-parametric] Wilcoxon signed-rank: W = 249.5000, p = 0.7842
+
+  ======================================================================
+  Behavioral Intention — Overall
+  ======================================================================
+    n = 92
+    PRE:   M = 5.3188, SD = 0.7444
+    POST:  M = 5.2029, SD = 0.7279
+    Mean difference (POST - PRE): -0.1159
+    SD of differences: 0.4147
+    Shapiro-Wilk on diffs: W=0.7761, p=0.0000 (NOT normal)
+    Paired t-test: t = 2.6814, p = 0.0087
+    Cohen's d = -0.2796
+    -> SIGNIFICANT at alpha = 0.05
+    -> SIGNIFICANT after Bonferroni correction (alpha = 0.0125)
+    [Non-parametric] Wilcoxon signed-rank: W = 130.5000, p = 0.0121
+
+  ======================================================================
+  Behavioral Intention — Nudge A
+  ======================================================================
+    n = 44
+    PRE:   M = 5.3106, SD = 0.7095
+    POST:  M = 5.1742, SD = 0.6914
+    Mean difference (POST - PRE): -0.1364
+    SD of differences: 0.4621
+    Shapiro-Wilk on diffs: W=0.8004, p=0.0000 (NOT normal)
+    Paired t-test: t = 1.9575, p = 0.0568
+    Cohen's d = -0.2951
+    -> NOT significant at alpha = 0.05
+    [Non-parametric] Wilcoxon signed-rank: W = 35.5000, p = 0.0509
+
+  ======================================================================
+  Behavioral Intention — Nudge B
+  ======================================================================
+    n = 48
+    PRE:   M = 5.3264, SD = 0.7825
+    POST:  M = 5.2292, SD = 0.7662
+    Mean difference (POST - PRE): -0.0972
+    SD of differences: 0.3700
+    Shapiro-Wilk on diffs: W=0.7344, p=0.0000 (NOT normal)
+    Paired t-test: t = 1.8203, p = 0.0751
+    Cohen's d = -0.2627
+    -> NOT significant at alpha = 0.05
+    [Non-parametric] Wilcoxon signed-rank: W = 30.5000, p = 0.0922
+
+  ======================================================================
+  Risk Avoidance (normalized 0-1) — Overall
+  ======================================================================
+    n = 92
+    PRE:   M = 0.4732, SD = 0.1760
+    POST:  M = 0.4955, SD = 0.1700
+    Mean difference (POST - PRE): 0.0223
+    SD of differences: 0.1664
+    Shapiro-Wilk on diffs: W=0.9521, p=0.0020 (NOT normal)
+    Paired t-test: t = -1.2842, p = 0.2023
+    Cohen's d = 0.1339
+    -> NOT significant at alpha = 0.05
+    -> NOT significant after Bonferroni correction (alpha = 0.0125)
+    [Non-parametric] Wilcoxon signed-rank: W = 1729.0000, p = 0.1997
+
+  ======================================================================
+  Risk Avoidance (normalized 0-1) — Nudge A
+  ======================================================================
+    n = 44
+    PRE:   M = 0.4879, SD = 0.1392
+    POST:  M = 0.4773, SD = 0.1529
+    Mean difference (POST - PRE): -0.0106
+    SD of differences: 0.1580
+    Shapiro-Wilk on diffs: W=0.9517, p=0.0637 (normal)
+    Paired t-test: t = 0.4452, p = 0.6584
+    Cohen's d = -0.0671
+    -> NOT significant at alpha = 0.05
+    [Non-parametric] Wilcoxon signed-rank: W = 441.5000, p = 0.7034
+
+  ======================================================================
+  Risk Avoidance (normalized 0-1) — Nudge B
+  ======================================================================
+    n = 48
+    PRE:   M = 0.4597, SD = 0.2046
+    POST:  M = 0.5122, SD = 0.1843
+    Mean difference (POST - PRE): 0.0524
+    SD of differences: 0.1698
+    Shapiro-Wilk on diffs: W=0.9217, p=0.0034 (NOT normal)
+    Paired t-test: t = -2.1389, p = 0.0377
+    Cohen's d = 0.3087
+    -> SIGNIFICANT at alpha = 0.05
+    [Non-parametric] Wilcoxon signed-rank: W = 365.0000, p = 0.0351
+
+----------------------------------------------------------------------------
+  SECTION 5: SEM PATH ANALYSIS
+  Antecedents (PRE composites) → Behavioral Outcomes
+----------------------------------------------------------------------------
+
+  Sample size for SEM: n = 93
+
+  Model Fit Indices:
+    DoF: 8
+    DoF Baseline: 33
+    chi2: 1.6313
+    chi2 p-value: 0.9903
+    chi2 Baseline: 104.9866
+    CFI: 1.0885
+    GFI: 0.9845
+    AGFI: 0.9359
+    NFI: 0.9845
+    TLI: 1.3649
+    RMSEA: 0
+    AIC: 55.9649
+    BIC: 126.8777
+    LogLik: 0.0175
+
+  Path Estimates (Overall):
+  lval                      op rval                       Estimate    Std.Err    z-value    p-value
+  ------------------------ --- ------------------------ ---------- ---------- ---------- ----------
+  tool_uses                  ~ trust_pre                   -0.1023     0.1262    -0.8107     0.4175
+  tool_uses                  ~ self_efficacy_pre            0.0548     0.1064     0.5150     0.6065
+  tool_uses                  ~ risk_avoidance_pre          -0.0086     0.1174    -0.0737     0.9413
+  tool_uses                  ~ motivation_pre              -0.1206     0.1211    -0.9957     0.3194
+  tool_uses                  ~ intention_pre               -0.0100     0.1375    -0.0724     0.9423
+  code_changed_count         ~ trust_pre                    0.0691     0.1256     0.5501     0.5823
+  code_changed_count         ~ self_efficacy_pre            0.2003     0.1059     1.8916     0.0585
+  code_changed_count         ~ risk_avoidance_pre          -0.0940     0.1169    -0.8043     0.4212
+  code_changed_count         ~ motivation_pre               0.0517     0.1205     0.4292     0.6678
+  code_changed_count         ~ intention_pre               -0.1281     0.1369    -0.9356     0.3495
+  vuln_diff_total            ~ trust_pre                    0.0962     0.1251     0.7687     0.4420
+  vuln_diff_total            ~ self_efficacy_pre           -0.0578     0.1055    -0.5481     0.5836
+  vuln_diff_total            ~ risk_avoidance_pre          -0.1375     0.1164    -1.1817     0.2373
+  vuln_diff_total            ~ motivation_pre              -0.0010     0.1201    -0.0084     0.9933
+  vuln_diff_total            ~ intention_pre               -0.2658     0.1363    -1.9499     0.0512
+  trust_pre                 ~~ self_efficacy_pre            0.1467     0.0985     1.4894     0.1364
+  trust_pre                 ~~ risk_avoidance_pre          -0.1356     0.0957    -1.4171     0.1565
+  trust_pre                 ~~ motivation_pre               0.4412     0.0745     5.9196     0.0000
+  trust_pre                 ~~ intention_pre                0.5168     0.0658     7.8584     0.0000
+  self_efficacy_pre         ~~ risk_avoidance_pre           0.0487     0.1008     0.4827     0.6293
+  self_efficacy_pre         ~~ motivation_pre               0.0536     0.1010     0.5308     0.5956
+  self_efficacy_pre         ~~ intention_pre                0.2366     0.0936     2.5283     0.0115
+  risk_avoidance_pre        ~~ motivation_pre              -0.3284     0.0858    -3.8274     0.0001
+  risk_avoidance_pre        ~~ intention_pre               -0.4213     0.0767    -5.4925     0.0000
+  motivation_pre            ~~ intention_pre                0.4359     0.0749     5.8207     0.0000
+  code_changed_count        ~~ code_changed_count           0.9429     0.1383     6.8191     0.0000
+  tool_uses                 ~~ tool_uses                    0.9521     0.1396     6.8191     0.0000
+  vuln_diff_total           ~~ vuln_diff_total              0.9353     0.1372     6.8191     0.0000
+
+  --- SEM Path Estimates — Nudge A ---
+  Outcome                   <- Predictor                  Estimate    p-value
+  ------------------------ --- ------------------------ ---------- ----------
+  tool_uses                 <- trust_pre                   -0.1198     0.5017
+  tool_uses                 <- self_efficacy_pre           -0.0736     0.6168
+  tool_uses                 <- risk_avoidance_pre           0.1355     0.3580
+  tool_uses                 <- motivation_pre              -0.2282     0.1412
+  tool_uses                 <- intention_pre                0.0139     0.9379
+  code_changed_count        <- trust_pre                    0.2176     0.2163
+  code_changed_count        <- self_efficacy_pre            0.1923     0.1851
+  code_changed_count        <- risk_avoidance_pre           0.0537     0.7121
+  code_changed_count        <- motivation_pre               0.0065     0.9663
+  code_changed_count        <- intention_pre               -0.3736     0.0338
+  vuln_diff_total           <- trust_pre                   -0.0469     0.7912
+  vuln_diff_total           <- self_efficacy_pre           -0.0986     0.5000
+  vuln_diff_total           <- risk_avoidance_pre           0.0865     0.5549
+  vuln_diff_total           <- motivation_pre              -0.0549     0.7219
+  vuln_diff_total           <- intention_pre               -0.2279     0.1987
+
+  --- SEM Path Estimates — Nudge B ---
+  Outcome                   <- Predictor                  Estimate    p-value
+  ------------------------ --- ------------------------ ---------- ----------
+  tool_uses                 <- trust_pre                   -0.0421     0.8114
+  tool_uses                 <- self_efficacy_pre            0.2567     0.0896
+  tool_uses                 <- risk_avoidance_pre          -0.0442     0.8293
+  tool_uses                 <- motivation_pre              -0.0206     0.9133
+  tool_uses                 <- intention_pre               -0.0988     0.6394
+  code_changed_count        <- trust_pre                    0.0316     0.8575
+  code_changed_count        <- self_efficacy_pre            0.1702     0.2596
+  code_changed_count        <- risk_avoidance_pre          -0.0690     0.7357
+  code_changed_count        <- motivation_pre               0.0366     0.8466
+  code_changed_count        <- intention_pre                0.0790     0.7078
+  vuln_diff_total           <- trust_pre                    0.1327     0.4507
+  vuln_diff_total           <- self_efficacy_pre            0.0255     0.8659
+  vuln_diff_total           <- risk_avoidance_pre          -0.2914     0.1543
+  vuln_diff_total           <- motivation_pre              -0.0211     0.9110
+  vuln_diff_total           <- intention_pre               -0.3416     0.1047
+
+  Effect size benchmarks (Cohen's d):
+    |0.2| = small, |0.5| = medium, |0.8| = large
+
+============================================================================
+  END OF REPORT
+============================================================================

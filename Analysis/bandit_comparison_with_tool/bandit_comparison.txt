@@ -1,0 +1,1508 @@
+================================================================================
+BANDIT SECURITY ANALYSIS: LLM-GENERATED TASKS
+================================================================================
+
+Task 1:
+  Total issues found: 0
+  No security issues detected.
+
+Task 2:
+  Total issues found: 1
+  Issues by type:
+    - B311 (blacklist): 1 issue(s)
+        1. Line 16
+           Severity: LOW, Confidence: HIGH
+           Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+
+Task 3:
+  Total issues found: 2
+  Issues by type:
+    - B404 (blacklist): 1 issue(s)
+        1. Line 2
+           Severity: LOW, Confidence: HIGH
+           Description: Consider possible security implications associated with the subprocess module.
+    - B602 (subprocess_popen_with_shell_equals_true): 1 issue(s)
+        1. Line 18
+           Severity: HIGH, Confidence: HIGH
+           Description: subprocess call with shell=True identified, security issue.
+
+LLM-Generated Tasks Summary:
+  Total issues across all tasks: 3
+  Issue types found: ['B311', 'B404', 'B602']
+    - B311 (blacklist): 1 occurrence(s)
+    - B404 (blacklist): 1 occurrence(s)
+    - B602 (subprocess_popen_with_shell_equals_true): 1 occurrence(s)
+
+================================================================================
+BANDIT SECURITY ANALYSIS: PARTICIPANT SUBMISSIONS (CHANGED TASKS ONLY)
+================================================================================
+
+Total changed task submissions analyzed: 83
+
+Participant 8 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+
+Participant 19 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 3 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B603 (subprocess_without_shell_equals_true): 1 issue(s)
+          1. Line 12
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 1
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Fixed (removed): ['B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+
+Participant 20 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B701 (jinja2_autoescape_false): 1 issue(s)
+          1. Line 9
+             Severity: HIGH, Confidence: HIGH
+             Description: By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 1
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=1 (+1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+        New (introduced): ['B701 (jinja2_autoescape_false)']
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 0
+      Change: -2 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+
+Participant 23 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+
+Participant 24 (Nudge B):
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B602 (subprocess_popen_with_shell_equals_true): 1 issue(s)
+          1. Line 20
+             Severity: HIGH, Confidence: HIGH
+             Description: subprocess call with shell=True identified, security issue.
+      - B603 (subprocess_without_shell_equals_true): 1 issue(s)
+          1. Line 31
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=1 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=2 (+1)
+      By Type:
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+
+Participant 27 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+
+Participant 28 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 25
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 45
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 31 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 16
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 32 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+
+Participant 33 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 16
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 34 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 23
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 36 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 0
+      Change: -2 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+
+Participant 39 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+
+Participant 41 (Nudge A):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 22
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 41
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 42 (Nudge A):
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B602 (subprocess_popen_with_shell_equals_true): 1 issue(s)
+          1. Line 18
+             Severity: HIGH, Confidence: HIGH
+             Description: subprocess call with shell=True identified, security issue.
+      - B603 (subprocess_without_shell_equals_true): 1 issue(s)
+          1. Line 30
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=1 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=2 (+1)
+      By Type:
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+
+Participant 47 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+
+Participant 50 (Nudge A):
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 18
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 25
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 51 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 27
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 43
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 52 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+
+Participant 53 (Nudge A):
+  Task 1 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B701 (jinja2_autoescape_false): 1 issue(s)
+          1. Line 9
+             Severity: HIGH, Confidence: HIGH
+             Description: By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 1
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=1 (+1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+        New (introduced): ['B701 (jinja2_autoescape_false)']
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 29
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 39
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 55 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 3 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 0
+      Change: -2 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+
+Participant 56 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 18
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 30
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 57 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 18
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 25
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 58 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 3
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 17
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 21
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 59 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+
+Participant 62 (Nudge A):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 2
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 1 issue(s)
+          1. Line 20
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 2
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=2 (+1)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 64 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 25
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 42
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 68 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 25
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 42
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 69 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 27
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 75
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 70 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 21
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 33
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 78 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+
+Participant 81 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 17
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 83 (Nudge B):
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 23
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 35
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 84 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 26
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 43
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 85 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 16
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 87 (Nudge A):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+
+Participant 94 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+
+Participant 96 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+
+Participant 101 (Nudge A):
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 17
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 26
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 103 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 3 (eventID=4 submission):
+    Issues found: 4
+    Issues by type:
+      - B105 (hardcoded_password_string): 1 issue(s)
+          1. Line 23
+             Severity: LOW, Confidence: MEDIUM
+             Description: Possible hardcoded password: '/bin/pwd'
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 25
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 36
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 4
+      Change: +2 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=4 (+3)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B105 (hardcoded_password_string)', 'B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 104 (Nudge B):
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 19
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 34
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 107 (Nudge B):
+  Task 3 (eventID=4 submission):
+    Issues found: 2
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 1 issue(s)
+          1. Line 23
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 2
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=2 (+1)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 108 (Nudge B):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 21
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 30
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 109 (Nudge A):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+
+Participant 110 (Nudge A):
+  Task 3 (eventID=4 submission):
+    Issues found: 4
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B602 (subprocess_popen_with_shell_equals_true): 1 issue(s)
+          1. Line 18
+             Severity: HIGH, Confidence: HIGH
+             Description: subprocess call with shell=True identified, security issue.
+      - B603 (subprocess_without_shell_equals_true): 1 issue(s)
+          1. Line 25
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+      - B607 (start_process_with_partial_path): 1 issue(s)
+          1. Line 25
+             Severity: LOW, Confidence: HIGH
+             Description: Starting a process with a partial executable path
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 4
+      Change: +2 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=1 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)', 'B607 (start_process_with_partial_path)']
+        Common (both have): ['B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+
+Participant 111 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 17
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 112 (Nudge A):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+
+Participant 115 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 16
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 118 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 1
+    Issues by type:
+      - B311 (blacklist): 1 issue(s)
+          1. Line 16
+             Severity: LOW, Confidence: HIGH
+             Description: Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 1
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=1 (0)
+      By Type:
+        Common (both have): ['B311 (blacklist)']
+
+Participant 120 (Nudge B):
+  Task 2 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 2:
+      Total issues - LLM: 1, Submitted: 0
+      Change: -1 issues (FEWER vulnerabilities)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=0 (-1)
+      By Type:
+        Fixed (removed): ['B311 (blacklist)']
+  Task 3 (eventID=4 submission):
+    Issues found: 4
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 26
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 46
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+      - B607 (start_process_with_partial_path): 1 issue(s)
+          1. Line 46
+             Severity: LOW, Confidence: HIGH
+             Description: Starting a process with a partial executable path
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 4
+      Change: +2 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=4 (+3)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)', 'B607 (start_process_with_partial_path)']
+        Common (both have): ['B404 (blacklist)']
+
+Participant 121 (Nudge A):
+  Task 1 (eventID=4 submission):
+    Issues found: 0
+    Comparison with LLM task 1:
+      Total issues - LLM: 0, Submitted: 0
+      Change: 0 (same count)
+      By Severity:
+        HIGH: LLM=0, Submitted=0 (0)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=0, Submitted=0 (0)
+      By Type:
+  Task 3 (eventID=4 submission):
+    Issues found: 3
+    Issues by type:
+      - B404 (blacklist): 1 issue(s)
+          1. Line 2
+             Severity: LOW, Confidence: HIGH
+             Description: Consider possible security implications associated with the subprocess module.
+      - B603 (subprocess_without_shell_equals_true): 2 issue(s)
+          1. Line 26
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+          2. Line 38
+             Severity: LOW, Confidence: HIGH
+             Description: subprocess call - check for execution of untrusted input.
+    Comparison with LLM task 3:
+      Total issues - LLM: 2, Submitted: 3
+      Change: +1 issues (MORE vulnerabilities)
+      By Severity:
+        HIGH: LLM=1, Submitted=0 (-1)
+        MEDIUM: LLM=0, Submitted=0 (0)
+        LOW: LLM=1, Submitted=3 (+2)
+      By Type:
+        Fixed (removed): ['B602 (subprocess_popen_with_shell_equals_true)']
+        New (introduced): ['B603 (subprocess_without_shell_equals_true)']
+        Common (both have): ['B404 (blacklist)']
+
+================================================================================
+OVERALL COMPARISON SUMMARY
+================================================================================
+
+Changed task submissions analyzed: 83
+
+Issue Count Comparison:
+  Total LLM issues (for compared tasks): 91
+  Total submitted issues: 87
+  Net change: -4
+
+Severity Breakdown (Aggregated):
+  Severity          LLM    Submitted     Change
+  ------------ -------- ------------ ----------
+  HIGH               29            5        -24
+  MEDIUM              0            0          0
+  LOW                62           82        +20
+
+Submission Outcomes:
+  Improved (fewer issues): 29 submissions
+  Worsened (more issues): 25 submissions
+  Same issue count: 29 submissions
+
+Issue Types Analysis:
+  Fixed (removed) across submissions: ['B311 (blacklist)', 'B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+  New (introduced) across submissions: ['B105 (hardcoded_password_string)', 'B603 (subprocess_without_shell_equals_true)', 'B607 (start_process_with_partial_path)', 'B701 (jinja2_autoescape_false)']
+  Common (present in both): ['B311 (blacklist)', 'B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+
+Per-Task Breakdown:
+  Task 1:
+    Changed submissions: 21
+    LLM issues per task: 0
+    Outcomes - Improved: 0, Worsened: 2, Same: 19
+    Severity changes: HIGH: 0→2 (+2)
+    New types: ['B701 (jinja2_autoescape_false)']
+  Task 2:
+    Changed submissions: 33
+    LLM issues per task: 1
+    Outcomes - Improved: 25, Worsened: 0, Same: 8
+    Severity changes: LOW: 33→8 (-25)
+    Fixed types: ['B311 (blacklist)']
+  Task 3:
+    Changed submissions: 29
+    LLM issues per task: 2
+    Outcomes - Improved: 4, Worsened: 23, Same: 2
+    Severity changes: HIGH: 29→3 (-26), LOW: 29→74 (+45)
+    Fixed types: ['B404 (blacklist)', 'B602 (subprocess_popen_with_shell_equals_true)']
+    New types: ['B105 (hardcoded_password_string)', 'B603 (subprocess_without_shell_equals_true)', 'B607 (start_process_with_partial_path)']
+
+================================================================================
+PER-NUDGE PER-TASK COUNTS
+================================================================================
+
+  Nudge A, Task 1 (n=6): total_issues=1, high=1, medium=0, low=0
+  Nudge A, Task 2 (n=14): total_issues=2, high=0, medium=0, low=2
+  Nudge A, Task 3 (n=11): total_issues=33, high=2, medium=0, low=31
+  Nudge B, Task 1 (n=15): total_issues=1, high=1, medium=0, low=0
+  Nudge B, Task 2 (n=19): total_issues=6, high=0, medium=0, low=6
+  Nudge B, Task 3 (n=18): total_issues=44, high=1, medium=0, low=43

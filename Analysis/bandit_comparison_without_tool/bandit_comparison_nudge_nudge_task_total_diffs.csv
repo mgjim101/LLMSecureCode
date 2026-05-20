@@ -1,0 +1,6 @@
+nudge,task_id,n,total_diff_issue_count,total_diff_high_severity,total_diff_medium_severity,total_diff_low_severity
+A,1,1,1,1,0,0
+A,2,1,0,0,0,0
+B,1,1,0,0,0,0
+B,2,1,0,0,0,0
+B,3,1,1,-1,0,2

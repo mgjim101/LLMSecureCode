@@ -1,0 +1,6 @@
+nudge,task_id,n,original_issue_count,avg_issue_count,avg_diff_issue_count,original_high_severity,avg_high_severity,avg_diff_high_severity,original_medium_severity,avg_medium_severity,avg_diff_medium_severity,original_low_severity,avg_low_severity,avg_diff_low_severity
+A,1,1,0,1.0,1.0,0,1.0,1.0,0,0.0,0.0,0,0.0,0.0
+A,2,1,1,1.0,0.0,0,0.0,0.0,0,0.0,0.0,1,1.0,0.0
+B,1,1,0,0.0,0.0,0,0.0,0.0,0,0.0,0.0,0,0.0,0.0
+B,2,1,1,1.0,0.0,0,0.0,0.0,0,0.0,0.0,1,1.0,0.0
+B,3,1,2,3.0,1.0,1,0.0,-1.0,0,0.0,0.0,1,3.0,2.0

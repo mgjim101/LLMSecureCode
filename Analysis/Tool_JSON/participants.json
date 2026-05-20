@@ -1,0 +1,740 @@
+[
+  {
+    "participant_id": 1,
+    "prolific_pid": "11111",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 2,
+    "prolific_pid": "122222222",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 3,
+    "prolific_pid": "54545454",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 4,
+    "prolific_pid": "qqqq",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 5,
+    "prolific_pid": "aaaa",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 6,
+    "prolific_pid": "44444",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 7,
+    "prolific_pid": "jojoy",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 8,
+    "prolific_pid": "583fe092d639d0000142fb2e",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 9,
+    "prolific_pid": "68d81c3c92ab53a2166931ac",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 10,
+    "prolific_pid": "5cfb53d4c04a940015aab805",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 11,
+    "prolific_pid": "6156fef09d1ab07148870099",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 12,
+    "prolific_pid": "65fb1a12337cd3edfa4dd6fc",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 13,
+    "prolific_pid": "661ff0336322c3c05a16a8af",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 14,
+    "prolific_pid": "60c770d5d536d798d92c6ee9",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 15,
+    "prolific_pid": "5c093a3f600aff0001d7002c",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 16,
+    "prolific_pid": "5dd671942b033b5ec8bc97b4",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 17,
+    "prolific_pid": "665b1c771d3f242a05ffd1b3",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 18,
+    "prolific_pid": "671d5cda4bb11257ce4bcda0",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 19,
+    "prolific_pid": "678b955998db06a51ad68305",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 20,
+    "prolific_pid": "665017cd16c82792f5b364ef",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 21,
+    "prolific_pid": "67ec0db875c63c368cce8118",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 22,
+    "prolific_pid": "6914c90c80bcbb0ee3307396",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 23,
+    "prolific_pid": "637f7d52d1a517e820233f7a",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 24,
+    "prolific_pid": "67896102d98295a520a25ebb",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 25,
+    "prolific_pid": "6718c55c0df4407cbaf8e00b",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 26,
+    "prolific_pid": "66a93d22605b24790c435be2",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 27,
+    "prolific_pid": "601941db6605160008690742",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 28,
+    "prolific_pid": "605415efff124848ed5fd8e3",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 29,
+    "prolific_pid": "68d6735a42a45ae88db9691a",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 30,
+    "prolific_pid": "68c84dcc3bc98e934dd2fffa",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 31,
+    "prolific_pid": "602d86345f6c24812bfc3a4e",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 32,
+    "prolific_pid": "692b2dc2fabccc75b20df0a8",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 33,
+    "prolific_pid": "611a702fa7003f9ed350ebb4",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 34,
+    "prolific_pid": "605b787e15c5cdab9f698cb4",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 35,
+    "prolific_pid": "614929e5dc437220dafb260c",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 36,
+    "prolific_pid": "69289ee670aad30bf97ccddf",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 37,
+    "prolific_pid": "677297960b61e2b0c736be56",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 38,
+    "prolific_pid": "5bacc09b709f60000104352f",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 39,
+    "prolific_pid": "68d56ac9a18490172556aaba",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 40,
+    "prolific_pid": "609867b0b776ee0e3d256324",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 41,
+    "prolific_pid": "664b876ebe0680d014a1c471",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 42,
+    "prolific_pid": "6916bcd9fde520e1f46976cb",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 43,
+    "prolific_pid": "667b1ca693a1d52a0447f22f",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 44,
+    "prolific_pid": "656afc419322351c400138f7",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 45,
+    "prolific_pid": "609ea1092e52cba6578846a2",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 46,
+    "prolific_pid": "60b7b8126c0c4524e913236e",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 47,
+    "prolific_pid": "60f5d1dfd8ff71196982160b",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 48,
+    "prolific_pid": "5d08f2345cb5cf0017ccbb95",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 49,
+    "prolific_pid": "5eb5fe677dd9764f6a7b0692",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 50,
+    "prolific_pid": "654fc4ada27c650347fd0446",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 51,
+    "prolific_pid": "66c4cefb3e98086ecca28a29",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 52,
+    "prolific_pid": "65df54ece89515308c1cae4b",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 53,
+    "prolific_pid": "65707f7057bfe1f9f1e9ef2c",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 54,
+    "prolific_pid": "66604a3a17f83e06a5d82378",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 55,
+    "prolific_pid": "66049c36acdc2fde734b0983",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 56,
+    "prolific_pid": "5be30d2451ed78000195c6b6",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 57,
+    "prolific_pid": "66bf10e19271dfdd1f7723dc",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 58,
+    "prolific_pid": "5e8244d17412d49657c3e6d8",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 59,
+    "prolific_pid": "6005e777d1d8768d5808b5fd",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 60,
+    "prolific_pid": "66854dacc87d341b452931d9",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 61,
+    "prolific_pid": "68c18047338d71b59d4e843d",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 62,
+    "prolific_pid": "652a97574fa0e1dd16211b91",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 63,
+    "prolific_pid": "68e54271b188d748c1a258bb",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 64,
+    "prolific_pid": "5d14bd7a49a18f0001e1e8b4",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 65,
+    "prolific_pid": "611842195ebcbb197bc11c0e",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 66,
+    "prolific_pid": "5cb7852e044ae900011ff74e",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 67,
+    "prolific_pid": "6525aebf13661dcdfda045f8",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 68,
+    "prolific_pid": "5dfb75507caa1e89ad5df828",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 69,
+    "prolific_pid": "5e69475fe2fe7b1ef2d2bb92",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 70,
+    "prolific_pid": "68c835d056de62062e18aba2",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 71,
+    "prolific_pid": "5f73375bf67991000855a6d7",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 72,
+    "prolific_pid": "6127f94d2af664941ae3bf4f",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 73,
+    "prolific_pid": "611e912ecd86ccea242bb5aa",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 74,
+    "prolific_pid": "66a2741b8cc4486c4d2032d9",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 75,
+    "prolific_pid": "65f3ffb89b13487e9bba801f",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 76,
+    "prolific_pid": "6672d9dfb3878b6f6c5fa763",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 77,
+    "prolific_pid": "67bae34ff802e124adfe7189",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 78,
+    "prolific_pid": "605cb6593cc166d022a9d17c",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 79,
+    "prolific_pid": "6932bac20fb8bc77a2965352",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 80,
+    "prolific_pid": "67194d1ba278571e0e4b6f87",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 81,
+    "prolific_pid": "6623c5f5e925484c99ce611a",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 82,
+    "prolific_pid": "67f16925364c696866c13aa3",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 83,
+    "prolific_pid": "66be0672a499baee058dc3f6",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 84,
+    "prolific_pid": "64df6f97391ce879a62edf28",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 85,
+    "prolific_pid": "6916458f262a97b6c99ce704",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 86,
+    "prolific_pid": "67d1c2ab7be66a6085721f6c",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 87,
+    "prolific_pid": "6717a701fec39ffe22799038",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 88,
+    "prolific_pid": "5f1c2f87a73eec487b58ad9a",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 89,
+    "prolific_pid": "65f45a87d68ec9b74898401d",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 90,
+    "prolific_pid": "67e7cdfb2d3c81d83ccef700",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 91,
+    "prolific_pid": "5f61371454efa10bdcfc588d",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 92,
+    "prolific_pid": "5eeb70e011363a08142ff479",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 93,
+    "prolific_pid": "6658e797b169774877e72acb",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 94,
+    "prolific_pid": "60baef9aa0cb140b69d72f5a",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 95,
+    "prolific_pid": "65968bbba0c39a6be3f20d8e",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 96,
+    "prolific_pid": "566ae5587da0350012b50b13",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 97,
+    "prolific_pid": "6932e95879b6ebb379d7a9db@email.prolific.com",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 98,
+    "prolific_pid": "647d94be8426dcb4838d8f73",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 99,
+    "prolific_pid": "609bcf27b68e518541b4a827",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 100,
+    "prolific_pid": "6869318f8be1d4ab8cabb66f",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 101,
+    "prolific_pid": "65a7f794e124362a1ae7b3d9",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 102,
+    "prolific_pid": "60df5be77153bc3056607d3b",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 103,
+    "prolific_pid": "654e3926a9f47dd3e0bd5471",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 104,
+    "prolific_pid": "610af0eb860dfb6aeb567a49",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 105,
+    "prolific_pid": "5ed8e72416627f40d066278f",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 106,
+    "prolific_pid": "55a1321efdf99b6ec83c214e",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 107,
+    "prolific_pid": "6521569441baced19add37ca",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 108,
+    "prolific_pid": "6563514258fc1a6958660b37",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 109,
+    "prolific_pid": "665f58b57749126beb1be1e6",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 110,
+    "prolific_pid": "562a52d2c8ffc2000f5139dd",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 111,
+    "prolific_pid": "692ed5436fca8c59b41c2eea",
+    "group_id": 3,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 112,
+    "prolific_pid": "64db89316721f33ed942da45",
+    "group_id": 4,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 113,
+    "prolific_pid": "5f0610c3da28a412967e1123",
+    "group_id": 5,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 114,
+    "prolific_pid": "658054690a72503441d25c4f",
+    "group_id": 6,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 115,
+    "prolific_pid": "66463e4efb99fba5a67a010a",
+    "group_id": 7,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 116,
+    "prolific_pid": "6172d63097f568ea03559adb",
+    "group_id": 8,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 117,
+    "prolific_pid": "5d0845f9e4b46500019376af",
+    "group_id": 9,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 118,
+    "prolific_pid": "5e6f570ab3d22551924c818a",
+    "group_id": 10,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 119,
+    "prolific_pid": "65b16b33c01181795aafb797",
+    "group_id": 11,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 120,
+    "prolific_pid": "5bec01bfe9b3490001e63ff4",
+    "group_id": 12,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 121,
+    "prolific_pid": "5ec84e710b73c13203ba9f3f",
+    "group_id": 1,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 122,
+    "prolific_pid": "5f216c1707456f055831aa5d",
+    "group_id": 2,
+    "llm_used_flag": null
+  },
+  {
+    "participant_id": 123,
+    "prolific_pid": "56cb8858edf8da000b6df354",
+    "group_id": 3,
+    "llm_used_flag": null
+  }
+]

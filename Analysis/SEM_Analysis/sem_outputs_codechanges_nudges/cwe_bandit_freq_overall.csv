@@ -1,0 +1,8 @@
+bandit_id,bandit_name,cwe,severity,total_occurrences
+B311,blacklist (random),CWE-330 (Insufficient Randomness),LOW,35
+B404,blacklist (subprocess import),CWE-78 (OS Command Injection - import),LOW,30
+B602,subprocess_popen_with_shell_equals_true,CWE-78 (OS Command Injection),HIGH,30
+B603,subprocess_without_shell_equals_true,CWE-78 (OS Command Injection - no shell),LOW,27
+B701,jinja2_autoescape_false,CWE-80 (XSS via template injection),HIGH,3
+B607,start_process_with_partial_path,CWE-426 (Untrusted Search Path),LOW,2
+B105,hardcoded_password_string,CWE-259 (Use of Hard-coded Password),LOW,1

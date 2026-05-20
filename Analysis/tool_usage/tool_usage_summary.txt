@@ -1,0 +1,979 @@
+Tool usage summary per participant
+Participants in scope: 97 (from prolific_ids_with_counts.txt)
+
+Participant 8 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 9 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 10 (Nudge B)
+  Used tool: 2 time(s)
+  Skipped tool: 1 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    - taskid=3
+
+Participant 12 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 13 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 14 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 15 (Nudge A)
+  Used tool: 2 time(s)
+  Skipped tool: 1 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    - taskid=1
+
+Participant 16 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 17 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 18 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 19 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 20 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 22 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 23 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 24 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 25 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 27 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 28 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 29 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 30 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 31 (Nudge B)
+  Used tool: 2 time(s)
+  Skipped tool: 1 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    - taskid=3
+
+Participant 32 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 33 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 34 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 36 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 38 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 39 (Nudge A)
+  Used tool: 1 time(s)
+  Skipped tool: 2 time(s)
+  Used tool details:
+    - taskid=2
+  Skipped tool details:
+    - taskid=1
+    - taskid=3
+
+Participant 41 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 42 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 44 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 45 (Nudge B)
+  Used tool: 0 time(s)
+  Skipped tool: 3 time(s)
+  Used tool details:
+    None
+  Skipped tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+
+Participant 46 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 47 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 48 (Nudge B)
+  Used tool: 2 time(s)
+  Skipped tool: 1 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    - taskid=1
+
+Participant 49 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 50 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 51 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 52 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 53 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 54 (Nudge A)
+  Used tool: 1 time(s)
+  Skipped tool: 2 time(s)
+  Used tool details:
+    - taskid=3
+  Skipped tool details:
+    - taskid=2
+    - taskid=1
+
+Participant 55 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 56 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 57 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 58 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 59 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 60 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 62 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 63 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 64 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 65 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 66 (Nudge A)
+  Used tool: 1 time(s)
+  Skipped tool: 2 time(s)
+  Used tool details:
+    - taskid=3
+  Skipped tool details:
+    - taskid=2
+    - taskid=1
+
+Participant 67 (Nudge B)
+  Used tool: 0 time(s)
+  Skipped tool: 3 time(s)
+  Used tool details:
+    None
+  Skipped tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+
+Participant 68 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 69 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 70 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 71 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 72 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 73 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 75 (Nudge A)
+  Used tool: 0 time(s)
+  Skipped tool: 3 time(s)
+  Used tool details:
+    None
+  Skipped tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+
+Participant 76 (Nudge A)
+  Used tool: 0 time(s)
+  Skipped tool: 3 time(s)
+  Used tool details:
+    None
+  Skipped tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+
+Participant 77 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 78 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 80 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 81 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 82 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 83 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 84 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 85 (Nudge A)
+  Used tool: 1 time(s)
+  Skipped tool: 2 time(s)
+  Used tool details:
+    - taskid=2
+  Skipped tool details:
+    - taskid=1
+    - taskid=3
+
+Participant 86 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 87 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 88 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 89 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 90 (Nudge A)
+  Used tool: 2 time(s)
+  Skipped tool: 1 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    - taskid=1
+
+Participant 91 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 93 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 94 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 96 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 98 (Nudge A)
+  Used tool: 2 time(s)
+  Skipped tool: 1 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    - taskid=3
+
+Participant 100 (Nudge A)
+  Used tool: 1 time(s)
+  Skipped tool: 2 time(s)
+  Used tool details:
+    - taskid=1
+  Skipped tool details:
+    - taskid=2
+    - taskid=3
+
+Participant 101 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 103 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 104 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 107 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 108 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 109 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 110 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 111 (Nudge A)
+  Used tool: 2 time(s)
+  Skipped tool: 1 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    - taskid=3
+
+Participant 112 (Nudge A)
+  Used tool: 1 time(s)
+  Skipped tool: 2 time(s)
+  Used tool details:
+    - taskid=2
+  Skipped tool details:
+    - taskid=3
+    - taskid=1
+
+Participant 114 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 115 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 117 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 118 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=3
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 119 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=1
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 120 (Nudge B)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=3
+    - taskid=2
+    - taskid=1
+  Skipped tool details:
+    None
+
+Participant 121 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=2
+    - taskid=3
+  Skipped tool details:
+    None
+
+Participant 122 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=1
+    - taskid=3
+    - taskid=2
+  Skipped tool details:
+    None
+
+Participant 123 (Nudge A)
+  Used tool: 3 time(s)
+  Skipped tool: 0 time(s)
+  Used tool details:
+    - taskid=2
+    - taskid=1
+    - taskid=3
+  Skipped tool details:
+    None
+
+Overall summary
+  Total tool uses: 260
+  Total tool skips: 31
+  Avg uses per participant: 2.68
+  Avg skips per participant: 0.32
+
+  Task breakdown (used | skipped):
+    taskid=1: 85 | 12
+    taskid=2: 90 | 7
+    taskid=3: 85 | 12
+
+
+Per-Nudge Per-Task Counts
+  Nudge A, taskid=1 (n=48): used=39, skipped=9
+  Nudge A, taskid=2 (n=48): used=43, skipped=5
+  Nudge A, taskid=3 (n=48): used=40, skipped=8
+  Nudge B, taskid=1 (n=49): used=46, skipped=3
+  Nudge B, taskid=2 (n=49): used=47, skipped=2
+  Nudge B, taskid=3 (n=49): used=45, skipped=4

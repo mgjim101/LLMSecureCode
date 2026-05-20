@@ -1,0 +1,865 @@
+Code changes after running the tool (event 2 vs event 4)
+Participants in scope: 97 (from prolific_ids_with_counts.txt)
+Comparison rule: eventid=2 code is start, eventid=4 code is end.
+
+Participant 8 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: changed (lines 31 -> 28)
+    - taskid=2: no change (lines 28 -> 28)
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 9 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+    - taskid=2: no change (lines 32 -> 32)
+    - taskid=3: no change (lines 34 -> 34)
+
+Participant 10 (Nudge B)
+  Task pairs analyzed: 2
+  Changed after tool: 0
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 29 -> 29)
+
+Participant 12 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 34 -> 34)
+    - taskid=2: no change (lines 32 -> 32)
+    - taskid=3: no change (lines 40 -> 40)
+
+Participant 13 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 29 -> 29)
+    - taskid=2: no change (lines 33 -> 33)
+    - taskid=3: no change (lines 40 -> 40)
+
+Participant 14 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 30 -> 30)
+    - taskid=3: no change (lines 30 -> 30)
+
+Participant 15 (Nudge A)
+  Task pairs analyzed: 2
+  Changed after tool: 0
+  No change after tool: 2
+  Task details:
+    - taskid=2: no change (lines 33 -> 33)
+    - taskid=3: no change (lines 33 -> 33)
+
+Participant 16 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 36 -> 36)
+    - taskid=2: no change (lines 30 -> 30)
+    - taskid=3: no change (lines 46 -> 46)
+
+Participant 17 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 39 -> 39)
+    - taskid=2: no change (lines 40 -> 40)
+    - taskid=3: no change (lines 67 -> 67)
+
+Participant 18 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 85 -> 85)
+    - taskid=2: no change (lines 55 -> 55)
+    - taskid=3: no change (lines 54 -> 54)
+
+Participant 19 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: changed (lines 34 -> 36)
+    - taskid=2: no change (lines 10 -> 10)
+    - taskid=3: changed (lines 14 -> 23)
+
+Participant 20 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 3
+  No change after tool: 0
+  Task details:
+    - taskid=1: changed (lines 28 -> 36)
+    - taskid=2: changed (lines 29 -> 29)
+    - taskid=3: changed (lines 31 -> 31)
+
+Participant 22 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+    - taskid=2: no change (lines 30 -> 30)
+    - taskid=3: no change (lines 55 -> 55)
+
+Participant 23 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 34 -> 34)
+    - taskid=2: changed (lines 37 -> 37)
+    - taskid=3: no change (lines 38 -> 38)
+
+Participant 24 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 35 -> 35)
+    - taskid=2: no change (lines 61 -> 61)
+    - taskid=3: changed (lines 81 -> 68)
+
+Participant 25 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 35 -> 35)
+    - taskid=2: no change (lines 18 -> 18)
+    - taskid=3: no change (lines 15 -> 15)
+
+Participant 27 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: changed (lines 29 -> 28)
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 28 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 36 -> 36)
+    - taskid=2: changed (lines 34 -> 34)
+    - taskid=3: changed (lines 41 -> 55)
+
+Participant 29 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 33 -> 33)
+    - taskid=3: no change (lines 46 -> 46)
+
+Participant 30 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 48 -> 48)
+    - taskid=2: no change (lines 21 -> 21)
+    - taskid=3: no change (lines 43 -> 43)
+
+Participant 31 (Nudge B)
+  Task pairs analyzed: 2
+  Changed after tool: 2
+  No change after tool: 0
+  Task details:
+    - taskid=1: changed (lines 30 -> 30)
+    - taskid=2: changed (lines 31 -> 29)
+
+Participant 32 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: changed (lines 34 -> 34)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 35 -> 35)
+
+Participant 33 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: changed (lines 38 -> 40)
+    - taskid=2: changed (lines 34 -> 34)
+    - taskid=3: no change (lines 38 -> 38)
+
+Participant 34 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 58 -> 58)
+    - taskid=2: changed (lines 48 -> 49)
+    - taskid=3: no change (lines 69 -> 69)
+
+Participant 36 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 31 -> 31)
+    - taskid=2: changed (lines 31 -> 31)
+    - taskid=3: changed (lines 32 -> 32)
+
+Participant 38 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 33 -> 33)
+    - taskid=2: no change (lines 35 -> 35)
+    - taskid=3: no change (lines 37 -> 37)
+
+Participant 39 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after tool: 1
+  No change after tool: 0
+  Task details:
+    - taskid=2: changed (lines 28 -> 28)
+
+Participant 41 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 3
+  No change after tool: 0
+  Task details:
+    - taskid=1: changed (lines 33 -> 30)
+    - taskid=2: changed (lines 32 -> 27)
+    - taskid=3: changed (lines 43 -> 51)
+
+Participant 42 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 34 -> 34)
+    - taskid=2: no change (lines 37 -> 37)
+    - taskid=3: changed (lines 40 -> 40)
+
+Participant 44 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 34 -> 34)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 33 -> 33)
+
+Participant 45 (Nudge B)
+  Task pairs analyzed: 1
+  Changed after tool: 0
+  No change after tool: 1
+  Task details:
+    - taskid=2: no change (lines 31 -> 31)
+
+Participant 46 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 35 -> 35)
+    - taskid=3: no change (lines 37 -> 37)
+
+Participant 47 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 33 -> 33)
+    - taskid=2: changed (lines 33 -> 33)
+    - taskid=3: no change (lines 24 -> 24)
+
+Participant 48 (Nudge B)
+  Task pairs analyzed: 2
+  Changed after tool: 0
+  No change after tool: 2
+  Task details:
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 30 -> 30)
+
+Participant 49 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 30 -> 30)
+    - taskid=3: no change (lines 36 -> 36)
+
+Participant 50 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: changed (lines 34 -> 34)
+
+Participant 51 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 35 -> 35)
+    - taskid=2: changed (lines 33 -> 33)
+    - taskid=3: changed (lines 38 -> 53)
+
+Participant 52 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 50 -> 50)
+    - taskid=2: changed (lines 32 -> 30)
+    - taskid=3: no change (lines 39 -> 39)
+
+Participant 53 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 3
+  No change after tool: 0
+  Task details:
+    - taskid=1: changed (lines 49 -> 35)
+    - taskid=2: changed (lines 34 -> 33)
+    - taskid=3: changed (lines 38 -> 49)
+
+Participant 54 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after tool: 0
+  No change after tool: 1
+  Task details:
+    - taskid=3: no change (lines 34 -> 34)
+
+Participant 55 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: changed (lines 36 -> 37)
+    - taskid=2: no change (lines 33 -> 33)
+    - taskid=3: changed (lines 36 -> 37)
+
+Participant 56 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 3
+  No change after tool: 0
+  Task details:
+    - taskid=1: changed (lines 32 -> 39)
+    - taskid=2: changed (lines 37 -> 26)
+    - taskid=3: changed (lines 40 -> 43)
+
+Participant 57 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 31 -> 31)
+    - taskid=2: changed (lines 29 -> 29)
+    - taskid=3: changed (lines 40 -> 40)
+
+Participant 58 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: changed (lines 32 -> 36)
+    - taskid=2: no change (lines 16 -> 16)
+    - taskid=3: changed (lines 48 -> 29)
+
+Participant 59 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: changed (lines 34 -> 35)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 32 -> 32)
+
+Participant 60 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 33 -> 33)
+    - taskid=2: no change (lines 30 -> 30)
+    - taskid=3: no change (lines 33 -> 33)
+
+Participant 62 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 3
+  No change after tool: 0
+  Task details:
+    - taskid=1: changed (lines 33 -> 33)
+    - taskid=2: changed (lines 29 -> 32)
+    - taskid=3: changed (lines 31 -> 33)
+
+Participant 63 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+    - taskid=2: no change (lines 38 -> 38)
+    - taskid=3: no change (lines 38 -> 38)
+
+Participant 64 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 31 -> 31)
+    - taskid=2: changed (lines 28 -> 16)
+    - taskid=3: changed (lines 30 -> 50)
+
+Participant 65 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 32 -> 32)
+
+Participant 66 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after tool: 0
+  No change after tool: 1
+  Task details:
+    - taskid=3: no change (lines 47 -> 47)
+
+Participant 67 (Nudge B)
+  Task pairs analyzed: 0
+  Changed after tool: 0
+  No change after tool: 0
+  Task details: none (no event 2 & 4 pair found)
+
+Participant 68 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 31 -> 31)
+    - taskid=2: changed (lines 33 -> 31)
+    - taskid=3: changed (lines 38 -> 53)
+
+Participant 69 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 43 -> 43)
+    - taskid=2: changed (lines 44 -> 44)
+    - taskid=3: changed (lines 59 -> 95)
+
+Participant 70 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 3
+  No change after tool: 0
+  Task details:
+    - taskid=1: changed (lines 35 -> 37)
+    - taskid=2: changed (lines 33 -> 33)
+    - taskid=3: changed (lines 41 -> 49)
+
+Participant 71 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 29 -> 29)
+    - taskid=3: no change (lines 33 -> 33)
+
+Participant 72 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+    - taskid=2: no change (lines 26 -> 26)
+    - taskid=3: no change (lines 30 -> 30)
+
+Participant 73 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 37 -> 37)
+    - taskid=2: no change (lines 34 -> 34)
+    - taskid=3: no change (lines 58 -> 58)
+
+Participant 75 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after tool: 0
+  No change after tool: 0
+  Task details: none (no event 2 & 4 pair found)
+
+Participant 76 (Nudge A)
+  Task pairs analyzed: 0
+  Changed after tool: 0
+  No change after tool: 0
+  Task details: none (no event 2 & 4 pair found)
+
+Participant 77 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 29 -> 29)
+    - taskid=2: no change (lines 32 -> 32)
+    - taskid=3: no change (lines 39 -> 39)
+
+Participant 78 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 36 -> 36)
+    - taskid=2: changed (lines 36 -> 36)
+    - taskid=3: no change (lines 47 -> 47)
+
+Participant 80 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 40 -> 40)
+    - taskid=2: no change (lines 38 -> 38)
+    - taskid=3: no change (lines 66 -> 66)
+
+Participant 81 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: changed (lines 33 -> 33)
+    - taskid=2: changed (lines 32 -> 33)
+    - taskid=3: no change (lines 35 -> 35)
+
+Participant 82 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 34 -> 34)
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 83 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 39 -> 39)
+    - taskid=2: no change (lines 35 -> 35)
+    - taskid=3: changed (lines 33 -> 43)
+
+Participant 84 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 39 -> 39)
+    - taskid=2: changed (lines 38 -> 38)
+    - taskid=3: changed (lines 43 -> 53)
+
+Participant 85 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after tool: 1
+  No change after tool: 0
+  Task details:
+    - taskid=2: changed (lines 29 -> 47)
+
+Participant 86 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 39 -> 39)
+    - taskid=2: no change (lines 34 -> 34)
+    - taskid=3: no change (lines 52 -> 52)
+
+Participant 87 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: changed (lines 30 -> 34)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 32 -> 32)
+
+Participant 88 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 31 -> 31)
+    - taskid=2: no change (lines 35 -> 35)
+    - taskid=3: no change (lines 36 -> 36)
+
+Participant 89 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 29 -> 29)
+    - taskid=3: no change (lines 35 -> 35)
+
+Participant 90 (Nudge A)
+  Task pairs analyzed: 2
+  Changed after tool: 0
+  No change after tool: 2
+  Task details:
+    - taskid=2: no change (lines 29 -> 29)
+    - taskid=3: no change (lines 31 -> 31)
+
+Participant 91 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 28 -> 28)
+    - taskid=2: no change (lines 28 -> 28)
+    - taskid=3: no change (lines 29 -> 29)
+
+Participant 93 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 33 -> 33)
+    - taskid=2: no change (lines 34 -> 34)
+    - taskid=3: no change (lines 32 -> 32)
+
+Participant 94 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 29 -> 29)
+    - taskid=2: changed (lines 28 -> 26)
+    - taskid=3: no change (lines 38 -> 38)
+
+Participant 96 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: changed (lines 38 -> 43)
+    - taskid=2: no change (lines 36 -> 36)
+    - taskid=3: no change (lines 61 -> 61)
+
+Participant 98 (Nudge A)
+  Task pairs analyzed: 2
+  Changed after tool: 0
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 38 -> 38)
+    - taskid=2: no change (lines 41 -> 41)
+
+Participant 100 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after tool: 0
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+
+Participant 101 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+    - taskid=2: no change (lines 21 -> 21)
+    - taskid=3: changed (lines 31 -> 39)
+
+Participant 103 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: changed (lines 34 -> 37)
+    - taskid=2: no change (lines 29 -> 29)
+    - taskid=3: changed (lines 40 -> 54)
+
+Participant 104 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 33 -> 33)
+    - taskid=2: no change (lines 17 -> 17)
+    - taskid=3: changed (lines 38 -> 45)
+
+Participant 107 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 35 -> 35)
+    - taskid=2: no change (lines 49 -> 49)
+    - taskid=3: changed (lines 33 -> 33)
+
+Participant 108 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 3
+  No change after tool: 0
+  Task details:
+    - taskid=1: changed (lines 36 -> 36)
+    - taskid=2: changed (lines 34 -> 38)
+    - taskid=3: changed (lines 36 -> 40)
+
+Participant 109 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: changed (lines 30 -> 39)
+    - taskid=2: changed (lines 29 -> 39)
+    - taskid=3: no change (lines 39 -> 39)
+
+Participant 110 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 33 -> 33)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: changed (lines 33 -> 33)
+
+Participant 111 (Nudge A)
+  Task pairs analyzed: 2
+  Changed after tool: 1
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: changed (lines 31 -> 32)
+
+Participant 112 (Nudge A)
+  Task pairs analyzed: 1
+  Changed after tool: 1
+  No change after tool: 0
+  Task details:
+    - taskid=2: changed (lines 25 -> 26)
+
+Participant 114 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 34 -> 34)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 40 -> 40)
+
+Participant 115 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 34 -> 34)
+    - taskid=2: changed (lines 43 -> 43)
+    - taskid=3: no change (lines 43 -> 43)
+
+Participant 117 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 35 -> 35)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 32 -> 32)
+
+Participant 118 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 1
+  No change after tool: 2
+  Task details:
+    - taskid=1: no change (lines 31 -> 31)
+    - taskid=2: changed (lines 28 -> 28)
+    - taskid=3: no change (lines 30 -> 30)
+
+Participant 119 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+    - taskid=2: no change (lines 31 -> 31)
+    - taskid=3: no change (lines 32 -> 32)
+
+Participant 120 (Nudge B)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: no change (lines 38 -> 38)
+    - taskid=2: changed (lines 35 -> 35)
+    - taskid=3: changed (lines 43 -> 56)
+
+Participant 121 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 2
+  No change after tool: 1
+  Task details:
+    - taskid=1: changed (lines 39 -> 42)
+    - taskid=2: no change (lines 22 -> 22)
+    - taskid=3: changed (lines 40 -> 49)
+
+Participant 122 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 32 -> 32)
+    - taskid=2: no change (lines 98 -> 98)
+    - taskid=3: no change (lines 112 -> 112)
+
+Participant 123 (Nudge A)
+  Task pairs analyzed: 3
+  Changed after tool: 0
+  No change after tool: 3
+  Task details:
+    - taskid=1: no change (lines 30 -> 30)
+    - taskid=2: no change (lines 30 -> 30)
+    - taskid=3: no change (lines 38 -> 38)
+
+Summary
+  Task pairs analyzed: 261
+    with changes: 83
+    no changes: 178
+  Participants with >=1 change: 51
+  Participants with zero changes: 46
+  Incomplete pairs skipped (missing event 2 or 4): 2
+  Skipped pair list (participant_id, taskid):
+    - 66, taskid=1
+    - 67, taskid=3
+
+Per-Nudge Per-Task Counts
+  Nudge A, taskid=1 (n=39): changed=6, unchanged=33
+  Nudge A, taskid=2 (n=43): changed=14, unchanged=29
+  Nudge A, taskid=3 (n=40): changed=11, unchanged=29
+  Nudge B, taskid=1 (n=46): changed=15, unchanged=31
+  Nudge B, taskid=2 (n=48): changed=19, unchanged=29
+  Nudge B, taskid=3 (n=45): changed=18, unchanged=27

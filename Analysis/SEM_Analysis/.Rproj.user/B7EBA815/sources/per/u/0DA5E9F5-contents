@@ -1,0 +1,122 @@
+library(dplyr)
+library(tidyr)
+
+
+# Ensure Nudge is factor
+df$Nudge <- as.factor(df$Nudge)
+# ---- PRE / POST CONSTRUCTS ----
+
+constructs <- list(
+  RiskTolerance = list(
+    pre  = c("risk_pre_1_n","risk_pre_2_n","risk_pre_3_n"),
+    post = c("risk_post_1_n","risk_post_2_n","risk_post_3_n")
+  ),
+  SelfEfficacy = list(
+    pre  = c("se_pre_1_n","se_pre_2_n","se_pre_3_n"),
+    post = c("se_post_1_n","se_post_2_n","se_post_3_n")
+  ),
+  Trust = list(
+    pre  = c("trust_pre_1_n","trust_pre_2_n","trust_pre_3_n"),
+    post = c("trust_post_1_n","trust_post_2_n","trust_post_3_n")
+  ),
+  BehavioralIntention = list(
+    pre  = c("bi_pre_1_n","bi_pre_2_n","bi_pre_3_n"),
+    post = c("bi_post_1_n","bi_post_2_n","bi_post_3_n")
+  )
+)
+
+for (name in names(constructs)) {
+  df[[paste0("Pre", name)]]  <- rowMeans(df[, constructs[[name]]$pre], na.rm = TRUE)
+  df[[paste0("Post", name)]] <- rowMeans(df[, constructs[[name]]$post], na.rm = TRUE)
+}
+
+within_tests <- function(data, var_pre, var_post) {
+  
+  # Paired t-test
+  tt <- t.test(data[[var_pre]], data[[var_post]], paired = TRUE)
+  
+  # Wilcoxon
+  wt <- wilcox.test(data[[var_pre]], data[[var_post]], paired = TRUE)
+  
+  # Effect size (Cohen's d for paired)
+  d <- cohen.d(data[[var_post]], data[[var_pre]], paired = TRUE)$estimate
+  
+  # Effect size r for Wilcoxon
+  r <- abs(qnorm(wt$p.value / 2)) / sqrt(nrow(data))
+  
+  tibble(
+    t = tt$statistic,
+    p_t = tt$p.value,
+    wilcox_W = wt$statistic,
+    p_w = wt$p.value,
+    cohen_d = d,
+    r = r,
+    mean_pre = mean(data[[var_pre]], na.rm = TRUE),
+    mean_post = mean(data[[var_post]], na.rm = TRUE)
+  )
+}
+within_results <- list()
+
+for (name in names(constructs)) {
+  
+  var_pre  <- paste0("Pre", name)
+  var_post <- paste0("Post", name)
+  
+  res_A <- within_tests(filter(df, Nudge == "A"), var_pre, var_post)
+  res_B <- within_tests(filter(df, Nudge == "B"), var_pre, var_post)
+  
+  res_A$Group <- "A"
+  res_B$Group <- "B"
+  
+  res_A$Construct <- name
+  res_B$Construct <- name
+  
+  within_results[[name]] <- bind_rows(res_A, res_B)
+}
+
+within_results_df <- bind_rows(within_results)
+print(within_results_df)
+
+single_vars <- c(
+  "AvgToolUse",
+  "AvgNewVulns",
+  "CodeChangesWithTool",
+  "Motivation"
+)
+between_tests <- function(data, var) {
+  
+  # t-test
+  tt <- t.test(as.formula(paste(var, "~ Nudge")), data = data)
+  
+  # Mann-Whitney
+  wt <- wilcox.test(as.formula(paste(var, "~ Nudge")), data = data)
+  
+  # Cohen's d
+  d <- cohen.d(as.formula(paste(var, "~ Nudge")), data = data)$estimate
+  
+  # Effect size r
+  r <- abs(qnorm(wt$p.value / 2)) / sqrt(nrow(data))
+  
+  tibble(
+    variable = var,
+    t = tt$statistic,
+    p_t = tt$p.value,
+    wilcox_W = wt$statistic,
+    p_w = wt$p.value,
+    cohen_d = d,
+    r = r,
+    mean_A = mean(data[data$Nudge=="A", var], na.rm = TRUE),
+    mean_B = mean(data[data$Nudge=="B", var], na.rm = TRUE)
+  )
+}
+between_results <- bind_rows(
+  lapply(single_vars, function(v) between_tests(df, v))
+)
+
+print(between_results)
+write.csv(within_results_df, "within_group_results.csv", row.names = FALSE)
+write.csv(between_results, "between_group_results.csv", row.names = FALSE)
+
+
+
+
